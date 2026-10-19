@@ -133,6 +133,14 @@
       {
         "url": "https://rss.dw.com/rdf/rss-en-world",
         "topic": "world"
+      },
+      {
+        "url": "https://rss.dw.com/rdf/rss-en-ger",
+        "topic": "world"
+      },
+      {
+        "url": "https://rss.dw.com/rdf/rss-en-eu",
+        "topic": "world"
       }
     ]
   },
@@ -178,5 +186,14 @@
         "topic": "world"
       }
     ]
+  },
+  {
+    "id": "asahi",
+    "name": "The Asahi Shimbun",
+    "country": "JP",
+    "language": "en",
+    "url": "https://www.asahi.com/ajw/feed_msn/",
+    "home": "https://www.asahi.com",
+    "kind": "Private newspaper"
   }
 ]
