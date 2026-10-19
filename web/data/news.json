@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-19T11:44:48.583069+00:00",
+  "generatedAt": "2026-10-19T11:47:41.868892+00:00",
   "translationEngine": "Argos Translate en → ru",
   "sources": [
     {
@@ -116,6 +116,54 @@
   ],
   "articles": [
     {
+      "id": "6c335ffd65113bc40d9f",
+      "sourceId": "tass",
+      "source": "ТАСС",
+      "country": "RU",
+      "language": "ru",
+      "sourceKind": "Государственное информационное агентство",
+      "url": "https://tass.ru/obschestvo/28229721",
+      "publishedAt": "2026-10-19T11:43:51+00:00",
+      "originalTitle": "Корецкий заявил, что на Украине больше людей с бронью, чем военных",
+      "originalText": "Премьер-министр страны добавил, что в сфере оформления броней от мобилизации фиксируется много злоупотреблений",
+      "excerptOrigin": "rss",
+      "title": "Корецкий заявил, что на Украине больше людей с бронью, чем военных",
+      "text": "Премьер-министр страны добавил, что в сфере оформления броней от мобилизации фиксируется много злоупотреблений",
+      "translation": "original"
+    },
+    {
+      "id": "10332a062cb5b7c18201",
+      "sourceId": "tass",
+      "source": "ТАСС",
+      "country": "RU",
+      "language": "ru",
+      "sourceKind": "Государственное информационное агентство",
+      "url": "https://tass.ru/proisshestviya/28229715",
+      "publishedAt": "2026-10-19T11:42:56+00:00",
+      "originalTitle": "El Pais: в Испании из-за непогоды погибли три человека",
+      "originalText": "Проливные дожди особенно сильно затронули Каталонию и Балеарские острова",
+      "excerptOrigin": "rss",
+      "title": "El Pais: в Испании из-за непогоды погибли три человека",
+      "text": "Проливные дожди особенно сильно затронули Каталонию и Балеарские острова",
+      "translation": "original"
+    },
+    {
+      "id": "62e33236a6233c1ddd44",
+      "sourceId": "tass",
+      "source": "ТАСС",
+      "country": "RU",
+      "language": "ru",
+      "sourceKind": "Государственное информационное агентство",
+      "url": "https://tass.ru/ekonomika/28229703",
+      "publishedAt": "2026-10-19T11:42:31+00:00",
+      "originalTitle": "Эксперт Кайль рекомендовал россиянам планировать поездки в Италию заранее",
+      "originalText": "Сокращение срока рассмотрения туристических виз еще не гарантирует, что каждый заявитель получит решение в течение полутора месяцев, отметил руководитель визового агентства Visantium",
+      "excerptOrigin": "rss",
+      "title": "Эксперт Кайль рекомендовал россиянам планировать поездки в Италию заранее",
+      "text": "Сокращение срока рассмотрения туристических виз еще не гарантирует, что каждый заявитель получит решение в течение полутора месяцев, отметил руководитель визового агентства Visantium",
+      "translation": "original"
+    },
+    {
       "id": "6fcedf7f8dc72932da8a",
       "sourceId": "tass",
       "source": "ТАСС",
@@ -126,6 +174,7 @@
       "publishedAt": "2026-10-19T11:41:34+00:00",
       "originalTitle": "В Северной Осетии два села остались без света",
       "originalText": "Причиной стало аварийное отключение электроснабжения в Пригородном районе региона",
+      "excerptOrigin": "rss",
       "title": "В Северной Осетии два села остались без света",
       "text": "Причиной стало аварийное отключение электроснабжения в Пригородном районе региона",
       "translation": "original"
@@ -141,6 +190,7 @@
       "publishedAt": "2026-10-19T11:41:33+00:00",
       "originalTitle": "В ФРГ мигранты призвали власти разработать меры по защите нацменьшинств",
       "originalText": "Авторы обращения к канцлеру Фридриху Мерцу и главам правительств федеральных земель указывают на риски, связанные с возможным вхождением партии \"Альтернатива для Германии\" в состав правительства федеральной земли Саксония-Анхальт",
+      "excerptOrigin": "rss",
       "title": "В ФРГ мигранты призвали власти разработать меры по защите нацменьшинств",
       "text": "Авторы обращения к канцлеру Фридриху Мерцу и главам правительств федеральных земель указывают на риски, связанные с возможным вхождением партии \"Альтернатива для Германии\" в состав правительства федеральной земли Саксония-Анхальт",
       "translation": "original"
@@ -156,23 +206,9 @@
       "publishedAt": "2026-10-19T11:41:32+00:00",
       "originalTitle": "Филимонов: директор вологодской \"Фармации\" и его замы уволились до итогов проверки",
       "originalText": "Результаты передадут правоохранительным органам, сообщил губернатор области",
+      "excerptOrigin": "rss",
       "title": "Филимонов: директор вологодской \"Фармации\" и его замы уволились до итогов проверки",
       "text": "Результаты передадут правоохранительным органам, сообщил губернатор области",
-      "translation": "original"
-    },
-    {
-      "id": "41ad678fab947c79b3ef",
-      "sourceId": "tass",
-      "source": "ТАСС",
-      "country": "RU",
-      "language": "ru",
-      "sourceKind": "Государственное информационное агентство",
-      "url": "https://tass.ru/obschestvo/28229711",
-      "publishedAt": "2026-10-19T11:41:05+00:00",
-      "originalTitle": "В Подмосковье прививку от гриппа сделали более 1,1 млн человек",
-      "originalText": "Вакцинация проводится бесплатно",
-      "title": "В Подмосковье прививку от гриппа сделали более 1,1 млн человек",
-      "text": "Вакцинация проводится бесплатно",
       "translation": "original"
     },
     {
@@ -186,53 +222,9 @@
       "publishedAt": "2026-10-19T11:41:00+00:00",
       "originalTitle": "UN food program cuts aid to 500,000 Palestinians in Gaza",
       "originalText": "Amid funding shortages, the World Food Program has said it is being forced to reduce necessary aid. Over two-thirds of Palestinians in Gaza are facing acute hunger, according to the agency.",
+      "excerptOrigin": "rss",
       "title": "Продовольственная программа ООН сократила помощь 500 тысячам палестинцев в Газе",
       "text": "На фоне нехватки финансирования Всемирная продовольственная программа заявила, что вынуждена сократить необходимую помощь. По данным агентства, более двух третей палестинцев в Газе сталкиваются с острым голодом.",
-      "translation": "argos"
-    },
-    {
-      "id": "558e15c8a6fce7a28dd2",
-      "sourceId": "tass",
-      "source": "ТАСС",
-      "country": "RU",
-      "language": "ru",
-      "sourceKind": "Государственное информационное агентство",
-      "url": "https://tass.ru/ekonomika/28229697",
-      "publishedAt": "2026-10-19T11:40:51+00:00",
-      "originalTitle": "Аксаков объяснил, чем поможет Минфину новый статус Силуанова",
-      "originalText": "Назначение министра финансов вице-премьером расширит участие ведомства в координации экономполитики, считает председатель комитета Госдумы по финансовому рынку",
-      "title": "Аксаков объяснил, чем поможет Минфину новый статус Силуанова",
-      "text": "Назначение министра финансов вице-премьером расширит участие ведомства в координации экономполитики, считает председатель комитета Госдумы по финансовому рынку",
-      "translation": "original"
-    },
-    {
-      "id": "66f6c4a42d97b6db7233",
-      "sourceId": "tass",
-      "source": "ТАСС",
-      "country": "RU",
-      "language": "ru",
-      "sourceKind": "Государственное информационное агентство",
-      "url": "https://tass.ru/proisshestviya/28229669",
-      "publishedAt": "2026-10-19T11:40:08+00:00",
-      "originalTitle": "Житель Коми потерял 2,84 млн рублей при попытке привезти внедорожник из Китая",
-      "originalText": "Злоумышленник пытался выманить у мужчины еще 400 тыс. рублей якобы для таможенного оформления",
-      "title": "Житель Коми потерял 2,84 млн рублей при попытке привезти внедорожник из Китая",
-      "text": "Злоумышленник пытался выманить у мужчины еще 400 тыс. рублей якобы для таможенного оформления",
-      "translation": "original"
-    },
-    {
-      "id": "2a0deb6236661875e2c6",
-      "sourceId": "npr",
-      "source": "NPR",
-      "country": "US",
-      "language": "en",
-      "sourceKind": "Некоммерческая редакция",
-      "url": "https://www.npr.org/2026/10/19/g-s1-148737/australia-lawmaker-critically-injured",
-      "publishedAt": "2026-10-19T11:38:43+00:00",
-      "originalTitle": "Australian prime minister says lawmaker critically injured by car is 'no accident'",
-      "originalText": "A car hit an Australian federal independent lawmaker on Monday, critically injuring her in an apparent deliberate attack, Prime Minister Anthony Albanese said. The driver was arrested.",
-      "title": "Премьер-министр Австралии заявил, что пострадавший от автокатастрофы законодатель - \"не несчастный случай\"",
-      "text": "Автомобиль врезался в австралийского федерального независимого законодателя в понедельник, критически ранив ее в результате очевидного преднамеренного нападения, сказал премьер-министр Энтони Албанезе. Водитель был арестован.",
       "translation": "argos"
     },
     {
@@ -246,6 +238,7 @@
       "publishedAt": "2026-10-19T11:37:23+00:00",
       "originalTitle": "Politico узнало об «ужасных» спорах из-за миграции в ЕС на фоне протестов",
       "originalText": "На саммите ЕС лидер устроили «ужасные» и «очень прямолинейные дебаты» по вопросам миграции, «недостойные заседания Европейского совета», сообщает Politico. Это усиливает разногласия в блоке на фоне беспорядков во Франции",
+      "excerptOrigin": "rss",
       "title": "Politico узнало об «ужасных» спорах из-за миграции в ЕС на фоне протестов",
       "text": "На саммите ЕС лидер устроили «ужасные» и «очень прямолинейные дебаты» по вопросам миграции, «недостойные заседания Европейского совета», сообщает Politico. Это усиливает разногласия в блоке на фоне беспорядков во Франции",
       "translation": "original"
@@ -261,6 +254,7 @@
       "publishedAt": "2026-10-19T11:30:09+00:00",
       "originalTitle": "В Британии начнут штрафовать на £1000 за музыку из телефона в поездах",
       "originalText": "В Великобритании будут штрафовать на £1000 (ок.",
+      "excerptOrigin": "rss",
       "title": "В Британии начнут штрафовать на £1000 за музыку из телефона в поездах",
       "text": "В Великобритании будут штрафовать на £1000 (ок.",
       "translation": "original"
@@ -276,6 +270,7 @@
       "publishedAt": "2026-10-19T11:26:13+00:00",
       "originalTitle": "Brook says he has 'learned a lot' from off-field issues",
       "originalText": "White-ball captain Harry Brook says he has \"learned a lot\" as a captain and a person - and wants to be the player England fans rely on.",
+      "excerptOrigin": "rss",
       "title": "Брук говорит, что он «многому научился» из-за проблем вне поля",
       "text": "Капитан \"Белого мяча\" Гарри Брук говорит, что он \"многому научился\" как капитан и человек - и хочет быть игроком, на которого полагаются болельщики сборной Англии.",
       "translation": "argos"
@@ -291,6 +286,7 @@
       "publishedAt": "2026-10-19T11:25:45+00:00",
       "originalTitle": "Синоптик предупредил москвичей о первых заморозках",
       "originalText": "В Москве в ночь на вторник, 20 октября, температура впервые в этом сезоне опустится до околонулевых значений, а в Подмосковье ожидаются заморозки до минус 3 градусов, сообщил ведущий специалист центра погоды «Фобос» Евгений Тишковец.",
+      "excerptOrigin": "rss",
       "title": "Синоптик предупредил москвичей о первых заморозках",
       "text": "В Москве в ночь на вторник, 20 октября, температура впервые в этом сезоне опустится до околонулевых значений, а в Подмосковье ожидаются заморозки до минус 3 градусов, сообщил ведущий специалист центра погоды «Фобос» Евгений Тишковец.",
       "translation": "original"
@@ -306,6 +302,7 @@
       "publishedAt": "2026-10-19T11:23:45+00:00",
       "originalTitle": "Почти полмиллиона жителей Газы лишатся продовольственной помощи ООН",
       "originalText": "Всемирная продовольственная программа (ВПП) ООН из-за нехватки финансирования сокращает помощь в секторе Газа, почти 500 тыс.",
+      "excerptOrigin": "rss",
       "title": "Почти полмиллиона жителей Газы лишатся продовольственной помощи ООН",
       "text": "Всемирная продовольственная программа (ВПП) ООН из-за нехватки финансирования сокращает помощь в секторе Газа, почти 500 тыс.",
       "translation": "original"
@@ -321,6 +318,7 @@
       "publishedAt": "2026-10-19T11:22:26+00:00",
       "originalTitle": "Man accused of mass train stabbing admits wounding",
       "originalText": "Anthony Williams is in court after multiple stabbings on a train that was forced to stop in Huntingdon.",
+      "excerptOrigin": "rss",
       "title": "Мужчина, обвиняемый в ножевом ранении в поезде, признался в ранении",
       "text": "Энтони Уильямс предстал перед судом после нескольких ножевых ранений в поезде, который был вынужден остановиться в Хантингдоне.",
       "translation": "argos"
@@ -336,6 +334,7 @@
       "publishedAt": "2026-10-19T11:22:06+00:00",
       "originalTitle": "Reform MSP quits party to sit as independent",
       "originalText": "Amanda Bland's decision relegates the party to the third-largest group at Holyrood, with one member fewer than Labour.",
+      "excerptOrigin": "rss",
       "title": "Реформа MSP покинула партию, чтобы стать независимой",
       "text": "Решение Аманды Бланд переносит партию в третью по величине группу в Холируде, с одним членом меньше, чем Лейбористская партия.",
       "translation": "argos"
@@ -350,9 +349,10 @@
       "url": "https://www.rbc.ru/quote/19/10/2026/6ad5f7619a79472423969e7a",
       "publishedAt": "2026-10-19T11:21:44+00:00",
       "originalTitle": "Маск пообещал подарить по одной акции SpaceX каждому ребенку в США",
-      "originalText": "Маск сообщил о планах подарить по одной акции аэрокосмической компании SpaceX «каждому ребенку в Америке». Общая стоимость пожертвования может составить примерно $10,5 млрд",
+      "originalText": "Маск сообщил о планах подарить по одной акции аэрокосмической компании SpaceX «каждому ребенку в Америке». Общая стоимость подарка может составить примерно $10,5 млрд",
+      "excerptOrigin": "rss",
       "title": "Маск пообещал подарить по одной акции SpaceX каждому ребенку в США",
-      "text": "Маск сообщил о планах подарить по одной акции аэрокосмической компании SpaceX «каждому ребенку в Америке». Общая стоимость пожертвования может составить примерно $10,5 млрд",
+      "text": "Маск сообщил о планах подарить по одной акции аэрокосмической компании SpaceX «каждому ребенку в Америке». Общая стоимость подарка может составить примерно $10,5 млрд",
       "translation": "original"
     },
     {
@@ -366,6 +366,7 @@
       "publishedAt": "2026-10-19T11:16:43+00:00",
       "originalTitle": "SC upholds cancellation of patta over Tamil Nadu water body, orders alternative site for 20 flat owners",
       "originalText": "A Bench of Justices S.V.N. Bhatti and N.V. Anjaria directed the Tamil Nadu government to allot a suitable site to the 20 flat owners within six months before demolishing their apartments",
+      "excerptOrigin": "rss",
       "title": "СК поддерживает отмену патты над водоемом Тамилнад, заказывает альтернативную площадку для 20 владельцев квартир",
       "text": "Судьи С.В.Н. Бхатти и Н.В. Анджария поручили правительству Тамилнада выделить подходящее место для 20 владельцев квартир в течение шести месяцев, прежде чем снести их квартиры.",
       "translation": "argos"
@@ -381,6 +382,7 @@
       "publishedAt": "2026-10-19T11:15:43+00:00",
       "originalTitle": "2026 midterms could be the most expensive on record. And, Macron condemns protests",
       "originalText": "More than $15 billion has been raised in this year's midterm elections. And, France's president is condemning the violent protests erupting across the country.",
+      "excerptOrigin": "rss",
       "title": "Средние семестры 2026 года могут быть самыми дорогими в истории. Макрон осудил протесты",
       "text": "На промежуточных выборах в этом году было собрано более 15 миллиардов долларов. Президент Франции осуждает бурные протесты, разгоревшиеся по всей стране.",
       "translation": "argos"
@@ -396,6 +398,7 @@
       "publishedAt": "2026-10-19T11:15:38+00:00",
       "originalTitle": "Разгром люкса и «распаковка» после погромов во Франции. Видео",
       "originalText": "Во время беспорядков и погромов в городах Франции оказались повреждены и разграблены многочисленные магазины, торгующие продуктами питания, спортивными товарами, одеждой, обувью, предметами роскоши и смартфонами, передает французское издание CNews.",
+      "excerptOrigin": "rss",
       "title": "Разгром люкса и «распаковка» после погромов во Франции. Видео",
       "text": "Во время беспорядков и погромов в городах Франции оказались повреждены и разграблены многочисленные магазины, торгующие продуктами питания, спортивными товарами, одеждой, обувью, предметами роскоши и смартфонами, передает французское издание CNews.",
       "translation": "original"
@@ -411,6 +414,7 @@
       "publishedAt": "2026-10-19T11:11:54+00:00",
       "originalTitle": "Prior nod to probe bribe demand by police personnel not needed under anti-graft law: Supreme Court",
       "originalText": "The significant observation was made by a Bench of Justices S.V.N. Bhatti and N.V. Anjaria in its judgment delivered on October 16",
+      "excerptOrigin": "rss",
       "title": "До начала расследования запроса на взятку со стороны сотрудников полиции, который не нужен в соответствии с законом о борьбе с взяточничеством: Верховный суд",
       "text": "Значительное замечание было сделано группой судей С.В.Н. Бхатти и Н.В. Анджария в своем решении от 16 октября.",
       "translation": "argos"
@@ -426,6 +430,7 @@
       "publishedAt": "2026-10-19T11:08:45+00:00",
       "originalTitle": "Neha Bora moves Delhi High Court against peace bond notice",
       "originalText": "AISA said Neha Bora’s petition seeks an immediate stay and withdrawal of the notice, and argues that the notice is prima facie ambiguous and factually incorrect",
+      "excerptOrigin": "rss",
       "title": "Неха Бора направила в Высокий суд Дели уведомление о мирной облигации",
       "text": "AISA заявила, что петиция Нехи Боры требует немедленного приостановления и отзыва уведомления и утверждает, что уведомление prima facie неоднозначно и фактически неверно.",
       "translation": "argos"
@@ -441,6 +446,7 @@
       "publishedAt": "2026-10-19T11:08:16+00:00",
       "originalTitle": "MEA rejects OIC’s ‘anti-India’ references, accuses Pakistan of orchestrating them",
       "originalText": "The MEA said that the Union Territories of Jammu and Kashmir and Ladakh are integral and inalienable parts of India, and “politically motivated propaganda” cannot alter that reality",
+      "excerptOrigin": "rss",
       "title": "MEA отвергает «антииндийские» ссылки ОИС и обвиняет Пакистан в их организации",
       "text": "Союзные территории Джамму, Кашмира и Ладакха являются неотъемлемой и неотъемлемой частью Индии, и «политически мотивированная пропаганда» не может изменить эту реальность.",
       "translation": "argos"
@@ -456,6 +462,7 @@
       "publishedAt": "2026-10-19T11:08:00+00:00",
       "originalTitle": "Over 16% of Japanese companies experience data breaches",
       "originalText": "According to the survey, 30.2% of large companies suffered or potentially suffered breaches, significantly higher than 14.3% among small businesses.",
+      "excerptOrigin": "rss",
       "title": "Более 16% японских компаний столкнулись с утечкой данных",
       "text": "Согласно опросу, 30,2% крупных компаний пострадали или потенциально пострадали от нарушений, что значительно выше 14,3% среди малого бизнеса.",
       "translation": "argos"
@@ -471,6 +478,7 @@
       "publishedAt": "2026-10-19T11:01:48+00:00",
       "originalTitle": "New York City Has a Rat Killing Machine",
       "originalText": "Are the humans winning? That’s hard to say. But we certainly have a technological advantage.",
+      "excerptOrigin": "rss",
       "title": "В Нью-Йорке есть машина для убийства крыс",
       "text": "Люди побеждают? Трудно сказать. Но у нас, безусловно, есть технологическое преимущество.",
       "translation": "argos"
@@ -486,6 +494,7 @@
       "publishedAt": "2026-10-19T11:00:19+00:00",
       "originalTitle": "Les Misérables: Macron's 'sense of detachment' amid rising living costs and youth 'fears for future'",
       "originalText": "France’s escalating protest movement is exposing a widening disconnect between political leadership and public frustration, while raising questions about the country’s long tradition of social unrest. Chris Reynolds, Professor of French and European Studies at Nottingham Trent University, argues that President Emmanuel Macron’s latest address was characterised by a troubling “sense of detachment,” offering little to resolve the structural grievances driving the demonstrations.",
+      "excerptOrigin": "rss",
       "title": "Les Misérables: «чувство отстраненности» Макрона на фоне роста стоимости жизни и «страхов перед будущим»",
       "text": "Растущее протестное движение во Франции демонстрирует растущий разрыв между политическим руководством и общественным разочарованием, одновременно поднимая вопросы о давней традиции социальных волнений в стране. Крис Рейнольдс, профессор французских и европейских исследований в Ноттингемском Трентском университете, утверждает, что последнее обращение президента Эммануэля Макрона характеризовалось тревожным «чувством отрешенности», практически не предлагая разрешения структурных претензий, вызывающих демонстрации.",
       "translation": "argos"
@@ -501,6 +510,7 @@
       "publishedAt": "2026-10-19T10:59:55+00:00",
       "originalTitle": "To Find Criminals and Child Exploitation in Gold Mines, We Just Had to Look",
       "originalText": "Layers of people certify that gold is free from rights abuses and criminality. Nobody makes them leave their desks.",
+      "excerptOrigin": "rss",
       "title": "Чтобы найти преступников и эксплуатировать детей на золотых приисках, нам просто нужно было посмотреть.",
       "text": "Слои людей подтверждают, что золото свободно от нарушений прав и преступности. Никто не заставляет их покидать свои столы.",
       "translation": "argos"
@@ -516,6 +526,7 @@
       "publishedAt": "2026-10-19T10:58:09+00:00",
       "originalTitle": "Kerala High Court directs release of ₹9.73 crore for 225 victim compensation claims",
       "originalText": "The court also directed the secretaries of the respective District Legal Services Authorities to collect all required documents from victims while their cases were pending before the court to avoid delays in processing and disbursing compensation",
+      "excerptOrigin": "rss",
       "title": "Верховный суд Кералы вынес решение об освобождении 9,73 крор по 225 искам о компенсации жертвам",
       "text": "Суд также распорядился, чтобы секретари соответствующих окружных юридических служб собирали все необходимые документы у жертв во время рассмотрения их дел в суде, чтобы избежать задержек в обработке и выплате компенсации.",
       "translation": "argos"
@@ -531,6 +542,7 @@
       "publishedAt": "2026-10-19T10:57:41+00:00",
       "originalTitle": "Marseille cleans up after looting and vandalism in protest",
       "originalText": "Rubbish littered the streets of Marseille on Sunday, one day after demonstrations against rising living costs and declining public services spiralled out of control in some of the worst violence France has witnessed for decades. On Saturday, black-clad protesters broke into Marseille's city hall and defaced the building with graffiti, while public buildings were also targeted in other French cities.",
+      "excerptOrigin": "rss",
       "title": "Марсель убирается после мародерства и вандализма в знак протеста",
       "text": "В воскресенье на улицах Марселя разлился мусор, на следующий день после того, как демонстрации против роста стоимости жизни и снижения государственных услуг вышли из-под контроля в результате худшего насилия, которое Франция наблюдала на протяжении десятилетий. В субботу одетые в черное протестующие ворвались в мэрию Марселя и испортили здание граффити, в то время как общественные здания также были нацелены на другие французские города.",
       "translation": "argos"
@@ -546,6 +558,7 @@
       "publishedAt": "2026-10-19T10:57:34+00:00",
       "originalTitle": "How a Trillion-Dollar Industry Launders Illegal Gold",
       "originalText": "The line between dirty and clean gold is an industry fiction. Wall Street and governments profit off gold from criminals, gangsters and those who exploit children.",
+      "excerptOrigin": "rss",
       "title": "Как индустрия на триллион долларов отмывает незаконное золото",
       "text": "Граница между грязным и чистым золотом - это промышленная выдумка. Уолл-стрит и правительства получают прибыль от золота от преступников, гангстеров и тех, кто эксплуатирует детей.",
       "translation": "argos"
@@ -561,6 +574,7 @@
       "publishedAt": "2026-10-19T10:55:00+00:00",
       "originalTitle": "From delivery driver to global fame: A Korean writer's journey",
       "originalText": "You Yeong-Gwang's The Rainfall Market tells the story of a mysterious, hidden shop that only opens when it rains. For a debut novel by an unknown author, it was a massive success.",
+      "excerptOrigin": "rss",
       "title": "От водителя доставки до мировой славы: путешествие корейского писателя",
       "text": "You Yeong-Gwang's The Rainfall Market рассказывает историю таинственного, скрытого магазина, который открывается только когда идет дождь. Для дебютного романа неизвестного автора это был массовый успех.",
       "translation": "argos"
@@ -576,6 +590,7 @@
       "publishedAt": "2026-10-19T10:53:15+00:00",
       "originalTitle": "'Lame-duck president' Macron notes 'failures' after France unrest",
       "originalText": "French President Emmanuel Macron on Monday rejected Interior Minister Laurent Nunez's resignation. The move came in response to weekend protests, during which nearly 2,400 people were arrested and almost 1,000 police and gendarmes injured on Saturday. FRANCE 24's International affairs editor Philip Turle has more.",
+      "excerptOrigin": "rss",
       "title": "Президент «Хромой утки» Макрон отмечает «провалы» после беспорядков во Франции",
       "text": "Президент Франции Эммануэль Макрон в понедельник отклонил отставку министра внутренних дел Лорана Нуньеса. Этот шаг был предпринят в ответ на протесты, в ходе которых в субботу были арестованы почти 2400 человек и ранены почти 1000 полицейских и жандармов. У редактора журнала FRANCE 24 по международным делам Филипа Турла их больше.",
       "translation": "argos"
@@ -591,6 +606,7 @@
       "publishedAt": "2026-10-19T10:52:25+00:00",
       "originalTitle": "Four arrested after police officer injured in shooting",
       "originalText": "The officer was shot in the foot and remains in hospital in a stable condition, police say.",
+      "excerptOrigin": "rss",
       "title": "Четверо задержаны после ранения полицейского при стрельбе",
       "text": "Офицер был ранен в ногу и остается в больнице в стабильном состоянии, говорят в полиции.",
       "translation": "argos"
@@ -606,6 +622,7 @@
       "publishedAt": "2026-10-19T10:41:48+00:00",
       "originalTitle": "Peaceful protest is fundamental right, but protesters’ credentials must be weighed: Bombay HC",
       "originalText": "The Bombay High Court directed the Maharashtra government to respond to petitions alleging illegal detention of protesters during the anti-CEC demonstrations, while cautioning that “criminals should not participate” under the guise of civilians",
+      "excerptOrigin": "rss",
       "title": "Мирный протест является фундаментальным правом, но полномочия протестующих должны быть взвешены.",
       "text": "Верховный суд Бомбея поручил правительству Махараштры ответить на петиции о незаконном задержании протестующих во время демонстраций против ЦИК, предупреждая при этом, что «преступники не должны участвовать» под видом гражданских лиц.",
       "translation": "argos"
@@ -621,6 +638,7 @@
       "publishedAt": "2026-10-19T10:38:38+00:00",
       "originalTitle": "A Bad Combination",
       "originalText": "We take a look at the human face of America’s utility bill crisis.",
+      "excerptOrigin": "rss",
       "title": "Плохая комбинация",
       "text": "Мы взглянем на человеческое лицо американского кризиса коммунальных услуг.",
       "translation": "argos"
@@ -636,6 +654,7 @@
       "publishedAt": "2026-10-19T10:38:00+00:00",
       "originalTitle": "The homeless man living in front of a London mega-mansion",
       "originalText": "Anders Fernstedt lives in London without any money. The Swedish native has built a most unusual home under the porch of a house worth over €200 million. How did that happen?",
+      "excerptOrigin": "rss",
       "title": "Бездомный, живущий перед лондонским особняком",
       "text": "Андерс Фернштедт живет в Лондоне без денег. Уроженец Швеции построил самый необычный дом под крыльцом дома стоимостью более 200 миллионов евро. Как это случилось?",
       "translation": "argos"
@@ -651,6 +670,7 @@
       "publishedAt": "2026-10-19T10:34:18+00:00",
       "originalTitle": "Israeli police arrest 10 over settler attacks on journalist and diplomats in West Bank",
       "originalText": "It comes after masked settlers attacked Palestinians and European officials visiting the West Bank during olive harvesting season.",
+      "excerptOrigin": "rss",
       "title": "Израильская полиция арестовала 10 человек за нападения на журналистов и дипломатов на Западном берегу реки Иордан",
       "text": "Это произошло после того, как поселенцы в масках напали на палестинцев и европейских чиновников, посещающих Западный берег во время сбора урожая оливок.",
       "translation": "argos"
@@ -666,6 +686,7 @@
       "publishedAt": "2026-10-19T10:33:12+00:00",
       "originalTitle": "Kenya pastor accused of ordering parents to starve children to death faces verdict",
       "originalText": "Self-proclaimed pastor Paul Mackenzie faces 191 murder charges - all but one of them children.",
+      "excerptOrigin": "rss",
       "title": "Кенийского пастора обвинили в том, что он приказал родителям заморить детей голодом до смерти",
       "text": "Самопровозглашенному пастору Полу Маккензи предъявлено 191 обвинение в убийстве — все, кроме одного, дети.",
       "translation": "argos"
@@ -681,6 +702,7 @@
       "publishedAt": "2026-10-19T10:30:59+00:00",
       "originalTitle": "France’s Far Right Seizes the Moment as Rioting Stuns the Country",
       "originalText": "The National Rally, already ahead in the polls, presented itself as the party best placed to restore law and order.",
+      "excerptOrigin": "rss",
       "title": "Крайне правые во Франции захватили момент, когда беспорядки потрясли страну",
       "text": "«Национальное ралли», которое уже впереди в опросах, представило себя как партию, наилучшим образом способную восстановить закон и порядок.",
       "translation": "argos"
@@ -696,6 +718,7 @@
       "publishedAt": "2026-10-19T10:29:21+00:00",
       "originalTitle": "French retailers reel after weekend of riots, looting",
       "originalText": "Representatives of the French business community gather for a crisis meeting with the government following widespread looting during the weekend's protests. Meanwhile, the country's tourism sector fears a drop in winter holiday bookings, and bond and currency traders sell off French debt and the euro.",
+      "excerptOrigin": "rss",
       "title": "Французские ритейлеры шатаются после выходных беспорядков, грабежей",
       "text": "Представители французского бизнес-сообщества собираются на кризисную встречу с правительством после широкомасштабного мародерства во время протестов в выходные. Между тем, туристический сектор страны опасается падения зимних праздничных бронирований, а трейдеры облигаций и валюты продают французский долг и евро.",
       "translation": "argos"
@@ -711,6 +734,7 @@
       "publishedAt": "2026-10-19T10:22:00+00:00",
       "originalTitle": "Japan to restart accepting foreign workers for meal services at some facilities",
       "originalText": "The government aims to adopt the plan at a Cabinet meeting in December.",
+      "excerptOrigin": "rss",
       "title": "Япония возобновит прием иностранных работников для питания на некоторых объектах",
       "text": "Правительство намерено принять план на заседании кабинета министров в декабре.",
       "translation": "argos"
@@ -726,6 +750,7 @@
       "publishedAt": "2026-10-19T10:19:00+00:00",
       "originalTitle": "Greece: At least 12 die in migrant drownings overnight",
       "originalText": "Authorities say 12 people, including an infant, have drowned in Greek waters in two separate incidents overnight. Another 22 people were rescued. A search-and-rescue operation is ongoing.",
+      "excerptOrigin": "rss",
       "title": "Греция: 12 человек погибли в результате утопления мигрантов",
       "text": "12 человек, в том числе младенец, утонули в греческих водах в двух отдельных инцидентах за одну ночь. Еще 22 человека были спасены. Продолжается поисково-спасательная операция.",
       "translation": "argos"
@@ -741,6 +766,7 @@
       "publishedAt": "2026-10-19T10:13:40+00:00",
       "originalTitle": "Massive clean-up operation sweeps across France after protests",
       "originalText": "A massive clean-up operation was under way across France on Monday, from Lille in the north to Marseille in the south and from Strasbourg in the east to Bordeaux in the southwest, following nationwide demonstrations last weekend. The protests over high prices and declining public services were followed by widespread looting and damage to shops, with thousands arrested. FRANCE 24's Luke Shrago reports from central Paris.",
+      "excerptOrigin": "rss",
       "title": "Массовая операция по очистке территории Франции после протестов",
       "text": "Массовая операция по очистке была проведена по всей Франции в понедельник, от Лилля на севере до Марселя на юге и от Страсбурга на востоке до Бордо на юго-западе, после общенациональных демонстраций в минувшие выходные. За протестами по поводу высоких цен и снижения государственных услуг последовали массовые грабежи и повреждения магазинов, тысячи были арестованы. Люк Шраго (Luke Shrago) из центральной части Парижа.",
       "translation": "argos"
@@ -756,6 +782,7 @@
       "publishedAt": "2026-10-19T10:11:13+00:00",
       "originalTitle": "'Shame', 'anger', 'chaos': Papers react to polarising riots in France",
       "originalText": "PRESS REVIEW – Monday, October 19: French and international papers discuss the anti-government protests that turned violent at the weekend and their aftermath across France.",
+      "excerptOrigin": "rss",
       "title": "\"Позор\", \"гнев\", \"хаос\": Документы реагируют на поляризующие беспорядки во Франции",
       "text": "В понедельник, 19 октября, французские и международные газеты обсуждают антиправительственные протесты, которые стали насильственными в выходные дни, и их последствия по всей Франции.",
       "translation": "argos"
@@ -771,6 +798,7 @@
       "publishedAt": "2026-10-19T10:06:00+00:00",
       "originalTitle": "Australian MP seriously hurt in suspected car attack",
       "originalText": "Helen Haines, an independent federal lawmaker, has been struck by a car in what Australia's prime minister has called an apparent attack.",
+      "excerptOrigin": "rss",
       "title": "Австралийский депутат серьезно пострадал при подозрении на автомобильную атаку",
       "text": "Хелен Хейнс, независимый федеральный законодатель, была поражена автомобилем в результате того, что премьер-министр Австралии назвал очевидной атакой.",
       "translation": "argos"
@@ -786,6 +814,7 @@
       "publishedAt": "2026-10-19T10:01:00+00:00",
       "originalTitle": "Ukraine got 'no warning' of Russian ballistic strikes, Zelenskyy says",
       "originalText": "Massive strikes overnight hit the capital Kyiv, and damaged power stations, killing at least one person and cutting power to hundreds of thousands.",
+      "excerptOrigin": "rss",
       "title": "Украина не получила никакого предупреждения о российских баллистических ударах, говорит Зеленский",
       "text": "Массовые удары в одночасье обрушились на столицу Киев и повредили электростанции, убив по меньшей мере одного человека и сократив мощность до сотен тысяч.",
       "translation": "argos"
@@ -801,6 +830,7 @@
       "publishedAt": "2026-10-19T10:00:08+00:00",
       "originalTitle": "Israel’s High-Stakes Election, and How Illegal Gold Is Getting Into the Global Market",
       "originalText": "Plus, the search for “superhabitable” planets.",
+      "excerptOrigin": "rss",
       "title": "Выборы в Израиле и как незаконное золото попадает на мировой рынок",
       "text": "Поиск «сверхобитаемых» планет.",
       "translation": "argos"
@@ -816,6 +846,7 @@
       "publishedAt": "2026-10-19T09:59:00+00:00",
       "originalTitle": "China reveals advanced nuclear sub was used to test-fire missile",
       "originalText": "China had only conducted two publicly known ICBM tests in the Pacific before July, and both were land-based launches.",
+      "excerptOrigin": "rss",
       "title": "Китай показал, что передовая ядерная субмарина использовалась для испытания ракеты",
       "text": "До июля Китай провел только два испытания МБР в Тихом океане, и оба были наземными.",
       "translation": "argos"
@@ -831,6 +862,7 @@
       "publishedAt": "2026-10-19T09:11:00+00:00",
       "originalTitle": "New species of sperm whale identified from fossils found in Gunma",
       "originalText": "The species combines traits of ancient and modern sperm whales, and is the third new sperm whale species identified from fossils in Japan.",
+      "excerptOrigin": "rss",
       "title": "Новый вид кашалота идентифицирован из окаменелостей, найденных в Гунме",
       "text": "Вид сочетает в себе черты древних и современных кашалотов и является третьим новым видом кашалотов, идентифицированным из окаменелостей в Японии.",
       "translation": "argos"
@@ -846,6 +878,7 @@
       "publishedAt": "2026-10-19T09:00:00+00:00",
       "originalTitle": "The real reason it's going to take a while to know who won in some midterm races",
       "originalText": "Hint: It's not only because California counts slowly.",
+      "excerptOrigin": "rss",
       "title": "Настоящая причина, по которой потребуется некоторое время, чтобы узнать, кто выиграл в некоторых промежуточных гонках.",
       "text": "Подсказка: не только потому, что Калифорния считает медленно.",
       "translation": "argos"
@@ -861,6 +894,7 @@
       "publishedAt": "2026-10-19T09:00:00+00:00",
       "originalTitle": "A Kelvin wave raised sea levels on the West Coast. More are coming",
       "originalText": "A large underwater wave moved up the West Coast, raising sea levels. Scientists say it's driven by El Niño and it's going to happen again.",
+      "excerptOrigin": "rss",
       "title": "Волна Кельвина подняла уровень моря на западном побережье. Больше приходит",
       "text": "Большая подводная волна поднялась на западное побережье, повысив уровень моря. Ученые говорят, что это вызвано Эль-Ниньо, и это произойдет снова.",
       "translation": "argos"
@@ -876,6 +910,7 @@
       "publishedAt": "2026-10-19T08:46:44+00:00",
       "originalTitle": "Morning news brief",
       "originalText": "Ukraine and Russia exchange strikes as relations between U.S. and Ukraine deteriorate, the midterms are on track to be the most expensive on record, French president denounces violent protests.",
+      "excerptOrigin": "rss",
       "title": "Утренние новости",
       "text": "Украина и Россия обмениваются ударами, поскольку отношения между США и Украиной ухудшаются, промежуточные выборы являются самыми дорогими в истории, президент Франции осуждает насильственные протесты.",
       "translation": "argos"
@@ -891,8 +926,25 @@
       "publishedAt": "2026-10-19T08:46:18+00:00",
       "originalTitle": "Michigan's Democratic Senate candidate Abdul El-Sayed campaigns in GOP stronghold",
       "originalText": "Michigan's Democratic U.S. Senate candidate Abdul El-Sayed is campaigning in the GOP stronghold of Michigan's Upper Peninsula, an area that hasn't voted for a Democrat in Congress in over a decade.",
+      "excerptOrigin": "rss",
       "title": "Кандидат в Сенат от Демократической партии Мичигана Абдул Эль-Сайед проводит кампании в оплоте Республиканской партии",
       "text": "Кандидат в сенат от Демократической партии Мичигана Абдул Эль-Сайед проводит кампанию в оплоте Республиканской партии на Верхнем полуострове Мичигана, в районе, который не голосовал за демократа в Конгрессе более десяти лет.",
+      "translation": "argos"
+    },
+    {
+      "id": "b1e5fc1f0ab8d70b8b3b",
+      "sourceId": "npr",
+      "source": "NPR",
+      "country": "US",
+      "language": "en",
+      "sourceKind": "Некоммерческая редакция",
+      "url": "https://www.npr.org/2026/10/19/nx-s1-5993523/solar-power-is-changing-agriculture-in-pakistan-but-some-fear-it-could-cause-issues",
+      "publishedAt": "2026-10-19T08:45:58+00:00",
+      "originalTitle": "Solar power is changing agriculture in Pakistan, but some fear it could cause issues",
+      "originalText": "Solar power is transforming agriculture in Pakistan. But in a country already facing water scarcity and extreme weather, some fear their widespread use could cause problems.",
+      "excerptOrigin": "rss",
+      "title": "Солнечная энергия меняет сельское хозяйство в Пакистане, но некоторые опасаются, что это может вызвать проблемы.",
+      "text": "Солнечная энергия преобразует сельское хозяйство в Пакистане. Но в стране, уже столкнувшейся с нехваткой воды и экстремальными погодными условиями, некоторые опасаются, что их широкое использование может вызвать проблемы.",
       "translation": "argos"
     },
     {
@@ -906,6 +958,7 @@
       "publishedAt": "2026-10-19T08:44:00+00:00",
       "originalTitle": "Tensions overshadow 70th anniversary of key Japan-Soviet declaration",
       "originalText": "In response to Japanese sanctions, Russia has suspended peace treaty talks and asserted that a territorial dispute has been settled.",
+      "excerptOrigin": "rss",
       "title": "Напряженность затмила 70-летие ключевой японо-советской декларации",
       "text": "В ответ на японские санкции Россия приостановила переговоры по мирному договору и заявила, что территориальный спор урегулирован.",
       "translation": "argos"
@@ -921,6 +974,7 @@
       "publishedAt": "2026-10-19T08:37:00+00:00",
       "originalTitle": "Sydney’s new $4 billion airport set to open with barely any flights",
       "originalText": "Western Sydney International is already drawing unfavorable comparisons with airports elsewhere that ultimately failed to live up to expectations.",
+      "excerptOrigin": "rss",
       "title": "Новый аэропорт Сиднея стоимостью $4 млрд откроется практически без рейсов",
       "text": "Western Sydney International уже проводит неблагоприятные сравнения с аэропортами других стран, которые в конечном итоге не оправдали ожиданий.",
       "translation": "argos"
@@ -935,9 +989,10 @@
       "url": "https://news.cgtn.com/news/2026-10-19/Graphics-China-s-engagement-in-global-governance-1RmyErPAupa/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
       "publishedAt": "2026-10-19T02:59:08+00:00",
       "originalTitle": "Graphics: China's engagement in global governance",
-      "originalText": "",
+      "originalText": "The 2026 Global Governance Forum (Xiongan) will be held from October 23-25 in Xiongan New Area under the theme \"Rebuilding Confidence and Cooperation: Reforming and Improving Global Governance in a Transforming World.\" Delegates from nearly 100",
+      "excerptOrigin": "metadata",
       "title": "Графика: участие Китая в глобальном управлении",
-      "text": "",
+      "text": "Форум по глобальному управлению 2026 года (Xiongan) пройдет с 23 по 25 октября в новом районе Сюнган под девизом «Восстановление доверия и сотрудничества: реформирование и совершенствование глобального управления в меняющемся мире». Делегаты из почти 100",
       "translation": "argos"
     },
     {
@@ -951,6 +1006,7 @@
       "publishedAt": "2026-10-19T01:01:06+00:00",
       "originalTitle": "Montenegrin PM meets Chinese FM",
       "originalText": "Montenegrin Prime Minister Milojko Spajic met with visiting Chinese Foreign Minister Wang Yi in Podgorica on Sunday. Both sides expressed willingness to further deepen bilateral relations and expand practical cooperation.",
+      "excerptOrigin": "rss",
       "title": "Премьер Черногории встретился с китайским министром иностранных дел",
       "text": "Премьер-министр Черногории Милойко Спайич встретился с министром иностранных дел Китая Ван И в Подгорице в воскресенье. Стороны выразили готовность к дальнейшему углублению двусторонних отношений и расширению практического сотрудничества.",
       "translation": "argos"
@@ -966,6 +1022,7 @@
       "publishedAt": "2026-10-18T23:08:59+00:00",
       "originalTitle": "Canadian PM confirms four killed in military base fire",
       "originalText": "Flames that killed four Canadian soldiers and left 19 people in critical condition began with a smoldering grass ‌fire that quickly grew in an Alberta base's training area where personnel were carrying out exercises, officials said on Sunday.",
+      "excerptOrigin": "rss",
       "title": "Премьер-министр Канады подтвердил гибель четырех человек при пожаре на военной базе",
       "text": "Огни, в результате которых погибли четыре канадских солдата и 19 человек остались в критическом состоянии, начались с тлеющего травяного огня, который быстро разросся в тренировочном районе базы в Альберте, где персонал проводил учения.",
       "translation": "argos"
@@ -980,9 +1037,10 @@
       "url": "https://newsus.cgtn.com/news/2026-10-19/Data-centers-lead-to-major-political-environmental-dilemmas-in-Mexico-1RlXeW6q1ZC/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
       "publishedAt": "2026-10-18T18:08:25+00:00",
       "originalTitle": "Data centers lead to major political, environmental dilemmas in Mexico",
-      "originalText": "",
+      "originalText": "The race to build artificial intelligence is driving a global boom in data centers, and Mexico wants a share of it.But in the center of the country, residents say the servers are causing problems.CGTN's Alasdair Baverstock reports.",
+      "excerptOrigin": "metadata",
       "title": "Центры обработки данных приводят к серьезным политическим и экологическим проблемам в Мексике.",
-      "text": "",
+      "text": "Гонка за создание искусственного интеллекта ведет к глобальному буму в центрах обработки данных, и Мексика хочет его долю. Но в центре страны жители говорят, что серверы вызывают проблемы. Об этом сообщает Alasdair Baverstock.",
       "translation": "argos"
     },
     {
@@ -996,6 +1054,7 @@
       "publishedAt": "2026-10-18T14:55:25+00:00",
       "originalTitle": "Premier Li says to advance Belt and Road cooperation with Tajikistan",
       "originalText": "Chinese Premier Li Qiang said on Sunday that China stands ready to work with Tajikistan to advance high-quality Belt and Road cooperation.",
+      "excerptOrigin": "rss",
       "title": "Премьер-министр Ли Кэцян заявил о развитии сотрудничества «Пояса и пути» с Таджикистаном",
       "text": "Премьер-министр Китая Ли Цян заявил в воскресенье, что Китай готов работать с Таджикистаном для продвижения высококачественного сотрудничества «Пояса и пути».",
       "translation": "argos"
@@ -1011,6 +1070,7 @@
       "publishedAt": "2026-10-18T14:42:49+00:00",
       "originalTitle": "Reporter’s Diary: How to take care of the elderly in Kenya?",
       "originalText": "Ephraim Matindi Hinga has lived through almost a century of change. From the transformation of Kenyan society to the challenges of growing old in a rapidly changing world, his life offers a window into a generation whose contributions built the foundations on which younger generations stand.",
+      "excerptOrigin": "rss",
       "title": "Дневник репортера: как ухаживать за пожилыми людьми в Кении?",
       "text": "Эфраим Матинди Хинга пережил почти столетие перемен. От трансформации кенийского общества до проблем старения в быстро меняющемся мире, его жизнь открывает окно в поколение, чей вклад заложил основы, на которых стоят молодые поколения.",
       "translation": "argos"
