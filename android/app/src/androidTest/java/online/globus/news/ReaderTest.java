@@ -2,13 +2,12 @@ package online.globus.news;
 
 import android.app.Instrumentation;
 import android.content.Intent;
-import android.graphics.Bitmap;
+import android.os.ParcelFileDescriptor;
 import android.view.KeyEvent;
 import android.webkit.WebView;
 import android.widget.FrameLayout;
 import androidx.test.platform.app.InstrumentationRegistry;
-import java.io.File;
-import java.io.FileOutputStream;
+import java.io.FileInputStream;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
@@ -27,9 +26,11 @@ public class ReaderTest {
         return result.get();
     }
     private void screenshot(String name) throws Exception {
-        Bitmap bitmap = instrumentation.getUiAutomation().takeScreenshot();
-        File file = new File(instrumentation.getTargetContext().getExternalFilesDir(null), name + ".png");
-        try (FileOutputStream out = new FileOutputStream(file)) { bitmap.compress(Bitmap.CompressFormat.PNG,100,out); }
+        try (ParcelFileDescriptor descriptor = instrumentation.getUiAutomation().executeShellCommand("screencap -p /sdcard/Download/globus-" + name + ".png");
+             FileInputStream input = new FileInputStream(descriptor.getFileDescriptor())) {
+            byte[] buffer = new byte[4096];
+            while (input.read(buffer) != -1) { }
+        }
     }
     @Test public void releaseReaderRespondsToTvRemote() throws Exception {
         instrumentation = InstrumentationRegistry.getInstrumentation();
