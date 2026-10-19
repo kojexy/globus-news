@@ -43,7 +43,7 @@ public class MainActivity extends Activity {
                 String path = uri.getPath();
                 if (path == null || path.equals("/")) path = "/index.html";
                 if (path.contains("..") || path.contains("\\")) return missing();
-                String mime = path.endsWith(".html") ? "text/html" : path.endsWith(".css") ? "text/css" : (path.endsWith(".js") || path.endsWith(".mjs")) ? "application/javascript" : path.endsWith(".json") || path.endsWith(".webmanifest") ? "application/json" : path.endsWith(".svg") ? "image/svg+xml" : "application/octet-stream";
+                String mime = path.endsWith(".html") ? "text/html" : path.endsWith(".css") ? "text/css" : (path.endsWith(".js") || path.endsWith(".mjs")) ? "application/javascript" : path.endsWith(".json") || path.endsWith(".webmanifest") ? "application/json" : path.endsWith(".ttf") ? "font/ttf" : path.endsWith(".svg") ? "image/svg+xml" : "application/octet-stream";
                 try {
                     HashMap<String,String> headers = new HashMap<>();
                     headers.put("Access-Control-Allow-Origin", "https://" + HOST);

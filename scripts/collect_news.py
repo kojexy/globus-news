@@ -68,6 +68,58 @@ def clean_text(value):
     return re.sub(r'\s+', ' ', ''.join(parser.parts)).strip()
 
 
+def is_photo_caption(text):
+    """Recognize only short visual-agency credits, not general source attributions."""
+    if not isinstance(text, str):
+        return False
+    paragraph = text.strip()
+    if not 12 <= len(paragraph) <= 500 or re.search(r'[\r\n]', paragraph) or re.match(r'^[«“"„]', paragraph):
+        return False
+    credit = re.search(r'\s+\/(VCG|CFP|Xinhua|Синьхуа)\/?\.?$', paragraph, re.I)
+    if not credit:
+        return False
+    return bool(re.fullmatch(r'VCG|CFP', credit[1], re.I) or re.match(
+        r'^(?:(?:A |The )?(?:file |archive )?photo(?:graph)?(?: of| shows| taken|:)|На фото(?:графии)?(?=[\s:])|(?:Архивное |Файловое )?Фото(?:графия)?[ :])', paragraph, re.I))
+
+
+def clean_article_text(text, titles=()):
+    """Remove standalone publisher controls; never filter a story by service names."""
+    controls = re.compile(r'^(?:Share|Partager|Поделиться|Advertisement|Реклама|Sign up|Subscribe|Подписаться|Читайте также|Related articles|Related topics|Read more)\s*[:：]?$', re.I)
+    metadata = re.compile(r'^(?:(?:Issued on|Modified(?: on)?|Updated(?: on)?|Published(?: on)?|Выпущено|Изменено|Обновлено|Опубликовано)\s*[:：]\s*)+$', re.I)
+    date = re.compile(r'^(?:\d{1,2}[/.\-]\d{1,2}[/.\-]\d{2,4}|\d{4}-\d{2}-\d{2})(?:\s*[-–—,·T]\s*|\s+)?(?:\d{1,2}:\d{2}(?::\d{2})?(?:\s*(?:UTC|GMT|Z|[+-]\d{2}:?\d{2}))?)?$', re.I)
+    video = [
+        re.compile(r'^To display this content from YouTube, you must enable advertisement tracking and audience measurement\.?$', re.I),
+        re.compile(r'^One of your browser extensions seems to be blocking the video player from loading\.\s*To watch this content, you may need to disable it on this site\.?$', re.I),
+        re.compile(r'^Чтобы (?:отобразить|показать) этот контент с YouTube, вы должны включить отслеживание рекламы и измерение аудитории\.?$', re.I),
+        re.compile(r'^Одно из расширений вашего браузера, похоже, блокирует загрузку видеоплеера\.\s*Чтобы посмотреть этот контент, вам может потребоваться отключить его на этом сайте\.?$', re.I),
+    ]
+    normalize = lambda value: ''.join(c for c in value.lower() if c.isalnum())
+    headings = {normalize(t) for t in titles if isinstance(t, str) and t.strip()}
+    paragraphs = [re.sub(r'[\t ]+', ' ', p).strip() for p in re.split(r'\n\s*\n', (text or '').replace('\r\n', '\n').replace('\r', '\n'))]
+    out, after_metadata = [], False
+    for paragraph in filter(None, paragraphs):
+        if metadata.fullmatch(paragraph):
+            after_metadata = True
+            continue
+        if after_metadata and date.fullmatch(paragraph):
+            continue
+        after_metadata = False
+        if controls.fullmatch(paragraph) or any(pattern.fullmatch(paragraph) for pattern in video) or is_photo_caption(paragraph):
+            continue
+        if len(out) < 3 and normalize(paragraph) in headings:
+            continue
+        out.append(paragraph)
+    return '\n\n'.join(out)
+
+
+def clean_article_record(article):
+    titles = [article.get('title', ''), article.get('originalTitle', '')]
+    for key in ('originalFullText', 'fullText', 'originalText', 'text'):
+        if key in article:
+            article[key] = clean_article_text(article[key], titles)
+    return article
+
+
 def excerpt(text, limit=650):
     if len(text) <= limit:
         return text
@@ -123,10 +175,12 @@ def parse_feed(data, source, now=None, limit=6):
         date = parse_date(field(item, ['pubDate', 'published', 'date', 'updated']))
         if date and (now - date > MAX_AGE or date > now + timedelta(hours=2)):
             continue
-        if not title or not url or url in seen:
+        if not title or not url or url in seen or re.match(r'^ns-graphics?\d*\s*\(', title, re.I):
             continue
         seen.add(url)
         description = excerpt(clean_text(field(item, ['description', 'summary', 'encoded', 'content'])))
+        if description == '記事がありません。':
+            description = ''
         if description == title:
             description = ''
         # Retain exactly the RSS teaser, with a strict length bound.
@@ -155,9 +209,7 @@ def extract_article(html, url, summary=''):
     body = trafilatura.extract(html, url=url, include_comments=False, include_tables=False,
                                favor_precision=True, deduplicate=True) or ''
     paragraphs = [re.sub(r'[ \t]+', ' ', line).strip() for line in body.splitlines()]
-    paragraphs = [line for line in paragraphs if line and not re.match(
-        r'^(Advertisement|Read more|Related (articles|topics)|Sign up|Subscribe|Copyright|Реклама|Читайте также|Подписывайтесь)\b', line, re.I)]
-    body = '\n\n'.join(paragraphs).strip()
+    body = clean_article_text('\n\n'.join(paragraphs))
     if len(body) < max(220, len(summary) + 80):
         return '', 'unavailable'
     if len(body) > 40000:
@@ -214,6 +266,7 @@ def fetch_source(source, now, previous_by_id=None, limit=30):
             for key in ('originalFullText', 'fullText', 'fullStatus', 'fullTranslation'):
                 if key in old:
                     article[key] = old[key]
+            clean_article_record(article)
             continue
         # Keep refreshing RSS breadth quickly. Cached full texts are always retained;
         # remaining new bodies are collected in later editions as the cache grows.
@@ -298,6 +351,7 @@ def collect(output, cache_path, raw=False, limit=30):
         raise RuntimeError('All sources failed; preserving the previous edition')
     seen, articles = set(), []
     for article in records:
+        clean_article_record(article)
         identity = re.sub(r'\W+', '', article['originalTitle'].lower())
         if article['id'] in seen or identity in seen:
             continue
@@ -320,7 +374,8 @@ def collect(output, cache_path, raw=False, limit=30):
                 log.warning('Full article translation failed for %s: %s', article['id'], error)
                 article['fullText'] = article['originalFullText']
                 article['fullTranslation'] = 'unavailable'
-        articles.append(article)
+        # Translation caches can contain old UI strings; clean output as well as input.
+        articles.append(clean_article_record(article))
     articles.sort(key=lambda a: a.get('publishedAt') or '', reverse=True)
     data = {'schemaVersion': 1, 'generatedAt': now.isoformat(), 'translationEngine': 'Argos Translate en → ru',
             'sources': sorted(statuses, key=lambda s: [x['id'] for x in sources].index(s['id'])), 'articles': articles}

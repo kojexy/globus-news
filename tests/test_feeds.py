@@ -4,7 +4,7 @@ import unittest
 import io
 from datetime import datetime, timezone
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from collect_news import parse_feed, clean_text, canonical_url, excerpt, MetadataParser, extract_article, fetch_candidates
+from collect_news import parse_feed, clean_text, canonical_url, excerpt, MetadataParser, extract_article, fetch_candidates, clean_article_text, clean_article_record, is_photo_caption
 from unittest.mock import patch
 from types import SimpleNamespace
 
@@ -51,5 +51,52 @@ class FeedTests(unittest.TestCase):
         self.assertEqual(status,'available')
         self.assertIn('\n\n',text)
         self.assertNotIn('Advertisement',text)
+    def test_france24_controls_are_removed_before_translation(self):
+        title='Four soldiers dead, dozens injured in fire at Canada military base'
+        report="Four soldiers were killed and dozens injured in a fire at a military base in Alberta province, Prime Minister Mark Carney said Sunday."
+        text='\n\n'.join([
+            'To display this content from YouTube, you must enable advertisement tracking and audience measurement.',
+            'One of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.',
+            title,'Issued on:','19/10/2026 - 10:41','Share',report])
+        self.assertEqual(clean_article_text(text,[title]),report)
+    def test_cached_translated_body_and_original_are_cleaned(self):
+        article={'title':'Премьер Франции заявил о протестах','originalTitle':'French PM comments on protests',
+                 'originalFullText':'Issued on:\n\n19/10/2026 - 10:41\n\nShare\n\nFrench PM comments on protests\n\nThe prime minister addressed parliament.',
+                 'fullText':'Выпущено: Изменено:\n\n19/10/2026 - 10:41\n\nПоделиться\n\nПремьер Франции заявил о протестах\n\nПремьер-министр выступил в парламенте.'}
+        clean_article_record(article)
+        self.assertEqual(article['originalFullText'],'The prime minister addressed parliament.')
+        self.assertEqual(article['fullText'],'Премьер-министр выступил в парламенте.')
+    def test_legitimate_youtube_blocking_reporting_and_standalone_dates_stay(self):
+        text='\n\n'.join(['Парламент обсуждает блокировку YouTube и рекламных сервисов.',
+                          'Поделиться результатами переговоров министр обещал завтра.',
+                          '«Поделиться» — так называлась инициатива партии.',
+                          '19/10/2026','10:41','Subscribe to the opposition newspaper, the candidate urged.'])
+        self.assertEqual(clean_article_text(text),text)
+        contextual='Issued on:\n\n19/10/2026 - 10:41\n\nReport.\n\n2026-10-19'
+        self.assertEqual(clean_article_text(contextual),'Report.\n\n2026-10-19')
+    def test_japanese_rss_service_placeholders_do_not_break_valid_headline_translation(self):
+        xml='''<rss><channel><item><title>ns-graphics2(Yana)</title><link>https://example.org/placeholder</link></item><item><title>China economy grows</title><link>https://example.org/valid</link><description>記事がありません。</description></item></channel></rss>'''.encode()
+        items=parse_feed(xml,SOURCE,NOW)
+        self.assertEqual(len(items),1)
+        self.assertEqual(items[0]['originalTitle'],'China economy grows')
+        self.assertEqual(items[0]['originalText'],'')
+    def test_only_short_unambiguous_photo_credits_are_removed(self):
+        captions=[
+            'An election billboard featuring Israeli Prime Minister Benjamin Netanyahu is displayed in Ramat Gan, near Tel Aviv, Israel, on October 18, 2026. /VCG',
+            'Избирательный билборд с участием премьер-министра Израиля Биньямина Нетаньяху выставлен в Рамат-Гане, недалеко от Тель-Авива, Израиль, 18 октября 2026 года. /VCG/',
+            'Workers are pictured at a factory in Beijing. /CFP/',
+            'A file photo of the parliament building. /Xinhua/',
+            'На фото: здание парламента. /Синьхуа/',
+        ]
+        for caption in captions:
+            self.assertTrue(is_photo_caption(caption),caption)
+            self.assertEqual(clean_article_text(caption+'\n\nThe government announced a new policy.'),'The government announced a new policy.')
+        reporting=['Xinhua reported that lawmakers approved the budget.', '(With input from Xinhua)',
+                   '(перенаправлено с «Xinhua»)', 'По данным агентства Синьхуа, переговоры продолжатся завтра.',
+                   'The government announced a new policy. /Xinhua/', 'Стороны обсудили сотрудничество. /Синьхуа/',
+                   '«Это важное соглашение», — заявил министр. /VCG/', 'Policy detail. '*45+'/VCG/']
+        for paragraph in reporting:
+            self.assertFalse(is_photo_caption(paragraph),paragraph)
+            self.assertEqual(clean_article_text(paragraph),paragraph)
 
 if __name__=='__main__':unittest.main()
