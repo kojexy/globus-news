@@ -3,7 +3,7 @@ from pathlib import Path
 import unittest
 from datetime import datetime, timezone
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from collect_news import parse_feed, clean_text, canonical_url, excerpt
+from collect_news import parse_feed, clean_text, canonical_url, excerpt, MetadataParser
 
 SOURCE = {'id':'test','name':'Test','country':'US','language':'en','kind':'Редакция'}
 NOW = datetime(2026,10,19,12,tzinfo=timezone.utc)
@@ -25,5 +25,9 @@ class FeedTests(unittest.TestCase):
         self.assertIsNone(canonical_url('data:text/html,test'))
         self.assertIsNone(canonical_url('https://user:pass@example.org'))
         self.assertLessEqual(len(excerpt('word '*500)),651)
+    def test_public_teaser_metadata(self):
+        parser=MetadataParser()
+        parser.feed('<meta property="og:description" content="Publisher &amp; description"><meta name="description" content="Fallback">')
+        self.assertEqual(parser.descriptions['og:description'],'Publisher & description')
 
 if __name__=='__main__':unittest.main()

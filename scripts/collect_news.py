@@ -47,6 +47,20 @@ class TextParser(HTMLParser):
             self.parts.append(data)
 
 
+class MetadataParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.descriptions = {}
+
+    def handle_starttag(self, tag, attrs):
+        if tag != 'meta':
+            return
+        attrs = dict(attrs)
+        name = (attrs.get('property') or attrs.get('name') or '').lower()
+        if name in ('og:description', 'description') and attrs.get('content'):
+            self.descriptions[name] = attrs['content']
+
+
 def clean_text(value):
     parser = TextParser()
     parser.feed(unescape(value or ''))
@@ -121,6 +135,7 @@ def parse_feed(data, source, now=None, limit=6):
             'language': source['language'], 'sourceKind': source['kind'], 'url': url,
             'publishedAt': date.isoformat() if date else None,
             'originalTitle': title, 'originalText': description,
+            'excerptOrigin': 'rss',
         })
     articles.sort(key=lambda a: a['publishedAt'] or '', reverse=True)
     return articles[:limit]
@@ -138,6 +153,25 @@ def fetch_source(source, now):
     articles = parse_feed(payload, source, now)
     if not articles:
         raise ValueError('No articles from the last 72 hours')
+    # Some RSS feeds publish only titles. Read the publisher's public teaser
+    # metadata, never the full article or a paywall, and preserve its provenance.
+    base = urlparse(source['home']).hostname.removeprefix('www.')
+    for article in articles:
+        host = urlparse(article['url']).hostname or ''
+        if len(article['originalText']) >= 70 or not (host == base or host.endswith('.' + base)):
+            continue
+        try:
+            request = urllib.request.Request(article['url'], headers={'User-Agent': 'GlobusNews/1.0 (personal news reader)'})
+            with urllib.request.urlopen(request, timeout=8) as response:
+                payload = response.read(400_000).decode(response.headers.get_content_charset() or 'utf-8', errors='replace')
+            parser = MetadataParser()
+            parser.feed(payload)
+            description = excerpt(clean_text(parser.descriptions.get('og:description') or parser.descriptions.get('description', '')))
+            if len(description) > len(article['originalText']) and description != article['originalTitle']:
+                article['originalText'] = description
+                article['excerptOrigin'] = 'metadata'
+        except Exception:
+            pass  # An unavailable original must never break the RSS edition.
     return articles
 
 

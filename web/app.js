@@ -136,8 +136,9 @@ function showSource(){
   $('sourceTitle').textContent=a.source;
   $('sourceDetails').textContent=`${countryInfo(a.country).name} · ${a.sourceKind||'Редакция'} · ${ageLabel(a.publishedAt)}`;
   $('originalTitle').textContent=a.originalTitle||a.title;$('originalTitle').lang=a.language||'ru';
-  $('sourceDisclaimer').textContent='Показан краткий текст, опубликованный редакцией в RSS. Глобус не дописывает факты и не выдаёт перевод за независимую проверку.';
+  $('sourceDisclaimer').textContent=`Показан краткий текст редакции ${a.excerptOrigin==='metadata'?'из публичной аннотации страницы':'из RSS'}. Глобус не дописывает факты и не выдаёт перевод за независимую проверку.`;
   const link=safeUrl(a.url);if(link)$('originalLink').href=link;else $('originalLink').removeAttribute('href');
+  $('originalLink').target=location.hostname==='app.globus.local'?'_self':'_blank';
   showDialog('sourceDialog');
 }
 async function loadFeed(manual=false){
@@ -250,6 +251,7 @@ function tick(){
   updateStatus();
 }
 applySettings();tick();
+if(location.hostname==='app.globus.local')$('fullscreenButton').hidden=true;
 try{const saved=storage.get(CACHE_KEY);if(saved){feed=validateFeed(saved);offline=true;rebuildQueue(true);}}catch{}
 async function start(){
   if(!feed && location.hostname==='app.globus.local'){
