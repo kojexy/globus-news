@@ -5,7 +5,7 @@
 | Страна редакции | Редакция | RSS |
 |---|---|---|
 | Россия | РБК | https://rssexport.rbc.ru/rbcnews/news/30/full.rss |
-| Россия | Лента.ру | https://lenta.ru/rss/news |
+| Россия | ТАСС | https://tass.ru/rss/v2.xml |
 | США | NPR | https://feeds.npr.org/1001/rss.xml |
 | США | The New York Times | https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml |
 | Китай | CGTN, английская редакция | https://www.cgtn.com/subscribe/rss/section/world.xml |
