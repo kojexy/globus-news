@@ -1,6 +1,6 @@
 {
   "name": "globus-news",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "private": true,
   "description": "Новости с Луны — полноэкранная газета в двух колонках для компьютера и Android TV",
   "scripts": {

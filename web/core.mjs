@@ -6,12 +6,12 @@ export const COUNTRIES = [
 ];
 export const DEFAULTS = {countries:COUNTRIES.map(c=>c.code),font:'normal',theme:'paper',textScale:100,lineHeight:1.5,contentWidth:'wide',autoTranslate:true,topic:'politics',musicEnabled:false,musicVolume:12};
 export const PAPER_STYLES = [
-  {id:'morning',name:'Утренняя'}, {id:'broadsheet',name:'Большая газета'},
-  {id:'coffee',name:'За кофе'}, {id:'archive',name:'Архив'},
-  {id:'northern',name:'Северная'}, {id:'letterpress',name:'Типография'},
-  {id:'sunday',name:'Воскресная'}, {id:'telegram',name:'Телеграф'},
-  {id:'library',name:'Библиотечная'}, {id:'moon',name:'Лунный выпуск'},
-  {id:'post',name:'Почтовая'}, {id:'evening',name:'Вечерняя'},
+  {id:'morning',texture:'fresh',name:'Утренняя'}, {id:'broadsheet',texture:'broadsheet',name:'Большая газета'},
+  {id:'coffee',texture:'coffee',name:'За кофе'}, {id:'archive',texture:'archive',name:'Архив'},
+  {id:'northern',texture:'northern',name:'Северная'}, {id:'letterpress',texture:'letterpress',name:'Типография'},
+  {id:'sunday',texture:'sunday',name:'Воскресная'}, {id:'telegram',texture:'telegram',name:'Телеграф'},
+  {id:'library',texture:'sunday',name:'Библиотечная'}, {id:'moon',texture:'moon',name:'Лунный выпуск'},
+  {id:'post',texture:'archive',name:'Почтовая'}, {id:'evening',texture:'evening',name:'Вечерняя'},
 ];
 export function normalizeSettings(input = {}) {
   const countries = Array.isArray(input.countries) ? [...new Set(input.countries.filter(c => COUNTRIES.some(x => x.code===c)))] : DEFAULTS.countries;

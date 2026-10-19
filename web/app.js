@@ -27,7 +27,7 @@ function applySettings(){
   radio.configure(settings.musicEnabled,settings.musicVolume);
   applyPaperStyle();
 }
-function applyPaperStyle(){const style=settings.paperStyle==='rotate'?PAPER_STYLES[index%PAPER_STYLES.length].id:settings.paperStyle;document.body.dataset.paper=style;$('reader').dataset.paper=style;for(const b of document.querySelectorAll('[data-paper-choice]'))b.setAttribute('aria-pressed',String(b.dataset.paperChoice===settings.paperStyle));$('rotateStyle').setAttribute('aria-pressed',String(settings.paperStyle==='rotate'));}
+function applyPaperStyle(){const style=settings.paperStyle==='rotate'?PAPER_STYLES[index%PAPER_STYLES.length].id:settings.paperStyle;document.body.dataset.paper=style;$('reader').dataset.paper=style;const texture=PAPER_STYLES.find(p=>p.id===style).texture;document.body.style.setProperty('--paper-texture',`url("./assets/papers/${texture}.webp")`);$('reader').dataset.texture=texture;for(const b of document.querySelectorAll('[data-paper-choice]'))b.setAttribute('aria-pressed',String(b.dataset.paperChoice===settings.paperStyle));$('rotateStyle').setAttribute('aria-pressed',String(settings.paperStyle==='rotate'));}
 function saveSettings(){settings=normalizeSettings(settings);if(!storage.set(SETTINGS_KEY,settings))toast('Настройки не удалось сохранить.');applySettings();}
 function hasFull(a=current()){return Boolean(a&&(a.fullText||a.originalFullText));}
 function storyContent(){

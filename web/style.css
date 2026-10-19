@@ -12,7 +12,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,.dialog button:focus,.d
 button:disabled{opacity:.35}[hidden]{display:none!important}
 .newspaper{height:100vh;height:100dvh;padding:2.3vh 3vw 3.4vh;display:flex;flex-direction:column;position:relative;isolation:isolate;outline:none;background:var(--paper)}
 .newspaper::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,var(--edge-tone),transparent 4%,transparent 96%,var(--edge-tone)),linear-gradient(var(--edge-tone),transparent 7%,transparent 94%,var(--edge-tone))}
-.paper-texture{position:absolute;inset:0;background:url('./assets/newsprint.webp') center/100% 100% no-repeat;opacity:var(--texture-opacity);mix-blend-mode:multiply;pointer-events:none;z-index:-1;-webkit-mask-image:radial-gradient(ellipse at center,#0003 40%,#0008 82%,#000 100%);mask-image:radial-gradient(ellipse at center,#0003 40%,#0008 82%,#000 100%)}
+.paper-texture{position:absolute;inset:0;background:var(--paper-texture,url('./assets/newsprint.webp')) center/100% 100% no-repeat;opacity:var(--texture-opacity);mix-blend-mode:multiply;pointer-events:none;z-index:-1;-webkit-mask-image:radial-gradient(ellipse at center,#0003 40%,#0008 82%,#000 100%);mask-image:radial-gradient(ellipse at center,#0003 40%,#0008 82%,#000 100%)}
 .paper-header{display:flex;align-items:center;gap:14px;min-height:25px;flex-shrink:0;padding-bottom:9px;border-bottom:1px solid var(--line);font-size:clamp(10px,.86vw,16px);color:var(--muted);line-height:1.35;letter-spacing:.15px}
 #country{color:var(--ink);white-space:nowrap;font-weight:600}
 #sourceLine{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -84,3 +84,8 @@ body[data-theme=dark] .newspaper::after{display:none}
 @media(max-height:650px) and (min-width:650px){.newspaper{padding:2.3vh 3vw 3.7vh}.paper-header{padding-bottom:7px;min-height:23px}article{padding-top:13px}h1{margin-bottom:13px;padding-bottom:11px}.dialog{padding:20px}.dialog h2{font-size:28px}.dialog-description{margin-bottom:14px}.country-option{padding:9px 12px}.dialog-note{margin:12px 0}.setting-label{margin-top:13px}.segmented button{padding:8px 6px}.settings-meta{margin-top:8px}.quick-grid{gap:8px}.quick-grid .pill{padding:11px 18px}}
 @media(max-width:600px){.newspaper{padding:2.5vh 4vw 3.6vh}.paper-header{font-size:10px;gap:8px}.paper-name{display:none}.paper-grid{gap:6vw}.page-mark{right:4vw}h1{letter-spacing:-.4px;margin-bottom:15px}article{padding-top:16px}.dialog{padding:22px;width:94vw}.dialog.compact{width:94vw}.country-option{font-size:14px;padding:11px 9px;gap:7px}.dialog h2{font-size:28px}.dialog-description{font-size:14px}.settings-grid{grid-template-columns:1fr;gap:0}.segmented button{font-size:12px}.setting-label{font-size:14px}.dialog-links .text-button{font-size:12px}.dialog-links{gap:10px}.primary-button{padding:13px 18px}.style-options{grid-template-columns:1fr 1fr;gap:8px}.style-option{font-size:15px;padding:14px 9px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* AI-generated blank papers: grain stays quieter under copy than at the edges. */
+.paper-texture{opacity:.48;-webkit-mask-image:radial-gradient(ellipse at center,#0006 40%,#000a 82%,#000 100%);mask-image:radial-gradient(ellipse at center,#0006 40%,#000a 82%,#000 100%)}
+body[data-paper=coffee] .newspaper::after{display:none}
+body[data-theme=dark] .paper-texture{opacity:.035}

@@ -1,0 +1,96 @@
+{
+  "generator": "built-in image_gen",
+  "count": 10,
+  "assets": [
+    {
+      "id": "fresh",
+      "file": "./fresh.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: background texture for a fullscreen Russian newspaper reading app on a large television. Generate ONE standalone blank newspaper paper texture, landscape 16:9, 1536x864 if possible. Edge-to-edge flat orthographic scan of paper only, no perspective, no tabletop, no objects, no text, no letters, no printed marks, no frames, no watermark. Variant 01 FRESH MORNING NEWSPRINT: neutral warm off-white paper, very fine authentic cellulose fibers, subtle natural tactile grain, almost invisible dry press variation. The central 90% must be very clean, uniformly light and low contrast for black text reading; any slight age or shadow only inside outermost 3% of edges. No strong creases, no dark stains, no decorative graphics. Even diffuse scan illumination, elegant understated realism. Return the image and save file.",
+      "width": 1672,
+      "height": 941,
+      "bytes": 146830,
+      "sha256": "29ad0f3aef357ceee9da413242ce39a1ecc2fb225c50c52d925d3713f74d500c"
+    },
+    {
+      "id": "broadsheet",
+      "file": "./broadsheet.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: fullscreen newspaper reading background for a television app. Generate ONE blank landscape 16:9 paper texture, edge-to-edge orthographic flat scan, around1536x864. No perspective, no objects, no tabletop, no border, no text, no letters, no watermark. Central90% perfectly readable: very light, low-contrast, almost uniform; tactile details microscopic, stronger aging allowed only outermost3% edges. Even diffuse scan illumination. No central fold, no harsh creases, no print, no dark marks beneath future text. COOL BROADSHEET: pale cool ivory finely milled newsprint, unusually smooth clean center, delicate narrow horizontal cellulose grain, subtly blue-gray clean edges, sophisticated daily newspaper paper.",
+      "width": 1672,
+      "height": 941,
+      "bytes": 141176,
+      "sha256": "e54b0c5b24083b7598ac5bac41fc6765102b28f0d99637317340ea9990158429"
+    },
+    {
+      "id": "coffee",
+      "file": "./coffee.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: fullscreen newspaper reading background for a television app. Generate ONE blank landscape 16:9 paper texture, edge-to-edge orthographic flat scan, around1536x864. No perspective, no objects, no tabletop, no border, no text, no letters, no watermark. Central90% perfectly readable: very light, low-contrast, almost uniform; tactile details microscopic, stronger aging allowed only outermost3% edges. Even diffuse scan illumination. No central fold, no harsh creases, no print, no dark marks beneath future text. QUIET COFFEE PAPER: light creamy newsprint with fine pulp, clean warm ivory center. A single faint incomplete pale coffee ring only peeking into the bottom-right outermost2% corner, mostly outside the image, never inside central reading area. No cup or liquid.",
+      "width": 1672,
+      "height": 941,
+      "bytes": 116028,
+      "sha256": "8fff86077ede619ca0269be800b466126de647182e7bcc2607f731345effbda8"
+    },
+    {
+      "id": "archive",
+      "file": "./archive.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: fullscreen newspaper reading background for a television app. Generate ONE blank landscape 16:9 paper texture, edge-to-edge orthographic flat scan, around1536x864. No perspective, no objects, no tabletop, no border, no text, no letters, no watermark. Central90% perfectly readable: very light, low-contrast, almost uniform; tactile details microscopic, stronger aging allowed only outermost3% edges. Even diffuse scan illumination. No central fold, no harsh creases, no print, no dark marks beneath future text. GENTLE ARCHIVE: pale warm archival newspaper sheet, softly amber outermost2% edges, naturally aged thin wood-pulp fibers, extremely faint few foxing specks confined to extreme corners. Center90% uniformly pale ivory, not yellow, completely clean, no stains or central creases.",
+      "width": 1672,
+      "height": 941,
+      "bytes": 96734,
+      "sha256": "510c3f11e216980b87c77c6e0ecd392405cd588260850c26bb9984ce767e973d"
+    },
+    {
+      "id": "northern",
+      "file": "./northern.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: blank fullscreen newspaper paper texture for reading news on a large TV. One landscape16:9 image around1536x864, flat edge-to-edge orthographic scan of paper. No objects, no perspective, no desk, no frame, no text or letters, no printing, no logos or watermark. Center90% uniformly pale and almost smooth, low-contrast extremely fine natural grain suitable beneath black text. Any stronger texture restricted to outer3% edges. No central fold or wrinkles. Even flat scan illumination. NORTHERN NEWS SHEET: very pale cool gray-white newsprint with the faintest sage-gray undertone, fine lengthwise cellulose fibers, crisp smooth surface, tiny organic fibers only along far side edges, modern Scandinavian newspaper quietness.",
+      "width": 1672,
+      "height": 941,
+      "bytes": 187788,
+      "sha256": "330638ee7958dcf1fc40b938ec9c9b2bc9a46fe11f63f78f5d74de5fbd5b983f"
+    },
+    {
+      "id": "letterpress",
+      "file": "./letterpress.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: blank fullscreen newspaper paper texture for reading news on a large TV. One landscape16:9 image around1536x864, flat edge-to-edge orthographic scan of paper. No objects, no perspective, no desk, no frame, no text or letters, no printing, no logos or watermark. Center90% uniformly pale and almost smooth, low-contrast extremely fine natural grain suitable beneath black text. Any stronger texture restricted to outer3% edges. No central fold or wrinkles. Even flat scan illumination. LETTERPRESS STOCK: pale uncoated ivory printing paper, tactile slightly toothy rag-and-pulp material with minute dry-press depressions but no letter shapes whatsoever. Central reading zone extremely clean, luxurious restrained texture, warm neutral white with gently weathered extreme edges.",
+      "width": 1672,
+      "height": 941,
+      "bytes": 120400,
+      "sha256": "9b306abb6ae5ba37f415dd00e234ceb04e5314c2249775bbbc93931953335d48"
+    },
+    {
+      "id": "sunday",
+      "file": "./sunday.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: blank fullscreen newspaper paper texture for reading news on a large TV. One landscape16:9 image around1536x864, flat edge-to-edge orthographic scan of paper. No objects, no perspective, no desk, no frame, no text or letters, no printing, no logos or watermark. Center90% uniformly pale and almost smooth, low-contrast extremely fine natural grain suitable beneath black text. Any stronger texture restricted to outer3% edges. No central fold or wrinkles. Even flat scan illumination. SUNDAY COTTON PAPER: premium soft creamy-white cotton newspaper supplement stock, fine velvety uniform grain, very faint warm natural fibers, a few microscopic irregular paper flecks only at extreme outer edges. Almost perfectly uniform clean ivory center, tranquil literary paper.",
+      "width": 1672,
+      "height": 941,
+      "bytes": 92310,
+      "sha256": "17f5efe1522248ad95b2ab91fc2573fa6516889be56e0d8dc0b582233707f00b"
+    },
+    {
+      "id": "telegram",
+      "file": "./telegram.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: fullscreen newspaper background texture in a TV news reading app. Generate ONE standalone blank paper texture, landscape16:9 around1536x864. Flat orthographic edge-to-edge scan, even lighting. No text, letters, ink, drawing, borders, watermarks, objects or tabletop. Keep central90% pale, clean, near uniform and extremely low contrast for black text. Delicate natural material texture, only outer3% edges may be more textured. No central folds, dark spots or graphic decoration. TELEGRAPH NEWS SHEET: thin pale greige historic newsprint with subtle horizontal wood-pulp grain and almost imperceptible irregular paper density. Cool neutral off-white center, softly worn extreme edges. Authentic old reading-room newspaper stock without yellowing or marks.",
+      "width": 1672,
+      "height": 941,
+      "bytes": 143524,
+      "sha256": "6b3ee9a2c086344ff8af4939eb356b6d350c7924b4006ab59c40a86ad937216a"
+    },
+    {
+      "id": "moon",
+      "file": "./moon.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: fullscreen newspaper background texture in a TV news reading app. Generate ONE standalone blank paper texture, landscape16:9 around1536x864. Flat orthographic edge-to-edge scan, even lighting. No text, letters, ink, drawing, borders, watermarks, objects or tabletop. Keep central90% pale, clean, near uniform and extremely low contrast for black text. Delicate natural material texture, only outer3% edges may be more textured. No central folds, dark spots or graphic decoration. MOON EDITION PAPER: cool pearl-white fine cellulose paper, faint silvery gray mineral-like fiber sheen without glitter, extremely smooth luminous matte center. Understated precision and moonlit coolness but still ordinary realistic paper. No moons, stars, icons or illustrations.",
+      "width": 1672,
+      "height": 941,
+      "bytes": 132242,
+      "sha256": "3d814fae4816e252925972d84418c98a03bd85cdf756304e7feaa21fa3b2f6e2"
+    },
+    {
+      "id": "evening",
+      "file": "./evening.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: fullscreen newspaper background texture in a TV news reading app. Generate ONE standalone blank paper texture, landscape16:9 around1536x864. Flat orthographic edge-to-edge scan, even lighting. No text, letters, ink, drawing, borders, watermarks, objects or tabletop. Keep central90% pale, clean, near uniform and extremely low contrast for black text. Delicate natural material texture, only outer3% edges may be more textured. No central folds, dark spots or graphic decoration. EVENING RECYCLED NEWSPRINT: quiet pale gray-beige fine recycled newspaper stock, tiny neutral pulp fibers, a few almost invisible organic flecks only at extreme edges, clean stable warm-gray white center. Subtle tactile press paper, not cardboard, never dirty or rough.",
+      "width": 1672,
+      "height": 941,
+      "bytes": 188184,
+      "sha256": "7ca77912a9688681bb8f18b2a55fd93e4d7dfaecc2bedf6a8ae6f42f1d742e38"
+    }
+  ]
+}

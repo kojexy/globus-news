@@ -41,6 +41,8 @@ public class ReaderTest {
         assertEquals("Full text shown immediately","true",evaluate("document.querySelector('#leftText').textContent.length>0"));
         assertEquals("Bundled Cyrillic fonts are loaded", "true",evaluate("Array.from(document.fonts).filter(f=>f.family.includes('PT Serif')||f.family.includes('Oswald')).every(f=>f.status==='loaded')"));
         assertEquals("Editorial paragraphs and explicit lines are present", "true",evaluate("Boolean(document.querySelector('#leftText .copy-paragraph .copy-line'))"));
+        evaluate("window.paperTextureCount=0;import('./core.mjs').then(m=>Promise.all(Array.from(new Set(m.PAPER_STYLES.map(s=>s.texture))).map(id=>new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>resolve(id);image.onerror=reject;image.src='./assets/papers/'+id+'.webp';})))).then(images=>window.paperTextureCount=images.length)");
+        waitFor("window.paperTextureCount===10");
         screenshot("01-reader");
         String before=evaluate("document.querySelector('#reader').dataset.newsId");
         key(KeyEvent.KEYCODE_DPAD_RIGHT);waitFor("document.querySelector('#reader').dataset.ready==='true'");
