@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-19T11:30:59.846000+00:00",
+  "generatedAt": "2026-10-19T11:35:20.474087+00:00",
   "translationEngine": "Argos Translate en → ru",
   "sources": [
     {
@@ -116,6 +116,21 @@
   ],
   "articles": [
     {
+      "id": "8a2d267c193f18c61806",
+      "sourceId": "lenta",
+      "source": "Лента.ру",
+      "country": "RU",
+      "language": "ru",
+      "sourceKind": "Частная медиагруппа",
+      "url": "https://lenta.ru/news/2026/10/19/raskryta-vozmozhnaya-prichina-posadki-podavshego-signal-bedstviya-samoleta-s7/",
+      "publishedAt": "2026-10-19T11:33:49+00:00",
+      "originalTitle": "Раскрыта возможная причина посадки подавшего сигнал бедствия самолета S7",
+      "originalText": "",
+      "title": "Раскрыта возможная причина посадки подавшего сигнал бедствия самолета S7",
+      "text": "",
+      "translation": "original"
+    },
+    {
       "id": "0e2fb7511681a6765879",
       "sourceId": "rbc",
       "source": "РБК",
@@ -131,6 +146,36 @@
       "translation": "original"
     },
     {
+      "id": "5edb9e8020cc8748e338",
+      "sourceId": "lenta",
+      "source": "Лента.ру",
+      "country": "RU",
+      "language": "ru",
+      "sourceKind": "Частная медиагруппа",
+      "url": "https://lenta.ru/news/2026/10/19/ura-borisov-i-sergey-katyshev-nazvali-imia-ekr-bestsellera-lavr/",
+      "publishedAt": "2026-10-19T11:30:00+00:00",
+      "originalTitle": "Юра Борисов и Сергей Катышев назвали имя режиссера экранизации романа-бестселлера «Лавр»",
+      "originalText": "",
+      "title": "Юра Борисов и Сергей Катышев назвали имя режиссера экранизации романа-бестселлера «Лавр»",
+      "text": "",
+      "translation": "original"
+    },
+    {
+      "id": "43ceef12501a473e0ed1",
+      "sourceId": "lenta",
+      "source": "Лента.ру",
+      "country": "RU",
+      "language": "ru",
+      "sourceKind": "Частная медиагруппа",
+      "url": "https://lenta.ru/news/2026/10/19/retsidivist-poluchil-maksimalnyy-srok-za-zhestokuyu-raspravu-nad-rossiyankoy/",
+      "publishedAt": "2026-10-19T11:28:00+00:00",
+      "originalTitle": "Рецидивист получил максимальный срок за жестокую расправу над россиянкой",
+      "originalText": "",
+      "title": "Рецидивист получил максимальный срок за жестокую расправу над россиянкой",
+      "text": "",
+      "translation": "original"
+    },
+    {
       "id": "52e7a40c5cc8b310b32d",
       "sourceId": "lenta",
       "source": "Лента.ру",
@@ -138,7 +183,7 @@
       "language": "ru",
       "sourceKind": "Частная медиагруппа",
       "url": "https://lenta.ru/news/2026/10/19/frantsuzskie-mitinguyuschie-zaplanirovali-novuyu-datu-protestov-v-strane/",
-      "publishedAt": "2026-10-19T11:27:58+00:00",
+      "publishedAt": "2026-10-19T11:27:00+00:00",
       "originalTitle": "Французские митингующие запланировали новую дату протестов в стране",
       "originalText": "",
       "title": "Французские митингующие запланировали новую дату протестов в стране",
@@ -153,7 +198,7 @@
       "language": "ru",
       "sourceKind": "Частная медиагруппа",
       "url": "https://lenta.ru/news/2026/10/19/tramp-ob-yavil-o-zahvate-frantsii/",
-      "publishedAt": "2026-10-19T11:27:44+00:00",
+      "publishedAt": "2026-10-19T11:27:00+00:00",
       "originalTitle": "Трамп объявил о «захвате Франции»",
       "originalText": "",
       "title": "Трамп объявил о «захвате Франции»",
@@ -168,7 +213,7 @@
       "language": "ru",
       "sourceKind": "Частная медиагруппа",
       "url": "https://lenta.ru/news/2026/10/19/camera/",
-      "publishedAt": "2026-10-19T11:27:11+00:00",
+      "publishedAt": "2026-10-19T11:27:00+00:00",
       "originalTitle": "Названа неочевидная угроза камере смартфона",
       "originalText": "",
       "title": "Названа неочевидная угроза камере смартфона",
@@ -176,34 +221,19 @@
       "translation": "original"
     },
     {
-      "id": "d2d129db43aaa04cdf65",
-      "sourceId": "lenta",
-      "source": "Лента.ру",
-      "country": "RU",
-      "language": "ru",
-      "sourceKind": "Частная медиагруппа",
-      "url": "https://lenta.ru/news/2026/10/19/vrach-podskazala-sposoby-otlichit-poleznyy-produkt-ot-vrednogo-v-supermarkete/",
-      "publishedAt": "2026-10-19T11:26:39+00:00",
-      "originalTitle": "Врач подсказала способы отличить полезный продукт от вредного в супермаркете",
-      "originalText": "",
-      "title": "Врач подсказала способы отличить полезный продукт от вредного в супермаркете",
-      "text": "",
-      "translation": "original"
-    },
-    {
-      "id": "d3f0c5557e4c5dfc8748",
-      "sourceId": "lenta",
-      "source": "Лента.ру",
-      "country": "RU",
-      "language": "ru",
-      "sourceKind": "Частная медиагруппа",
-      "url": "https://lenta.ru/news/2026/10/19/evrokomissiya-otkazalas-vozobnovit-pokupki-rossiyskogo-gaza/",
-      "publishedAt": "2026-10-19T11:26:20+00:00",
-      "originalTitle": "Еврокомиссия отказалась возобновить покупки российского газа",
-      "originalText": "",
-      "title": "Еврокомиссия отказалась возобновить покупки российского газа",
-      "text": "",
-      "translation": "original"
+      "id": "c6e319ff79df7d8a1abc",
+      "sourceId": "bbc",
+      "source": "BBC News",
+      "country": "GB",
+      "language": "en",
+      "sourceKind": "Общественный вещатель",
+      "url": "https://www.bbc.co.uk/sport/cricket/articles/cm3elzgj5glzo",
+      "publishedAt": "2026-10-19T11:26:13+00:00",
+      "originalTitle": "Brook says he has 'learned a lot' from off-field issues",
+      "originalText": "White-ball captain Harry Brook says he has \"learned a lot\" as a captain and a person - and wants to be the player England fans rely on.",
+      "title": "Брук говорит, что он «многому научился» из-за проблем вне поля",
+      "text": "Капитан \"Белого мяча\" Гарри Брук говорит, что он \"многому научился\" как капитан и человек - и хочет быть игроком, на которого полагаются болельщики сборной Англии.",
+      "translation": "argos"
     },
     {
       "id": "353785169859e22491ca",
@@ -246,9 +276,9 @@
       "publishedAt": "2026-10-19T11:22:06+00:00",
       "originalTitle": "Reform MSP quits party to sit as independent",
       "originalText": "Amanda Bland's decision relegates the party to the third-largest group at Holyrood, with one member fewer than Labour.",
-      "title": "Reform MSP quits party to sit as independent",
-      "text": "Amanda Bland's decision relegates the party to the third-largest group at Holyrood, with one member fewer than Labour.",
-      "translation": "unavailable"
+      "title": "Реформа MSP покинула партию, чтобы стать независимой",
+      "text": "Решение Аманды Бланд переносит партию в третью по величине группу в Холируде, с одним членом меньше, чем Лейбористская партия.",
+      "translation": "argos"
     },
     {
       "id": "c7152592871d57aea663",
@@ -266,21 +296,6 @@
       "translation": "original"
     },
     {
-      "id": "98371e66e3604886fac3",
-      "sourceId": "lenta",
-      "source": "Лента.ру",
-      "country": "RU",
-      "language": "ru",
-      "sourceKind": "Частная медиагруппа",
-      "url": "https://lenta.ru/news/2026/10/19/obuchaem/",
-      "publishedAt": "2026-10-19T11:21:00+00:00",
-      "originalTitle": "В России собрались активнее готовить в вузах иностранных специалистов",
-      "originalText": "",
-      "title": "В России собрались активнее готовить в вузах иностранных специалистов",
-      "text": "",
-      "translation": "original"
-    },
-    {
       "id": "66bc9566f469de9f35c4",
       "sourceId": "hindu",
       "source": "The Hindu",
@@ -291,9 +306,9 @@
       "publishedAt": "2026-10-19T11:16:43+00:00",
       "originalTitle": "SC upholds cancellation of patta over Tamil Nadu water body, orders alternative site for 20 flat owners",
       "originalText": "A Bench of Justices S.V.N. Bhatti and N.V. Anjaria directed the Tamil Nadu government to allot a suitable site to the 20 flat owners within six months before demolishing their apartments",
-      "title": "SC upholds cancellation of patta over Tamil Nadu water body, orders alternative site for 20 flat owners",
-      "text": "A Bench of Justices S.V.N. Bhatti and N.V. Anjaria directed the Tamil Nadu government to allot a suitable site to the 20 flat owners within six months before demolishing their apartments",
-      "translation": "unavailable"
+      "title": "СК поддерживает отмену патты над водоемом Тамилнад, заказывает альтернативную площадку для 20 владельцев квартир",
+      "text": "Судьи С.В.Н. Бхатти и Н.В. Анджария поручили правительству Тамилнада выделить подходящее место для 20 владельцев квартир в течение шести месяцев, прежде чем снести их квартиры.",
+      "translation": "argos"
     },
     {
       "id": "ebe44b85612d8b12495f",
@@ -306,9 +321,9 @@
       "publishedAt": "2026-10-19T11:15:43+00:00",
       "originalTitle": "2026 midterms could be the most expensive on record. And, Macron condemns protests",
       "originalText": "More than $15 billion has been raised in this year's midterm elections. And, France's president is condemning the violent protests erupting across the country.",
-      "title": "2026 midterms could be the most expensive on record. And, Macron condemns protests",
-      "text": "More than $15 billion has been raised in this year's midterm elections. And, France's president is condemning the violent protests erupting across the country.",
-      "translation": "unavailable"
+      "title": "Средние семестры 2026 года могут быть самыми дорогими в истории. Макрон осудил протесты",
+      "text": "На промежуточных выборах в этом году было собрано более 15 миллиардов долларов. Президент Франции осуждает бурные протесты, разгоревшиеся по всей стране.",
+      "translation": "argos"
     },
     {
       "id": "f0397f457b2ff6766381",
@@ -336,9 +351,9 @@
       "publishedAt": "2026-10-19T11:11:54+00:00",
       "originalTitle": "Prior nod to probe bribe demand by police personnel not needed under anti-graft law: Supreme Court",
       "originalText": "The significant observation was made by a Bench of Justices S.V.N. Bhatti and N.V. Anjaria in its judgment delivered on October 16",
-      "title": "Prior nod to probe bribe demand by police personnel not needed under anti-graft law: Supreme Court",
-      "text": "The significant observation was made by a Bench of Justices S.V.N. Bhatti and N.V. Anjaria in its judgment delivered on October 16",
-      "translation": "unavailable"
+      "title": "До начала расследования запроса на взятку со стороны сотрудников полиции, который не нужен в соответствии с законом о борьбе с взяточничеством: Верховный суд",
+      "text": "Значительное замечание было сделано группой судей С.В.Н. Бхатти и Н.В. Анджария в своем решении от 16 октября.",
+      "translation": "argos"
     },
     {
       "id": "daad69d96bb19292b0b3",
@@ -351,9 +366,9 @@
       "publishedAt": "2026-10-19T11:08:45+00:00",
       "originalTitle": "Neha Bora moves Delhi High Court against peace bond notice",
       "originalText": "AISA said Neha Bora’s petition seeks an immediate stay and withdrawal of the notice, and argues that the notice is prima facie ambiguous and factually incorrect",
-      "title": "Neha Bora moves Delhi High Court against peace bond notice",
-      "text": "AISA said Neha Bora’s petition seeks an immediate stay and withdrawal of the notice, and argues that the notice is prima facie ambiguous and factually incorrect",
-      "translation": "unavailable"
+      "title": "Неха Бора направила в Высокий суд Дели уведомление о мирной облигации",
+      "text": "AISA заявила, что петиция Нехи Боры требует немедленного приостановления и отзыва уведомления и утверждает, что уведомление prima facie неоднозначно и фактически неверно.",
+      "translation": "argos"
     },
     {
       "id": "87318f096fcb46bfcf82",
@@ -366,9 +381,9 @@
       "publishedAt": "2026-10-19T11:08:16+00:00",
       "originalTitle": "MEA rejects OIC’s ‘anti-India’ references, accuses Pakistan of orchestrating them",
       "originalText": "The MEA said that the Union Territories of Jammu and Kashmir and Ladakh are integral and inalienable parts of India, and “politically motivated propaganda” cannot alter that reality",
-      "title": "MEA rejects OIC’s ‘anti-India’ references, accuses Pakistan of orchestrating them",
-      "text": "The MEA said that the Union Territories of Jammu and Kashmir and Ladakh are integral and inalienable parts of India, and “politically motivated propaganda” cannot alter that reality",
-      "translation": "unavailable"
+      "title": "MEA отвергает «антииндийские» ссылки ОИС и обвиняет Пакистан в их организации",
+      "text": "Союзные территории Джамму, Кашмира и Ладакха являются неотъемлемой и неотъемлемой частью Индии, и «политически мотивированная пропаганда» не может изменить эту реальность.",
+      "translation": "argos"
     },
     {
       "id": "7a27176f3f3c4068f4d3",
@@ -381,9 +396,9 @@
       "publishedAt": "2026-10-19T11:08:00+00:00",
       "originalTitle": "Over 16% of Japanese companies experience data breaches",
       "originalText": "According to the survey, 30.2% of large companies suffered or potentially suffered breaches, significantly higher than 14.3% among small businesses.",
-      "title": "Over 16% of Japanese companies experience data breaches",
-      "text": "According to the survey, 30.2% of large companies suffered or potentially suffered breaches, significantly higher than 14.3% among small businesses.",
-      "translation": "unavailable"
+      "title": "Более 16% японских компаний столкнулись с утечкой данных",
+      "text": "Согласно опросу, 30,2% крупных компаний пострадали или потенциально пострадали от нарушений, что значительно выше 14,3% среди малого бизнеса.",
+      "translation": "argos"
     },
     {
       "id": "01b6b63dc1cc6a9df251",
@@ -411,9 +426,9 @@
       "publishedAt": "2026-10-19T11:01:48+00:00",
       "originalTitle": "New York City Has a Rat Killing Machine",
       "originalText": "Are the humans winning? That’s hard to say. But we certainly have a technological advantage.",
-      "title": "New York City Has a Rat Killing Machine",
-      "text": "Are the humans winning? That’s hard to say. But we certainly have a technological advantage.",
-      "translation": "unavailable"
+      "title": "В Нью-Йорке есть машина для убийства крыс",
+      "text": "Люди побеждают? Трудно сказать. Но у нас, безусловно, есть технологическое преимущество.",
+      "translation": "argos"
     },
     {
       "id": "6d9e212c1c5ede91d088",
@@ -426,9 +441,9 @@
       "publishedAt": "2026-10-19T11:00:19+00:00",
       "originalTitle": "Les Misérables: Macron's 'sense of detachment' amid rising living costs and youth 'fears for future'",
       "originalText": "France’s escalating protest movement is exposing a widening disconnect between political leadership and public frustration, while raising questions about the country’s long tradition of social unrest. Chris Reynolds, Professor of French and European Studies at Nottingham Trent University, argues that President Emmanuel Macron’s latest address was characterised by a troubling “sense of detachment,” offering little to resolve the structural grievances driving the demonstrations.",
-      "title": "Les Misérables: Macron's 'sense of detachment' amid rising living costs and youth 'fears for future'",
-      "text": "France’s escalating protest movement is exposing a widening disconnect between political leadership and public frustration, while raising questions about the country’s long tradition of social unrest. Chris Reynolds, Professor of French and European Studies at Nottingham Trent University, argues that President Emmanuel Macron’s latest address was characterised by a troubling “sense of detachment,” offering little to resolve the structural grievances driving the demonstrations.",
-      "translation": "unavailable"
+      "title": "Les Misérables: «чувство отстраненности» Макрона на фоне роста стоимости жизни и «страхов перед будущим»",
+      "text": "Растущее протестное движение во Франции демонстрирует растущий разрыв между политическим руководством и общественным разочарованием, одновременно поднимая вопросы о давней традиции социальных волнений в стране. Крис Рейнольдс, профессор французских и европейских исследований в Ноттингемском Трентском университете, утверждает, что последнее обращение президента Эммануэля Макрона характеризовалось тревожным «чувством отрешенности», практически не предлагая разрешения структурных претензий, вызывающих демонстрации.",
+      "translation": "argos"
     },
     {
       "id": "252e748d5a47611a45c4",
@@ -441,9 +456,9 @@
       "publishedAt": "2026-10-19T10:59:55+00:00",
       "originalTitle": "To Find Criminals and Child Exploitation in Gold Mines, We Just Had to Look",
       "originalText": "Layers of people certify that gold is free from rights abuses and criminality. Nobody makes them leave their desks.",
-      "title": "To Find Criminals and Child Exploitation in Gold Mines, We Just Had to Look",
-      "text": "Layers of people certify that gold is free from rights abuses and criminality. Nobody makes them leave their desks.",
-      "translation": "unavailable"
+      "title": "Чтобы найти преступников и эксплуатировать детей на золотых приисках, нам просто нужно было посмотреть.",
+      "text": "Слои людей подтверждают, что золото свободно от нарушений прав и преступности. Никто не заставляет их покидать свои столы.",
+      "translation": "argos"
     },
     {
       "id": "f80a69e563249f15ecae",
@@ -456,9 +471,9 @@
       "publishedAt": "2026-10-19T10:58:09+00:00",
       "originalTitle": "Kerala High Court directs release of ₹9.73 crore for 225 victim compensation claims",
       "originalText": "The court also directed the secretaries of the respective District Legal Services Authorities to collect all required documents from victims while their cases were pending before the court to avoid delays in processing and disbursing compensation",
-      "title": "Kerala High Court directs release of ₹9.73 crore for 225 victim compensation claims",
-      "text": "The court also directed the secretaries of the respective District Legal Services Authorities to collect all required documents from victims while their cases were pending before the court to avoid delays in processing and disbursing compensation",
-      "translation": "unavailable"
+      "title": "Верховный суд Кералы вынес решение об освобождении 9,73 крор по 225 искам о компенсации жертвам",
+      "text": "Суд также распорядился, чтобы секретари соответствующих окружных юридических служб собирали все необходимые документы у жертв во время рассмотрения их дел в суде, чтобы избежать задержек в обработке и выплате компенсации.",
+      "translation": "argos"
     },
     {
       "id": "0020b7c1e779c1e41f9c",
@@ -471,9 +486,9 @@
       "publishedAt": "2026-10-19T10:57:41+00:00",
       "originalTitle": "Marseille cleans up after looting and vandalism in protest",
       "originalText": "Rubbish littered the streets of Marseille on Sunday, one day after demonstrations against rising living costs and declining public services spiralled out of control in some of the worst violence France has witnessed for decades. On Saturday, black-clad protesters broke into Marseille's city hall and defaced the building with graffiti, while public buildings were also targeted in other French cities.",
-      "title": "Marseille cleans up after looting and vandalism in protest",
-      "text": "Rubbish littered the streets of Marseille on Sunday, one day after demonstrations against rising living costs and declining public services spiralled out of control in some of the worst violence France has witnessed for decades. On Saturday, black-clad protesters broke into Marseille's city hall and defaced the building with graffiti, while public buildings were also targeted in other French cities.",
-      "translation": "unavailable"
+      "title": "Марсель убирается после мародерства и вандализма в знак протеста",
+      "text": "В воскресенье на улицах Марселя разлился мусор, на следующий день после того, как демонстрации против роста стоимости жизни и снижения государственных услуг вышли из-под контроля в результате худшего насилия, которое Франция наблюдала на протяжении десятилетий. В субботу одетые в черное протестующие ворвались в мэрию Марселя и испортили здание граффити, в то время как общественные здания также были нацелены на другие французские города.",
+      "translation": "argos"
     },
     {
       "id": "f08f809e91b9f17d7b09",
@@ -486,9 +501,9 @@
       "publishedAt": "2026-10-19T10:57:34+00:00",
       "originalTitle": "How a Trillion-Dollar Industry Launders Illegal Gold",
       "originalText": "The line between dirty and clean gold is an industry fiction. Wall Street and governments profit off gold from criminals, gangsters and those who exploit children.",
-      "title": "How a Trillion-Dollar Industry Launders Illegal Gold",
-      "text": "The line between dirty and clean gold is an industry fiction. Wall Street and governments profit off gold from criminals, gangsters and those who exploit children.",
-      "translation": "unavailable"
+      "title": "Как индустрия на триллион долларов отмывает незаконное золото",
+      "text": "Граница между грязным и чистым золотом - это промышленная выдумка. Уолл-стрит и правительства получают прибыль от золота от преступников, гангстеров и тех, кто эксплуатирует детей.",
+      "translation": "argos"
     },
     {
       "id": "7b32b6a2b26c16368bcd",
@@ -501,9 +516,9 @@
       "publishedAt": "2026-10-19T10:55:00+00:00",
       "originalTitle": "From delivery driver to global fame: A Korean writer's journey",
       "originalText": "You Yeong-Gwang's The Rainfall Market tells the story of a mysterious, hidden shop that only opens when it rains. For a debut novel by an unknown author, it was a massive success.",
-      "title": "From delivery driver to global fame: A Korean writer's journey",
-      "text": "You Yeong-Gwang's The Rainfall Market tells the story of a mysterious, hidden shop that only opens when it rains. For a debut novel by an unknown author, it was a massive success.",
-      "translation": "unavailable"
+      "title": "От водителя доставки до мировой славы: путешествие корейского писателя",
+      "text": "You Yeong-Gwang's The Rainfall Market рассказывает историю таинственного, скрытого магазина, который открывается только когда идет дождь. Для дебютного романа неизвестного автора это был массовый успех.",
+      "translation": "argos"
     },
     {
       "id": "63f8fb306f42abc4d71b",
@@ -516,9 +531,9 @@
       "publishedAt": "2026-10-19T10:53:15+00:00",
       "originalTitle": "'Lame-duck president' Macron notes 'failures' after France unrest",
       "originalText": "French President Emmanuel Macron on Monday rejected Interior Minister Laurent Nunez's resignation. The move came in response to weekend protests, during which nearly 2,400 people were arrested and almost 1,000 police and gendarmes injured on Saturday. FRANCE 24's International affairs editor Philip Turle has more.",
-      "title": "'Lame-duck president' Macron notes 'failures' after France unrest",
-      "text": "French President Emmanuel Macron on Monday rejected Interior Minister Laurent Nunez's resignation. The move came in response to weekend protests, during which nearly 2,400 people were arrested and almost 1,000 police and gendarmes injured on Saturday. FRANCE 24's International affairs editor Philip Turle has more.",
-      "translation": "unavailable"
+      "title": "Президент «Хромой утки» Макрон отмечает «провалы» после беспорядков во Франции",
+      "text": "Президент Франции Эммануэль Макрон в понедельник отклонил отставку министра внутренних дел Лорана Нуньеса. Этот шаг был предпринят в ответ на протесты, в ходе которых в субботу были арестованы почти 2400 человек и ранены почти 1000 полицейских и жандармов. У редактора журнала FRANCE 24 по международным делам Филипа Турла их больше.",
+      "translation": "argos"
     },
     {
       "id": "be6b405b8b45db6b3916",
@@ -531,9 +546,9 @@
       "publishedAt": "2026-10-19T10:52:25+00:00",
       "originalTitle": "Four arrested after police officer injured in shooting",
       "originalText": "The officer was shot in the foot and remains in hospital in a stable condition, police say.",
-      "title": "Four arrested after police officer injured in shooting",
-      "text": "The officer was shot in the foot and remains in hospital in a stable condition, police say.",
-      "translation": "unavailable"
+      "title": "Четверо задержаны после ранения полицейского при стрельбе",
+      "text": "Офицер был ранен в ногу и остается в больнице в стабильном состоянии, говорят в полиции.",
+      "translation": "argos"
     },
     {
       "id": "c8eda7d89d2d0ef09399",
@@ -546,9 +561,9 @@
       "publishedAt": "2026-10-19T10:41:48+00:00",
       "originalTitle": "Peaceful protest is fundamental right, but protesters’ credentials must be weighed: Bombay HC",
       "originalText": "The Bombay High Court directed the Maharashtra government to respond to petitions alleging illegal detention of protesters during the anti-CEC demonstrations, while cautioning that “criminals should not participate” under the guise of civilians",
-      "title": "Peaceful protest is fundamental right, but protesters’ credentials must be weighed: Bombay HC",
-      "text": "The Bombay High Court directed the Maharashtra government to respond to petitions alleging illegal detention of protesters during the anti-CEC demonstrations, while cautioning that “criminals should not participate” under the guise of civilians",
-      "translation": "unavailable"
+      "title": "Мирный протест является фундаментальным правом, но полномочия протестующих должны быть взвешены.",
+      "text": "Верховный суд Бомбея поручил правительству Махараштры ответить на петиции о незаконном задержании протестующих во время демонстраций против ЦИК, предупреждая при этом, что «преступники не должны участвовать» под видом гражданских лиц.",
+      "translation": "argos"
     },
     {
       "id": "9c8f4c722ee614b08ddc",
@@ -561,24 +576,24 @@
       "publishedAt": "2026-10-19T10:38:38+00:00",
       "originalTitle": "A Bad Combination",
       "originalText": "We take a look at the human face of America’s utility bill crisis.",
-      "title": "A Bad Combination",
-      "text": "We take a look at the human face of America’s utility bill crisis.",
-      "translation": "unavailable"
+      "title": "Плохая комбинация",
+      "text": "Мы взглянем на человеческое лицо американского кризиса коммунальных услуг.",
+      "translation": "argos"
     },
     {
-      "id": "2aa6940184dc5c821575",
+      "id": "80f9ce1b22bafecddb57",
       "sourceId": "dw",
       "source": "DW",
       "country": "DE",
       "language": "en",
       "sourceKind": "Международный общественный вещатель",
-      "url": "https://www.dw.com/en/how-a-homeless-man-lives-in-front-of-a-london-mega-mansion/a-79400925?maca=en-rss-en-top-1022-rdf",
+      "url": "https://www.dw.com/en/the-homeless-man-living-in-front-of-a-london-mega-mansion/a-79400925?maca=en-rss-en-top-1022-rdf",
       "publishedAt": "2026-10-19T10:38:00+00:00",
-      "originalTitle": "How a homeless man lives in front of a London mega-mansion",
-      "originalText": "Anders Fernstedt lives in London without ever using any money. The Swedish native has built a most unusual home under the porch of a house worth over €200 million. How did that happen?",
-      "title": "How a homeless man lives in front of a London mega-mansion",
-      "text": "Anders Fernstedt lives in London without ever using any money. The Swedish native has built a most unusual home under the porch of a house worth over €200 million. How did that happen?",
-      "translation": "unavailable"
+      "originalTitle": "The homeless man living in front of a London mega-mansion",
+      "originalText": "Anders Fernstedt lives in London without any money. The Swedish native has built a most unusual home under the porch of a house worth over €200 million. How did that happen?",
+      "title": "Бездомный, живущий перед лондонским особняком",
+      "text": "Андерс Фернштедт живет в Лондоне без денег. Уроженец Швеции построил самый необычный дом под крыльцом дома стоимостью более 200 миллионов евро. Как это случилось?",
+      "translation": "argos"
     },
     {
       "id": "1b62b4a62dfdf56a7358",
@@ -591,9 +606,9 @@
       "publishedAt": "2026-10-19T10:34:18+00:00",
       "originalTitle": "Israeli police arrest 10 over settler attacks on journalist and diplomats in West Bank",
       "originalText": "It comes after masked settlers attacked Palestinians and European officials visiting the West Bank during olive harvesting season.",
-      "title": "Israeli police arrest 10 over settler attacks on journalist and diplomats in West Bank",
-      "text": "It comes after masked settlers attacked Palestinians and European officials visiting the West Bank during olive harvesting season.",
-      "translation": "unavailable"
+      "title": "Израильская полиция арестовала 10 человек за нападения на журналистов и дипломатов на Западном берегу реки Иордан",
+      "text": "Это произошло после того, как поселенцы в масках напали на палестинцев и европейских чиновников, посещающих Западный берег во время сбора урожая оливок.",
+      "translation": "argos"
     },
     {
       "id": "c1bb4045c2bda5ae7209",
@@ -606,9 +621,9 @@
       "publishedAt": "2026-10-19T10:33:12+00:00",
       "originalTitle": "Kenya pastor accused of ordering parents to starve children to death faces verdict",
       "originalText": "Self-proclaimed pastor Paul Mackenzie faces 191 murder charges - all but one of them children.",
-      "title": "Kenya pastor accused of ordering parents to starve children to death faces verdict",
-      "text": "Self-proclaimed pastor Paul Mackenzie faces 191 murder charges - all but one of them children.",
-      "translation": "unavailable"
+      "title": "Кенийского пастора обвинили в том, что он приказал родителям заморить детей голодом до смерти",
+      "text": "Самопровозглашенному пастору Полу Маккензи предъявлено 191 обвинение в убийстве — все, кроме одного, дети.",
+      "translation": "argos"
     },
     {
       "id": "90bb96b46b9a35eda0c8",
@@ -621,9 +636,9 @@
       "publishedAt": "2026-10-19T10:30:59+00:00",
       "originalTitle": "France’s Far Right Seizes the Moment as Rioting Stuns the Country",
       "originalText": "The National Rally, already ahead in the polls, presented itself as the party best placed to restore law and order.",
-      "title": "France’s Far Right Seizes the Moment as Rioting Stuns the Country",
-      "text": "The National Rally, already ahead in the polls, presented itself as the party best placed to restore law and order.",
-      "translation": "unavailable"
+      "title": "Крайне правые во Франции захватили момент, когда беспорядки потрясли страну",
+      "text": "«Национальное ралли», которое уже впереди в опросах, представило себя как партию, наилучшим образом способную восстановить закон и порядок.",
+      "translation": "argos"
     },
     {
       "id": "d3377b8dced9b5162e17",
@@ -636,9 +651,9 @@
       "publishedAt": "2026-10-19T10:30:48+00:00",
       "originalTitle": "Severe weather warning issued ahead of potential UK storm later this week",
       "originalText": "Gales are possible later this week with a Met Office weather warning issued ahead of what could become the UK's first named storm of the autumn.",
-      "title": "Severe weather warning issued ahead of potential UK storm later this week",
-      "text": "Gales are possible later this week with a Met Office weather warning issued ahead of what could become the UK's first named storm of the autumn.",
-      "translation": "unavailable"
+      "title": "Сильное предупреждение о погоде, выпущенное перед потенциальным штормом в Великобритании на этой неделе",
+      "text": "Погоны возможны в конце этой недели с предупреждением о погоде Метеорологической службы, выпущенным перед тем, что может стать первым осенним штормом в Великобритании.",
+      "translation": "argos"
     },
     {
       "id": "10e4c8fa3c4aa09b5cf5",
@@ -651,9 +666,9 @@
       "publishedAt": "2026-10-19T10:29:21+00:00",
       "originalTitle": "French retailers reel after weekend of riots, looting",
       "originalText": "Representatives of the French business community gather for a crisis meeting with the government following widespread looting during the weekend's protests. Meanwhile, the country's tourism sector fears a drop in winter holiday bookings, and bond and currency traders sell off French debt and the euro.",
-      "title": "French retailers reel after weekend of riots, looting",
-      "text": "Representatives of the French business community gather for a crisis meeting with the government following widespread looting during the weekend's protests. Meanwhile, the country's tourism sector fears a drop in winter holiday bookings, and bond and currency traders sell off French debt and the euro.",
-      "translation": "unavailable"
+      "title": "Французские ритейлеры шатаются после выходных беспорядков, грабежей",
+      "text": "Представители французского бизнес-сообщества собираются на кризисную встречу с правительством после широкомасштабного мародерства во время протестов в выходные. Между тем, туристический сектор страны опасается падения зимних праздничных бронирований, а трейдеры облигаций и валюты продают французский долг и евро.",
+      "translation": "argos"
     },
     {
       "id": "a9b7748377ad4bbf93c4",
@@ -666,9 +681,9 @@
       "publishedAt": "2026-10-19T10:22:00+00:00",
       "originalTitle": "Japan to restart accepting foreign workers for meal services at some facilities",
       "originalText": "The government aims to adopt the plan at a Cabinet meeting in December.",
-      "title": "Japan to restart accepting foreign workers for meal services at some facilities",
-      "text": "The government aims to adopt the plan at a Cabinet meeting in December.",
-      "translation": "unavailable"
+      "title": "Япония возобновит прием иностранных работников для питания на некоторых объектах",
+      "text": "Правительство намерено принять план на заседании кабинета министров в декабре.",
+      "translation": "argos"
     },
     {
       "id": "2d263ed8b68e78e2d69e",
@@ -681,9 +696,9 @@
       "publishedAt": "2026-10-19T10:19:00+00:00",
       "originalTitle": "Greece: At least 12 die in migrant drownings overnight",
       "originalText": "Authorities say 12 people, including an infant, have drowned in Greek waters in two separate incidents overnight. Another 22 people were rescued. A search-and-rescue operation is ongoing.",
-      "title": "Greece: At least 12 die in migrant drownings overnight",
-      "text": "Authorities say 12 people, including an infant, have drowned in Greek waters in two separate incidents overnight. Another 22 people were rescued. A search-and-rescue operation is ongoing.",
-      "translation": "unavailable"
+      "title": "Греция: 12 человек погибли в результате утопления мигрантов",
+      "text": "12 человек, в том числе младенец, утонули в греческих водах в двух отдельных инцидентах за одну ночь. Еще 22 человека были спасены. Продолжается поисково-спасательная операция.",
+      "translation": "argos"
     },
     {
       "id": "45baf3e0c6b2a0dbfc93",
@@ -696,9 +711,9 @@
       "publishedAt": "2026-10-19T10:13:40+00:00",
       "originalTitle": "Massive clean-up operation sweeps across France after protests",
       "originalText": "A massive clean-up operation was under way across France on Monday, from Lille in the north to Marseille in the south and from Strasbourg in the east to Bordeaux in the southwest, following nationwide demonstrations last weekend. The protests over high prices and declining public services were followed by widespread looting and damage to shops, with thousands arrested. FRANCE 24's Luke Shrago reports from central Paris.",
-      "title": "Massive clean-up operation sweeps across France after protests",
-      "text": "A massive clean-up operation was under way across France on Monday, from Lille in the north to Marseille in the south and from Strasbourg in the east to Bordeaux in the southwest, following nationwide demonstrations last weekend. The protests over high prices and declining public services were followed by widespread looting and damage to shops, with thousands arrested. FRANCE 24's Luke Shrago reports from central Paris.",
-      "translation": "unavailable"
+      "title": "Массовая операция по очистке территории Франции после протестов",
+      "text": "Массовая операция по очистке была проведена по всей Франции в понедельник, от Лилля на севере до Марселя на юге и от Страсбурга на востоке до Бордо на юго-западе, после общенациональных демонстраций в минувшие выходные. За протестами по поводу высоких цен и снижения государственных услуг последовали массовые грабежи и повреждения магазинов, тысячи были арестованы. Люк Шраго (Luke Shrago) из центральной части Парижа.",
+      "translation": "argos"
     },
     {
       "id": "70c6464c548e82e2d12a",
@@ -711,24 +726,9 @@
       "publishedAt": "2026-10-19T10:11:13+00:00",
       "originalTitle": "'Shame', 'anger', 'chaos': Papers react to polarising riots in France",
       "originalText": "PRESS REVIEW – Monday, October 19: French and international papers discuss the anti-government protests that turned violent at the weekend and their aftermath across France.",
-      "title": "'Shame', 'anger', 'chaos': Papers react to polarising riots in France",
-      "text": "PRESS REVIEW – Monday, October 19: French and international papers discuss the anti-government protests that turned violent at the weekend and their aftermath across France.",
-      "translation": "unavailable"
-    },
-    {
-      "id": "270fc94b9174fe77041c",
-      "sourceId": "bbc",
-      "source": "BBC News",
-      "country": "GB",
-      "language": "en",
-      "sourceKind": "Общественный вещатель",
-      "url": "https://www.bbc.co.uk/sport/football/articles/c679plpvellgo",
-      "publishedAt": "2026-10-19T10:08:01+00:00",
-      "originalTitle": "England manager Wiegman signs contract extension",
-      "originalText": "Sarina Wiegman says she \"cannot think of a better job in football\" as she commits to staying on as manager of the Lionesses until after Euro 2029.",
-      "title": "England manager Wiegman signs contract extension",
-      "text": "Sarina Wiegman says she \"cannot think of a better job in football\" as she commits to staying on as manager of the Lionesses until after Euro 2029.",
-      "translation": "unavailable"
+      "title": "\"Позор\", \"гнев\", \"хаос\": Документы реагируют на поляризующие беспорядки во Франции",
+      "text": "В понедельник, 19 октября, французские и международные газеты обсуждают антиправительственные протесты, которые стали насильственными в выходные дни, и их последствия по всей Франции.",
+      "translation": "argos"
     },
     {
       "id": "6c2ed61af4a7329da1af",
@@ -741,9 +741,9 @@
       "publishedAt": "2026-10-19T10:06:00+00:00",
       "originalTitle": "Australian MP seriously hurt in suspected car attack",
       "originalText": "Helen Haines, an independent federal lawmaker, has been struck by a car in what Australia's prime minister has called an apparent attack.",
-      "title": "Australian MP seriously hurt in suspected car attack",
-      "text": "Helen Haines, an independent federal lawmaker, has been struck by a car in what Australia's prime minister has called an apparent attack.",
-      "translation": "unavailable"
+      "title": "Австралийский депутат серьезно пострадал при подозрении на автомобильную атаку",
+      "text": "Хелен Хейнс, независимый федеральный законодатель, была поражена автомобилем в результате того, что премьер-министр Австралии назвал очевидной атакой.",
+      "translation": "argos"
     },
     {
       "id": "70fb16d509b14bf0be5e",
@@ -756,9 +756,9 @@
       "publishedAt": "2026-10-19T10:01:00+00:00",
       "originalTitle": "Ukraine got 'no warning' of Russian ballistic strikes, Zelenskyy says",
       "originalText": "Massive strikes overnight hit the capital Kyiv, and damaged power stations, killing at least one person and cutting power to hundreds of thousands.",
-      "title": "Ukraine got 'no warning' of Russian ballistic strikes, Zelenskyy says",
-      "text": "Massive strikes overnight hit the capital Kyiv, and damaged power stations, killing at least one person and cutting power to hundreds of thousands.",
-      "translation": "unavailable"
+      "title": "Украина не получила никакого предупреждения о российских баллистических ударах, говорит Зеленский",
+      "text": "Массовые удары в одночасье обрушились на столицу Киев и повредили электростанции, убив по меньшей мере одного человека и сократив мощность до сотен тысяч.",
+      "translation": "argos"
     },
     {
       "id": "c8121568fcaf3565a591",
@@ -771,9 +771,9 @@
       "publishedAt": "2026-10-19T10:00:08+00:00",
       "originalTitle": "Israel’s High-Stakes Election, and How Illegal Gold Is Getting Into the Global Market",
       "originalText": "Plus, the search for “superhabitable” planets.",
-      "title": "Israel’s High-Stakes Election, and How Illegal Gold Is Getting Into the Global Market",
-      "text": "Plus, the search for “superhabitable” planets.",
-      "translation": "unavailable"
+      "title": "Выборы в Израиле и как незаконное золото попадает на мировой рынок",
+      "text": "Поиск «сверхобитаемых» планет.",
+      "translation": "argos"
     },
     {
       "id": "aa5fa4ac47911a513341",
@@ -786,9 +786,9 @@
       "publishedAt": "2026-10-19T09:59:00+00:00",
       "originalTitle": "China reveals advanced nuclear sub was used to test-fire missile",
       "originalText": "China had only conducted two publicly known ICBM tests in the Pacific before July, and both were land-based launches.",
-      "title": "China reveals advanced nuclear sub was used to test-fire missile",
-      "text": "China had only conducted two publicly known ICBM tests in the Pacific before July, and both were land-based launches.",
-      "translation": "unavailable"
+      "title": "Китай показал, что передовая ядерная субмарина использовалась для испытания ракеты",
+      "text": "До июля Китай провел только два испытания МБР в Тихом океане, и оба были наземными.",
+      "translation": "argos"
     },
     {
       "id": "e0ff9728be6256e96452",
@@ -801,9 +801,9 @@
       "publishedAt": "2026-10-19T09:11:00+00:00",
       "originalTitle": "New species of sperm whale identified from fossils found in Gunma",
       "originalText": "The species combines traits of ancient and modern sperm whales, and is the third new sperm whale species identified from fossils in Japan.",
-      "title": "New species of sperm whale identified from fossils found in Gunma",
-      "text": "The species combines traits of ancient and modern sperm whales, and is the third new sperm whale species identified from fossils in Japan.",
-      "translation": "unavailable"
+      "title": "Новый вид кашалота идентифицирован из окаменелостей, найденных в Гунме",
+      "text": "Вид сочетает в себе черты древних и современных кашалотов и является третьим новым видом кашалотов, идентифицированным из окаменелостей в Японии.",
+      "translation": "argos"
     },
     {
       "id": "f598e99d910210f9788d",
@@ -816,9 +816,9 @@
       "publishedAt": "2026-10-19T09:00:00+00:00",
       "originalTitle": "The real reason it's going to take a while to know who won in some midterm races",
       "originalText": "Hint: It's not only because California counts slowly.",
-      "title": "The real reason it's going to take a while to know who won in some midterm races",
-      "text": "Hint: It's not only because California counts slowly.",
-      "translation": "unavailable"
+      "title": "Настоящая причина, по которой потребуется некоторое время, чтобы узнать, кто выиграл в некоторых промежуточных гонках.",
+      "text": "Подсказка: не только потому, что Калифорния считает медленно.",
+      "translation": "argos"
     },
     {
       "id": "526116a2014d181b738c",
@@ -831,9 +831,9 @@
       "publishedAt": "2026-10-19T09:00:00+00:00",
       "originalTitle": "A Kelvin wave raised sea levels on the West Coast. More are coming",
       "originalText": "A large underwater wave moved up the West Coast, raising sea levels. Scientists say it's driven by El Niño and it's going to happen again.",
-      "title": "A Kelvin wave raised sea levels on the West Coast. More are coming",
-      "text": "A large underwater wave moved up the West Coast, raising sea levels. Scientists say it's driven by El Niño and it's going to happen again.",
-      "translation": "unavailable"
+      "title": "Волна Кельвина подняла уровень моря на западном побережье. Больше приходит",
+      "text": "Большая подводная волна поднялась на западное побережье, повысив уровень моря. Ученые говорят, что это вызвано Эль-Ниньо, и это произойдет снова.",
+      "translation": "argos"
     },
     {
       "id": "5a314bcba734afb47057",
@@ -846,9 +846,9 @@
       "publishedAt": "2026-10-19T08:46:44+00:00",
       "originalTitle": "Morning news brief",
       "originalText": "Ukraine and Russia exchange strikes as relations between U.S. and Ukraine deteriorate, the midterms are on track to be the most expensive on record, French president denounces violent protests.",
-      "title": "Morning news brief",
-      "text": "Ukraine and Russia exchange strikes as relations between U.S. and Ukraine deteriorate, the midterms are on track to be the most expensive on record, French president denounces violent protests.",
-      "translation": "unavailable"
+      "title": "Утренние новости",
+      "text": "Украина и Россия обмениваются ударами, поскольку отношения между США и Украиной ухудшаются, промежуточные выборы являются самыми дорогими в истории, президент Франции осуждает насильственные протесты.",
+      "translation": "argos"
     },
     {
       "id": "05a7675a729117c84394",
@@ -861,9 +861,9 @@
       "publishedAt": "2026-10-19T08:46:18+00:00",
       "originalTitle": "Michigan's Democratic Senate candidate Abdul El-Sayed campaigns in GOP stronghold",
       "originalText": "Michigan's Democratic U.S. Senate candidate Abdul El-Sayed is campaigning in the GOP stronghold of Michigan's Upper Peninsula, an area that hasn't voted for a Democrat in Congress in over a decade.",
-      "title": "Michigan's Democratic Senate candidate Abdul El-Sayed campaigns in GOP stronghold",
-      "text": "Michigan's Democratic U.S. Senate candidate Abdul El-Sayed is campaigning in the GOP stronghold of Michigan's Upper Peninsula, an area that hasn't voted for a Democrat in Congress in over a decade.",
-      "translation": "unavailable"
+      "title": "Кандидат в Сенат от Демократической партии Мичигана Абдул Эль-Сайед проводит кампании в оплоте Республиканской партии",
+      "text": "Кандидат в сенат от Демократической партии Мичигана Абдул Эль-Сайед проводит кампанию в оплоте Республиканской партии на Верхнем полуострове Мичигана, в районе, который не голосовал за демократа в Конгрессе более десяти лет.",
+      "translation": "argos"
     },
     {
       "id": "b1e5fc1f0ab8d70b8b3b",
@@ -876,9 +876,9 @@
       "publishedAt": "2026-10-19T08:45:58+00:00",
       "originalTitle": "Solar power is changing agriculture in Pakistan, but some fear it could cause issues",
       "originalText": "Solar power is transforming agriculture in Pakistan. But in a country already facing water scarcity and extreme weather, some fear their widespread use could cause problems.",
-      "title": "Solar power is changing agriculture in Pakistan, but some fear it could cause issues",
-      "text": "Solar power is transforming agriculture in Pakistan. But in a country already facing water scarcity and extreme weather, some fear their widespread use could cause problems.",
-      "translation": "unavailable"
+      "title": "Солнечная энергия меняет сельское хозяйство в Пакистане, но некоторые опасаются, что это может вызвать проблемы.",
+      "text": "Солнечная энергия преобразует сельское хозяйство в Пакистане. Но в стране, уже столкнувшейся с нехваткой воды и экстремальными погодными условиями, некоторые опасаются, что их широкое использование может вызвать проблемы.",
+      "translation": "argos"
     },
     {
       "id": "0fc01e29d64daccf91bf",
@@ -891,9 +891,9 @@
       "publishedAt": "2026-10-19T08:44:00+00:00",
       "originalTitle": "Tensions overshadow 70th anniversary of key Japan-Soviet declaration",
       "originalText": "In response to Japanese sanctions, Russia has suspended peace treaty talks and asserted that a territorial dispute has been settled.",
-      "title": "Tensions overshadow 70th anniversary of key Japan-Soviet declaration",
-      "text": "In response to Japanese sanctions, Russia has suspended peace treaty talks and asserted that a territorial dispute has been settled.",
-      "translation": "unavailable"
+      "title": "Напряженность затмила 70-летие ключевой японо-советской декларации",
+      "text": "В ответ на японские санкции Россия приостановила переговоры по мирному договору и заявила, что территориальный спор урегулирован.",
+      "translation": "argos"
     },
     {
       "id": "c60ab2c05367b0cf3640",
@@ -906,9 +906,9 @@
       "publishedAt": "2026-10-19T08:37:00+00:00",
       "originalTitle": "Sydney’s new $4 billion airport set to open with barely any flights",
       "originalText": "Western Sydney International is already drawing unfavorable comparisons with airports elsewhere that ultimately failed to live up to expectations.",
-      "title": "Sydney’s new $4 billion airport set to open with barely any flights",
-      "text": "Western Sydney International is already drawing unfavorable comparisons with airports elsewhere that ultimately failed to live up to expectations.",
-      "translation": "unavailable"
+      "title": "Новый аэропорт Сиднея стоимостью $4 млрд откроется практически без рейсов",
+      "text": "Western Sydney International уже проводит неблагоприятные сравнения с аэропортами других стран, которые в конечном итоге не оправдали ожиданий.",
+      "translation": "argos"
     },
     {
       "id": "b26115873410e29c35fa",
@@ -921,9 +921,9 @@
       "publishedAt": "2026-10-19T08:33:00+00:00",
       "originalTitle": "West Bank: Israel arrests 10 suspects over settler attacks on US journalist, European diplomats",
       "originalText": "Israeli police made the arrests following attacks on a US journalist and European diplomats in the occupied West Bank. Israeli human rights group Yesh Din has reported at least 170 settler attacks since September 27.",
-      "title": "West Bank: Israel arrests 10 suspects over settler attacks on US journalist, European diplomats",
-      "text": "Israeli police made the arrests following attacks on a US journalist and European diplomats in the occupied West Bank. Israeli human rights group Yesh Din has reported at least 170 settler attacks since September 27.",
-      "translation": "unavailable"
+      "title": "Израиль арестовал 10 подозреваемых в нападениях поселенцев на американского журналиста и европейских дипломатов",
+      "text": "Израильская полиция произвела аресты после нападений на американского журналиста и европейских дипломатов на оккупированном Западном берегу. Израильская правозащитная группа Yesh Din сообщила о по меньшей мере 170 нападениях поселенцев с 27 сентября.",
+      "translation": "argos"
     },
     {
       "id": "eaaecfd5716fc7e4143f",
@@ -936,9 +936,9 @@
       "publishedAt": "2026-10-19T02:59:08+00:00",
       "originalTitle": "Graphics: China's engagement in global governance",
       "originalText": "",
-      "title": "Graphics: China's engagement in global governance",
+      "title": "Графика: участие Китая в глобальном управлении",
       "text": "",
-      "translation": "unavailable"
+      "translation": "argos"
     },
     {
       "id": "a530b01c3d71e7f43b6f",
@@ -951,9 +951,9 @@
       "publishedAt": "2026-10-19T01:01:06+00:00",
       "originalTitle": "Montenegrin PM meets Chinese FM",
       "originalText": "Montenegrin Prime Minister Milojko Spajic met with visiting Chinese Foreign Minister Wang Yi in Podgorica on Sunday. Both sides expressed willingness to further deepen bilateral relations and expand practical cooperation.",
-      "title": "Montenegrin PM meets Chinese FM",
-      "text": "Montenegrin Prime Minister Milojko Spajic met with visiting Chinese Foreign Minister Wang Yi in Podgorica on Sunday. Both sides expressed willingness to further deepen bilateral relations and expand practical cooperation.",
-      "translation": "unavailable"
+      "title": "Премьер Черногории встретился с китайским министром иностранных дел",
+      "text": "Премьер-министр Черногории Милойко Спайич встретился с министром иностранных дел Китая Ван И в Подгорице в воскресенье. Стороны выразили готовность к дальнейшему углублению двусторонних отношений и расширению практического сотрудничества.",
+      "translation": "argos"
     },
     {
       "id": "ae9393ba6b51bdf77898",
@@ -966,9 +966,9 @@
       "publishedAt": "2026-10-18T23:08:59+00:00",
       "originalTitle": "Canadian PM confirms four killed in military base fire",
       "originalText": "Flames that killed four Canadian soldiers and left 19 people in critical condition began with a smoldering grass ‌fire that quickly grew in an Alberta base's training area where personnel were carrying out exercises, officials said on Sunday.",
-      "title": "Canadian PM confirms four killed in military base fire",
-      "text": "Flames that killed four Canadian soldiers and left 19 people in critical condition began with a smoldering grass ‌fire that quickly grew in an Alberta base's training area where personnel were carrying out exercises, officials said on Sunday.",
-      "translation": "unavailable"
+      "title": "Премьер-министр Канады подтвердил гибель четырех человек при пожаре на военной базе",
+      "text": "Огни, в результате которых погибли четыре канадских солдата и 19 человек остались в критическом состоянии, начались с тлеющего травяного огня, который быстро разросся в тренировочном районе базы в Альберте, где персонал проводил учения.",
+      "translation": "argos"
     },
     {
       "id": "0422933a9f0280fdad33",
@@ -981,9 +981,9 @@
       "publishedAt": "2026-10-18T18:08:25+00:00",
       "originalTitle": "Data centers lead to major political, environmental dilemmas in Mexico",
       "originalText": "",
-      "title": "Data centers lead to major political, environmental dilemmas in Mexico",
+      "title": "Центры обработки данных приводят к серьезным политическим и экологическим проблемам в Мексике.",
       "text": "",
-      "translation": "unavailable"
+      "translation": "argos"
     },
     {
       "id": "79bf2f6084a10067cdc7",
@@ -996,9 +996,9 @@
       "publishedAt": "2026-10-18T14:55:25+00:00",
       "originalTitle": "Premier Li says to advance Belt and Road cooperation with Tajikistan",
       "originalText": "Chinese Premier Li Qiang said on Sunday that China stands ready to work with Tajikistan to advance high-quality Belt and Road cooperation.",
-      "title": "Premier Li says to advance Belt and Road cooperation with Tajikistan",
-      "text": "Chinese Premier Li Qiang said on Sunday that China stands ready to work with Tajikistan to advance high-quality Belt and Road cooperation.",
-      "translation": "unavailable"
+      "title": "Премьер-министр Ли Кэцян заявил о развитии сотрудничества «Пояса и пути» с Таджикистаном",
+      "text": "Премьер-министр Китая Ли Цян заявил в воскресенье, что Китай готов работать с Таджикистаном для продвижения высококачественного сотрудничества «Пояса и пути».",
+      "translation": "argos"
     },
     {
       "id": "ff18c3d9b0bf9259db52",
@@ -1011,9 +1011,9 @@
       "publishedAt": "2026-10-18T14:42:49+00:00",
       "originalTitle": "Reporter’s Diary: How to take care of the elderly in Kenya?",
       "originalText": "Ephraim Matindi Hinga has lived through almost a century of change. From the transformation of Kenyan society to the challenges of growing old in a rapidly changing world, his life offers a window into a generation whose contributions built the foundations on which younger generations stand.",
-      "title": "Reporter’s Diary: How to take care of the elderly in Kenya?",
-      "text": "Ephraim Matindi Hinga has lived through almost a century of change. From the transformation of Kenyan society to the challenges of growing old in a rapidly changing world, his life offers a window into a generation whose contributions built the foundations on which younger generations stand.",
-      "translation": "unavailable"
+      "title": "Дневник репортера: как ухаживать за пожилыми людьми в Кении?",
+      "text": "Эфраим Матинди Хинга пережил почти столетие перемен. От трансформации кенийского общества до проблем старения в быстро меняющемся мире, его жизнь открывает окно в поколение, чей вклад заложил основы, на которых стоят молодые поколения.",
+      "translation": "argos"
     }
   ]
 }
