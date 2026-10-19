@@ -1,0 +1,12 @@
+{
+  "name": "globus-news",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TV-first Russian-language world news reader",
+  "scripts": {
+    "start": "python3 -m http.server 4173 --directory web",
+    "test": "node --test tests/core.test.mjs",
+    "test:feeds": "python3 -m unittest discover -s tests -p 'test_*.py'",
+    "build": "python3 scripts/build_web.py"
+  }
+}

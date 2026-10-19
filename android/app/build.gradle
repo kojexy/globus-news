@@ -1,0 +1,31 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'online.globus.news'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'online.globus.news'
+        minSdk 23
+        targetSdk 35
+        versionCode 1
+        versionName '1.0.0'
+    }
+    signingConfigs {
+        release {
+            if (System.getenv('GLOBUS_KEYSTORE')) {
+                storeFile file(System.getenv('GLOBUS_KEYSTORE'))
+                storePassword System.getenv('GLOBUS_KEYSTORE_PASSWORD')
+                keyAlias 'globus'
+                keyPassword System.getenv('GLOBUS_KEYSTORE_PASSWORD')
+            }
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+        }
+    }
+    sourceSets { main { assets.srcDirs = ['src/main/assets'] } }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}

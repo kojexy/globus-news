@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f2f0e9">
+  <meta name="description" content="Новости мира на русском. Одна новость на экран. Читайте на компьютере и Android TV, переключайте стрелками или пультом.">
+  <title>Глобус — новости на большом экране</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./runtime.js"></script>
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="masthead">
+      <a class="brand" href="./" aria-label="Глобус, главная"><img src="./icon.svg" alt="" width="39" height="39"><span>глобус<span class="brand-dot">.</span></span></a>
+      <div class="edition"><span class="live-dot"></span><span id="edition">Загружаем выпуск</span></div>
+      <div class="header-actions"><button id="countriesButton" class="pill" aria-haspopup="dialog">Страны <span id="countryCount">8</span></button><button id="settingsButton" class="icon-button" aria-label="Настройки чтения" title="Настройки">Aa</button><button id="fullscreenButton" class="icon-button" aria-label="На весь экран" title="На весь экран (F)">⛶</button></div>
+    </header>
+
+    <main id="reader" tabindex="-1" aria-label="Чтение новостей">
+      <div class="section-line"><span id="filterLabel">ВЕСЬ МИР</span><span id="clock"></span></div>
+      <div id="notice" class="notice" role="status" hidden></div>
+      <article id="article" class="article" aria-labelledby="headline">
+        <div class="story-top"><span id="country" class="country-badge"></span><span id="position" class="position"></span></div>
+        <div class="article-grid">
+          <div class="story-copy"><div id="storyCategory" class="eyebrow">НОВОСТИ МИРА</div><h1 id="headline">Мир. По одной новости.</h1><div id="textSpace" class="text-space"><p id="storyText">Загружаем свежие заголовки и краткие тексты редакций.</p></div><div class="text-pages"><span id="translationLabel"></span><div id="pageControls" hidden><button id="previousPage" aria-label="Предыдущая страница заметки">↑</button><span id="pageNumber"></span><button id="nextPage" aria-label="Следующая страница заметки">↓</button></div></div></div>
+          <aside class="source-panel"><div class="source-rule"></div><span class="eyebrow">ИСТОЧНИК</span><p id="sourceName" class="source-name">Глобус</p><p id="sourceKind" class="source-kind">Редакции разных стран.<br>Один удобный экран.</p><time id="publishedAt"></time><button id="sourceButton" class="text-button">Об этой новости <span>↗</span></button><div class="source-note">Краткий текст из RSS.<br>Полная статья — у редакции.</div></aside>
+        </div>
+      </article>
+      <div id="emptyState" class="empty-state" hidden><span class="eyebrow">В ЭТОМ ВЫПУСКЕ ПУСТО</span><h2>Для выбранных стран<br>нет свежих новостей.</h2><p id="emptyExplanation">Выберите другие страны или обновите выпуск.</p><div><button id="emptyCountries" class="pill">Выбрать страны</button><button id="retryButton" class="pill">Обновить</button></div></div>
+    </main>
+
+    <footer class="footer"><div class="reading-hint"><span class="keyboard">←</span><span class="keyboard">→</span><span>Переключить новость</span><span class="hint-extra">· <span class="keyboard">OK</span> Страны</span></div><div class="transport"><button id="previousButton" class="nav-button" aria-label="Предыдущая новость">←</button><button id="nextButton" class="nav-button next" aria-label="Следующая новость">Следующая <span>→</span></button></div></footer>
+    <div id="progress" class="progress"></div>
+  </div>
+
+  <section id="countriesDialog" class="overlay" role="dialog" aria-modal="true" aria-labelledby="countriesTitle" hidden>
+    <div class="dialog"><div class="dialog-top"><span class="eyebrow">ВАША ЛЕНТА</span><button class="close-button" data-close aria-label="Закрыть">×</button></div><h2 id="countriesTitle">Откуда читать новости?</h2><p class="dialog-description">Выберите страны редакций. Выбор сохранится на этом устройстве.</p><div class="presets"><button id="allCountries" class="pill">Весь мир</button><button id="russiaOnly" class="pill">Только Россия</button></div><div id="countryOptions" class="country-options"></div><p class="dialog-note">Флаг — страна редакции, а не место события. Взгляды редакций могут различаться.</p><button id="applyCountries" class="primary-button">Читать новости <span>→</span></button><div class="dialog-links"><button id="menuSettings" class="text-button">Настройки чтения</button><button id="menuSource" class="text-button">Об этой новости ↗</button></div></div>
+  </section>
+
+  <section id="settingsDialog" class="overlay" role="dialog" aria-modal="true" aria-labelledby="settingsTitle" hidden>
+    <div class="dialog compact"><div class="dialog-top"><span class="eyebrow">УДОБНОЕ ЧТЕНИЕ</span><button class="close-button" data-close aria-label="Закрыть">×</button></div><h2 id="settingsTitle">Настройки экрана</h2><p class="setting-label">Размер текста</p><div id="fontOptions" class="segmented"><button data-font="normal">Обычный</button><button data-font="large">Крупный</button><button data-font="extra">Очень крупный</button></div><p class="setting-label">Оформление</p><div id="themeOptions" class="segmented"><button data-theme="paper">Бумага</button><button data-theme="dark">Тёмное</button></div><div class="settings-meta"><p id="updateInfo"></p><button id="refreshButton" class="text-button">Обновить выпуск ↻</button><p>← → — новости · ↑ ↓ — страницы заметки<br>OK / Enter — страны · Esc / Назад — закрыть<br>F — полный экран · S — настройки</p><p>Автопрокрутки нет. Читайте в своём темпе.<br>Крупный текст помогает читать с расстояния, но не является защитой зрения.</p></div></div>
+  </section>
+
+  <section id="sourceDialog" class="overlay" role="dialog" aria-modal="true" aria-labelledby="sourceTitle" hidden>
+    <div class="dialog compact"><div class="dialog-top"><span class="eyebrow">ПЕРВОИСТОЧНИК</span><button class="close-button" data-close aria-label="Закрыть">×</button></div><h2 id="sourceTitle"></h2><p id="sourceDetails" class="dialog-description"></p><p id="originalTitle" class="original-title" lang="en"></p><p id="sourceDisclaimer" class="dialog-note"></p><a id="originalLink" class="primary-button" target="_blank" rel="noopener noreferrer">Открыть у редакции ↗</a><p class="dialog-note">Сайт редакции может требовать подписку или быть недоступен в вашей сети. Перевод машинный; он может содержать ошибки.</p></div>
+  </section>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>
