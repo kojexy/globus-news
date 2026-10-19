@@ -1,1 +1,1 @@
-window.GLOBUS_CONFIG = {feedUrl: './data/news.json', version: '1.2.0'};
+window.GLOBUS_CONFIG = {feedUrl: './data/news.json', version: '1.3.0'};

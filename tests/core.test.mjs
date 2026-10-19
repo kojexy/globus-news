@@ -40,3 +40,20 @@ test('malformed feed cannot replace valid cached data; duplicate and unsafe stor
   const valid=validateFeed({schemaVersion:1,generatedAt:new Date(now).toISOString(),articles:[a,a,{...a,id:'bad',url:'javascript:x'}]});
   assert.equal(valid.articles.length,1);
 });
+
+test('politics is the default and optional music is off until explicitly enabled',()=>{
+  const s=normalizeSettings({});assert.equal(s.topic,'politics');assert.equal(s.musicEnabled,false);assert.equal(s.musicVolume,12);
+  assert.equal(normalizeSettings({topic:'all',musicEnabled:true,musicVolume:99}).musicVolume,30);
+  assert.equal(normalizeSettings({musicEnabled:'true'}).musicEnabled,false);
+});
+test('strict political feed excludes sport, lifestyle and incidental politician mentions',async()=>{
+  const {isPolitics}=await import('../web/core.mjs');
+  for(const title of ['Путин подписал закон о бюджете','Лавров встретился с министром иностранных дел','Макрон обсудил протесты во Франции','Republicans prepare for Senate elections','China and Russia hold diplomatic talks'])assert.equal(isPolitics({title}),true,title);
+  for(const title of ['В Москве ожидаются заморозки','Теннисист проиграл на турнире в США','Новый вид кашалота найден в Японии','Звезда мема вышла замуж','Trump watches football match'])assert.equal(isPolitics({title,originalText:'Президент рассказал о выборах'}),false,title);
+  assert.equal(isPolitics({title:'New government reform',categories:['Politics']}),true);
+  assert.equal(isPolitics({title:'President visits football match',categories:['Sports']}),false);
+  const a={...article('politics','RU'),title:'Парламент принял закон'};
+  const b={...article('weather','RU'),title:'Погода на завтра'};
+  assert.deepEqual(createQueue([a,b],['RU'],now,'politics').map(x=>x.id),['politics']);
+  assert.deepEqual(createQueue([b],['RU'],now,'politics'),[]);
+});

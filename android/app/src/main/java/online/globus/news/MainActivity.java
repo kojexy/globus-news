@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
         settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
         settings.setSupportMultipleWindows(true);
         settings.setJavaScriptCanOpenWindowsAutomatically(false);
-        settings.setMediaPlaybackRequiresUserGesture(true);
+        settings.setMediaPlaybackRequiresUserGesture(false);
         reader.setWebViewClient(new WebViewClient() {
             @Override public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
                 Uri uri = request.getUrl();
@@ -102,6 +102,10 @@ public class MainActivity extends Activity {
     @Override protected void onResume() {
         super.onResume();
         if (reader != null) reader.evaluateJavascript("window.globusResume && window.globusResume()", null);
+    }
+    @Override protected void onPause() {
+        if (reader != null) reader.evaluateJavascript("window.globusPause && window.globusPause()", null);
+        super.onPause();
     }
     @Override protected void onDestroy() { if (reader != null) { reader.stopLoading(); reader.destroy(); } super.onDestroy(); }
 }

@@ -136,6 +136,9 @@ def parse_feed(data, source, now=None, limit=6):
             'publishedAt': date.isoformat() if date else None,
             'originalTitle': title, 'originalText': description,
             'excerptOrigin': 'rss',
+            'categories': list(dict.fromkeys(
+                (child.attrib.get('term') or clean_text(''.join(child.itertext())))[:150]
+                for child in item if child.tag.split('}')[-1] == 'category'))[:20],
         })
     articles.sort(key=lambda a: a['publishedAt'] or '', reverse=True)
     return articles[:limit]

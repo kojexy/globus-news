@@ -4,7 +4,7 @@ export const COUNTRIES = [
   {code:'DE', name:'Германия', flag:'🇩🇪'}, {code:'FR', name:'Франция', flag:'🇫🇷'},
   {code:'JP', name:'Япония', flag:'🇯🇵'}, {code:'IN', name:'Индия', flag:'🇮🇳'},
 ];
-export const DEFAULTS = {countries:COUNTRIES.map(c=>c.code),font:'normal',theme:'paper',textScale:100,lineHeight:1.5,contentWidth:'wide',autoTranslate:true};
+export const DEFAULTS = {countries:COUNTRIES.map(c=>c.code),font:'normal',theme:'paper',textScale:100,lineHeight:1.5,contentWidth:'wide',autoTranslate:true,topic:'politics',musicEnabled:false,musicVolume:12};
 export const PAPER_STYLES = [
   {id:'morning',name:'Утренняя'}, {id:'broadsheet',name:'Большая газета'},
   {id:'coffee',name:'За кофе'}, {id:'archive',name:'Архив'},
@@ -25,6 +25,9 @@ export function normalizeSettings(input = {}) {
     autoTranslate: input.autoTranslate!==false,
     paperStyle: ['rotate',...PAPER_STYLES.map(s=>s.id)].includes(input.paperStyle)?input.paperStyle:'rotate',
     justify: input.justify!==false,
+    topic: input.topic==='all'?'all':'politics',
+    musicEnabled: input.musicEnabled===true,
+    musicVolume: Number.isFinite(input.musicVolume)?Math.max(1,Math.min(30,Math.round(input.musicVolume))):12,
   };
 }
 export function safeUrl(value) {
@@ -45,10 +48,30 @@ export function isRecent(article, now=Date.now()) {
   return Number.isFinite(t) && now-t<=72*3600_000 && t-now<=2*3600_000;
 }
 // Round-robin keeps one prolific country from taking over the edition.
-export function createQueue(articles,countries,now=Date.now()) {
-  const groups=countries.map(code=>articles.filter(a=>a.country===code && isRecent(a,now)).sort((a,b)=>Number(Boolean(b.fullText||b.originalFullText))-Number(Boolean(a.fullText||a.originalFullText))||(Date.parse(b.publishedAt)||0)-(Date.parse(a.publishedAt)||0)));
+export function createQueue(articles,countries,now=Date.now(),topic='all') {
+  const groups=countries.map(code=>articles.filter(a=>a.country===code && isRecent(a,now) && (topic!=='politics'||isPolitics(a))).sort((a,b)=>Number(Boolean(b.fullText||b.originalFullText))-Number(Boolean(a.fullText||a.originalFullText))||(Date.parse(b.publishedAt)||0)-(Date.parse(a.publishedAt)||0)));
   const out=[]; for(let i=0;groups.some(g=>i<g.length);i++) for(const group of groups) if(group[i]) out.push(group[i]);
   return out;
+}
+// Classify the editorial topic, not incidental names appearing in the full article.
+// Unknown stories stay out of the strict feed; never replace an empty filter with all news.
+export function isPolitics(article) {
+  const categories=(Array.isArray(article.categories)?article.categories:[]).filter(x=>typeof x==='string').join(' ').toLowerCase();
+  const section=(()=>{try{return new URL(article.url).pathname.toLowerCase();}catch{return '';}})();
+  const headline=[article.originalTitle,article.title].filter(Boolean).join(' ').toLowerCase();
+  const teaser=[article.originalText,article.text].filter(Boolean).join(' ').slice(0,3000).toLowerCase();
+  const offTopic=/\b(sport|football|tennis|celebrity|entertainment|lifestyle|weather|horoscope|recipe|wellness)\w*|спорт|футбол|теннис|шоу-бизнес|гороскоп|рецепт|погод|заморозк/;
+  const politics=/\b(politic\w*|election\w*|parliament\w*|diploma(?:t|c)\w*|geopolitic\w*|sanction\w*|legislat\w*|senat\w*|republican\w*|democrat\w*|ceasefire|foreign minister|prime minister|white house|united nations|nato|kremlin|midterm\w*|voter\w*|ballot\w*|opposition|national security)\b|политик|выбор[а-яё]*|избирател|парламент|госдум|дипломат|санкци|перемири|вице-премьер|премьер-министр|премьер|министр[а-яё]* иностранных|международн[а-яё]* отношен|оппозици|республикан|демократическ[а-яё]* парти|конституц|(?:^|[^а-яё])(?:мид|нато|оон)(?:$|[^а-яё])|кремл/;
+  const incident=/\b(fire|car crash|accident|murder|anniversary|celebrity|festival)\b|при пожаре|автокатастроф|годовщин|убийств|мошенничеств/;
+  if(incident.test(headline)&&!politics.test(headline))return false;
+  if(offTopic.test(categories+' '+section))return false;
+  if(politics.test(categories+' '+section))return true;
+  if(offTopic.test(headline))return false;
+  if(politics.test(headline))return true;
+  const actor=/\b(president|government|trump|putin|zelensky\w*|macron|netanyahu|rubio|congress|cabinet|chancellor)\b|президент|правительств|трамп|путин|зеленск|макрон|нетаньяху|лавров|мишустин|госсекретар|канцлер/;
+  const action=/\b(meet\w*|talks|visit\w*|policy|summit|treaty|law|budget|reform\w*|war|military|missile\w*|protest\w*|immigration|governance|cooperation)\b|встрет|переговор|визит|закон|бюджет|реформ|войн|военн|ракет|протест|миграци|сотрудничеств|управлени|соглашени/;
+  if(actor.test(headline)&&action.test(headline+' '+teaser))return true;
+  return action.test(headline)&&politics.test(teaser);
 }
 export function moveIndex(index,delta,length) { return length ? ((index+delta)%length+length)%length : 0; }
 export function ageLabel(value,now=Date.now()) {
