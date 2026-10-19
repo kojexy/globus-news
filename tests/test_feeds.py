@@ -1,9 +1,10 @@
 import sys
 from pathlib import Path
 import unittest
+import io
 from datetime import datetime, timezone
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from collect_news import parse_feed, clean_text, canonical_url, excerpt, MetadataParser, extract_article
+from collect_news import parse_feed, clean_text, canonical_url, excerpt, MetadataParser, extract_article, fetch_candidates
 from unittest.mock import patch
 from types import SimpleNamespace
 
@@ -24,6 +25,14 @@ class FeedTests(unittest.TestCase):
         self.assertEqual(parse_feed(atom,SOURCE,NOW)[0]['categories'],['Politics'])
         rdf=b'''<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/"><item><title>RDF</title><link>https://example.org/rdf</link><dc:date>2026-10-19T08:00:00Z</dc:date><description>Text</description></item></rdf:RDF>'''
         self.assertIsNotNone(parse_feed(rdf,SOURCE,NOW)[0]['publishedAt'])
+    def test_dedicated_politics_feed_is_merged_before_ranking_and_not_limited_to_six(self):
+        items=''.join(f'<item><title>Indirect headline {i}</title><link>https://example.org/{i}</link><pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate></item>' for i in range(35))
+        xml=('<rss><channel>'+items+'</channel></rss>').encode()
+        source={**SOURCE,'url':'https://example.org/general.rss','feeds':[{'url':'https://example.org/politics.rss','topic':'politics'}]}
+        with patch('collect_news.urllib.request.urlopen',side_effect=lambda *a,**k:io.BytesIO(xml)):
+            articles=fetch_candidates(source,NOW)
+        self.assertEqual(len(articles),35)
+        self.assertTrue(all(a['topic']=='politics' and a['topicOrigin']=='editorial' for a in articles))
     def test_html_and_url_safety(self):
         self.assertEqual(clean_text('<b>Hello</b><br>world<style>bad</style>'),'Hello world')
         self.assertIsNone(canonical_url('data:text/html,test'))

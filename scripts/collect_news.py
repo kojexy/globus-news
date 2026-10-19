@@ -16,6 +16,7 @@ import logging
 from pathlib import Path
 import re
 import sys
+import subprocess
 import urllib.request
 from urllib.parse import urlparse, urlunparse, parse_qsl, urlencode
 import xml.etree.ElementTree as ET
@@ -139,6 +140,8 @@ def parse_feed(data, source, now=None, limit=6):
             'categories': list(dict.fromkeys(
                 (child.attrib.get('term') or clean_text(''.join(child.itertext())))[:150]
                 for child in item if child.tag.split('}')[-1] == 'category'))[:20],
+            'topic': source.get('topic', 'unknown'),
+            'topicOrigin': 'editorial' if source.get('topic') == 'politics' else 'classifier',
         })
     articles.sort(key=lambda a: a['publishedAt'] or '', reverse=True)
     return articles[:limit]
@@ -163,20 +166,46 @@ def extract_article(html, url, summary=''):
     return body, 'available'
 
 
-def fetch_source(source, now, previous_by_id=None):
-    request = urllib.request.Request(source['url'], headers={
-        'User-Agent': 'GlobusNews/1.0 (+https://github.com/kojexy/globus-news; personal RSS reader)',
-        'Accept': 'application/rss+xml, application/xml, text/xml, */*',
-    })
-    with urllib.request.urlopen(request, timeout=30) as response:
-        payload = response.read(3_000_001)
-    if len(payload) > 3_000_000:
-        raise ValueError('RSS exceeds 3 MB')
-    articles = parse_feed(payload, source, now)
+def fetch_candidates(source, now):
+    """Combine domestic politics, world and general RSS before applying a limit."""
+    articles, errors, seen = [], [], set()
+    streams = source.get('feeds', []) + [{'url': source['url']}]
+    for stream in streams:
+        try:
+            request = urllib.request.Request(stream['url'], headers={
+                'User-Agent': 'GlobusNews/1.3 (+https://github.com/kojexy/globus-news; personal RSS reader)',
+                'Accept': 'application/rss+xml, application/xml, text/xml, */*',
+            })
+            with urllib.request.urlopen(request, timeout=20) as response:
+                payload = response.read(3_000_001)
+            if len(payload) > 3_000_000:
+                raise ValueError('RSS exceeds 3 MB')
+            for article in parse_feed(payload, {**source, **stream}, now, limit=120):
+                if article['id'] not in seen:
+                    seen.add(article['id'])
+                    articles.append(article)
+        except Exception as error:
+            errors.append(str(error))
+            log.info('RSS stream unavailable %s: %s', stream['url'], error)
     if not articles:
-        raise ValueError('No articles from the last 72 hours')
+        raise ValueError('No recent RSS articles: ' + '; '.join(errors))
+    ranked = subprocess.run(['node', str(ROOT / 'scripts/rank_news.mjs')],
+                            input=json.dumps(articles), text=True, capture_output=True, check=True)
+    return json.loads(ranked.stdout)
+
+
+def fetch_source(source, now, previous_by_id=None, limit=30):
+    candidates = fetch_candidates(source, now)
+    # Reserve most space for politics, while keeping some general news for All topics.
+    political = [a for a in candidates if a['topic'] == 'politics']
+    other = [a for a in candidates if a['topic'] != 'politics']
+    articles = political[:max(1, limit - 4)] + other[:4]
+    if len(articles) < limit:
+        selected = {a['id'] for a in articles}
+        articles += [a for a in candidates if a['id'] not in selected][:limit - len(articles)]
     previous_by_id = previous_by_id or {}
     base = urlparse(source['home']).hostname.removeprefix('www.')
+    new_full_attempts = 0
     for article in articles:
         host = urlparse(article['url']).hostname or ''
         article['fullStatus'] = 'unavailable'
@@ -186,9 +215,15 @@ def fetch_source(source, now, previous_by_id=None):
                 if key in old:
                     article[key] = old[key]
             continue
+        # Keep refreshing RSS breadth quickly. Cached full texts are always retained;
+        # remaining new bodies are collected in later editions as the cache grows.
+        if new_full_attempts >= 8 or old.get('fullStatus') == 'restricted':
+            article['fullStatus'] = old.get('fullStatus', 'unavailable')
+            continue
         if not (host == base or host.endswith('.' + base)):
             continue
         try:
+            new_full_attempts += 1
             request = urllib.request.Request(article['url'], headers={'User-Agent': 'GlobusNews/1.0 (personal news reader)'})
             with urllib.request.urlopen(request, timeout=12) as response:
                 payload = response.read(2_000_000).decode(response.headers.get_content_charset() or 'utf-8', errors='replace')
@@ -233,7 +268,7 @@ class Translator:
         return '\n\n'.join(self.text(paragraph, language) for paragraph in text.split('\n\n') if paragraph.strip())
 
 
-def collect(output, cache_path, raw=False, limit=6):
+def collect(output, cache_path, raw=False, limit=30):
     now = datetime.now(timezone.utc)
     sources = json.loads((ROOT / 'scripts/sources.json').read_text())
     previous = json.loads(output.read_text()) if output.exists() else {'articles': []}
@@ -243,7 +278,7 @@ def collect(output, cache_path, raw=False, limit=6):
     translator = None if raw else Translator(cache)
     records, statuses, successes = [], [], 0
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as pool:
-        jobs = {pool.submit(fetch_source, source, now, previous_by_id): source for source in sources}
+        jobs = {pool.submit(fetch_source, source, now, previous_by_id, limit): source for source in sources}
         for job in concurrent.futures.as_completed(jobs):
             source = jobs[job]
             try:
@@ -304,6 +339,6 @@ if __name__ == '__main__':
     parser.add_argument('--output', type=Path, default=ROOT / 'web/data/news.json')
     parser.add_argument('--cache', type=Path, default=ROOT / 'scripts/translation-cache.json')
     parser.add_argument('--raw', action='store_true', help='Diagnostic only: leave foreign items explicitly untranslated')
-    parser.add_argument('--limit', type=int, default=6)
+    parser.add_argument('--limit', type=int, default=30)
     args = parser.parse_args()
     collect(args.output, args.cache, args.raw, args.limit)

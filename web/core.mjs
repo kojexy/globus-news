@@ -61,10 +61,11 @@ export function isPolitics(article) {
   const headline=[article.originalTitle,article.title].filter(Boolean).join(' ').toLowerCase();
   const teaser=[article.originalText,article.text].filter(Boolean).join(' ').slice(0,3000).toLowerCase();
   const offTopic=/\b(sport|football|tennis|celebrity|entertainment|lifestyle|weather|horoscope|recipe|wellness)\w*|спорт|футбол|теннис|шоу-бизнес|гороскоп|рецепт|погод|заморозк/;
-  const politics=/\b(politic\w*|election\w*|parliament\w*|diploma(?:t|c)\w*|geopolitic\w*|sanction\w*|legislat\w*|senat\w*|republican\w*|democrat\w*|ceasefire|foreign minister|prime minister|white house|united nations|nato|kremlin|midterm\w*|voter\w*|ballot\w*|opposition|national security)\b|политик|выбор[а-яё]*|избирател|парламент|госдум|дипломат|санкци|перемири|вице-премьер|премьер-министр|премьер|министр[а-яё]* иностранных|международн[а-яё]* отношен|оппозици|республикан|демократическ[а-яё]* парти|конституц|(?:^|[^а-яё])(?:мид|нато|оон)(?:$|[^а-яё])|кремл/;
+  const politics=/\b(politic\w*|election\w*|parliament\w*|diploma(?:t|c)\w*|geopolitic\w*|sanction\w*|legislat\w*|senat\w*|republican\w*|democrat\w*|ceasefire|airstrike\w*|invasion|armed conflict|peace talks|foreign minister|prime minister|white house|united nations|nato|kremlin|midterm\w*|voter\w*|ballot\w*|opposition|national security)\b|политик|выбор[а-яё]*|избирател|парламент|госдум|дипломат|санкци|вторжени|перемири|мирн[а-яё]* переговор|военн[а-яё]* операци|вице-премьер|премьер-министр|премьер|министр[а-яё]* иностранных|международн[а-яё]* отношен|оппозици|республикан|демократическ[а-яё]* парти|конституц|(?:^|[^а-яё])(?:мид|нато|оон)(?:$|[^а-яё])|кремл/;
   const incident=/\b(fire|car crash|accident|murder|anniversary|celebrity|festival)\b|при пожаре|автокатастроф|годовщин|убийств|мошенничеств/;
   if(incident.test(headline)&&!politics.test(headline))return false;
   if(offTopic.test(categories+' '+section))return false;
+  if(article.topic==='politics')return true;
   if(politics.test(categories+' '+section))return true;
   if(offTopic.test(headline))return false;
   if(politics.test(headline))return true;

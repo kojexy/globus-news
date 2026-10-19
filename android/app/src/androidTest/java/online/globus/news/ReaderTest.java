@@ -77,7 +77,9 @@ public class ReaderTest {
         evaluate("window.globusResume()");assertEquals("Radio resumes when opted in","true",evaluate("document.querySelector('#backgroundRadio').hasAttribute('src')"));
         evaluate("location.reload()");Thread.sleep(1500);waitFor("document.querySelector('#reader')?.dataset.ready==='true'");
         assertEquals("Enabled setting and volume survive reload","true",evaluate("JSON.parse(localStorage.getItem('globus.settings.v1')).musicEnabled && document.querySelector('#backgroundRadio').volume===.11 && document.querySelector('#backgroundRadio').hasAttribute('src')"));
-        key(KeyEvent.KEYCODE_MENU);evaluate("document.querySelector('#quickSettings').click();document.querySelector('#musicSettingsButton').click();document.querySelector('#musicOn').focus()");
+        key(KeyEvent.KEYCODE_MENU);evaluate("document.querySelector('#quickSettings').click();document.querySelector('#musicSettingsButton').click()");
+        Thread.sleep(400);evaluate("document.querySelector('#musicOn').focus()");
+        assertEquals("Enabled music button focused", "\"musicOn\"",evaluate("document.activeElement.id"));
         key(KeyEvent.KEYCODE_DPAD_LEFT);key(KeyEvent.KEYCODE_DPAD_CENTER);
         assertEquals("Disabled setting persists and stops audio","true",evaluate("!JSON.parse(localStorage.getItem('globus.settings.v1')).musicEnabled && document.querySelector('#backgroundRadio').paused && !document.querySelector('#backgroundRadio').hasAttribute('src')"));
         evaluate("document.querySelector('[data-topic=all]').click()");assertEquals("All-topic override saved","\"all\"",evaluate("JSON.parse(localStorage.getItem('globus.settings.v1')).topic"));

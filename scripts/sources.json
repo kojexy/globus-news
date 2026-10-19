@@ -1,14 +1,182 @@
 [
-  {"id":"rbc","name":"РБК","country":"RU","language":"ru","url":"https://rssexport.rbc.ru/rbcnews/news/30/full.rss","home":"https://www.rbc.ru","kind":"Частная медиагруппа"},
-  {"id":"tass","name":"ТАСС","country":"RU","language":"ru","url":"https://tass.ru/rss/v2.xml","home":"https://tass.ru","kind":"Государственное информационное агентство"},
-  {"id":"interfax","name":"Интерфакс","country":"RU","language":"ru","url":"https://www.interfax.ru/rss.asp","home":"https://www.interfax.ru","kind":"Частное информационное агентство"},
-  {"id":"lenta","name":"Лента.ру","country":"RU","language":"ru","url":"https://lenta.ru/rss/news","home":"https://lenta.ru","kind":"Частная медиагруппа"},
-  {"id":"npr","name":"NPR","country":"US","language":"en","url":"https://feeds.npr.org/1001/rss.xml","home":"https://www.npr.org","kind":"Некоммерческая редакция"},
-  {"id":"nyt","name":"The New York Times","country":"US","language":"en","url":"https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml","home":"https://www.nytimes.com","kind":"Частная медиагруппа"},
-  {"id":"cgtn","name":"CGTN","country":"CN","language":"en","url":"https://www.cgtn.com/subscribe/rss/section/world.xml","home":"https://www.cgtn.com","kind":"Государственный международный вещатель"},
-  {"id":"bbc","name":"BBC News","country":"GB","language":"en","url":"https://feeds.bbci.co.uk/news/rss.xml","home":"https://www.bbc.com/news","kind":"Общественный вещатель"},
-  {"id":"dw","name":"DW","country":"DE","language":"en","url":"https://rss.dw.com/rdf/rss-en-top","home":"https://www.dw.com","kind":"Международный общественный вещатель"},
-  {"id":"france24","name":"France 24","country":"FR","language":"en","url":"https://www.france24.com/en/rss","home":"https://www.france24.com/en/","kind":"Общественный международный вещатель"},
-  {"id":"japan","name":"The Japan Times","country":"JP","language":"en","url":"https://www.japantimes.co.jp/feed/","home":"https://www.japantimes.co.jp","kind":"Частная редакция"},
-  {"id":"hindu","name":"The Hindu","country":"IN","language":"en","url":"https://www.thehindu.com/news/national/feeder/default.rss","home":"https://www.thehindu.com","kind":"Частная медиагруппа"}
+  {
+    "id": "rbc",
+    "name": "РБК",
+    "country": "RU",
+    "language": "ru",
+    "url": "https://rssexport.rbc.ru/rbcnews/news/30/full.rss",
+    "home": "https://www.rbc.ru",
+    "kind": "Частная медиагруппа"
+  },
+  {
+    "id": "tass",
+    "name": "ТАСС",
+    "country": "RU",
+    "language": "ru",
+    "url": "https://tass.ru/rss/v2.xml",
+    "home": "https://tass.ru",
+    "kind": "Государственное информационное агентство"
+  },
+  {
+    "id": "interfax",
+    "name": "Интерфакс",
+    "country": "RU",
+    "language": "ru",
+    "url": "https://www.interfax.ru/rss.asp",
+    "home": "https://www.interfax.ru",
+    "kind": "Частное информационное агентство"
+  },
+  {
+    "id": "lenta",
+    "name": "Лента.ру",
+    "country": "RU",
+    "language": "ru",
+    "url": "https://lenta.ru/rss/news",
+    "home": "https://lenta.ru",
+    "kind": "Частная медиагруппа",
+    "feeds": [
+      {
+        "url": "https://lenta.ru/rss/news/world/",
+        "topic": "world"
+      },
+      {
+        "url": "https://lenta.ru/rss/news/russia/",
+        "topic": "world"
+      }
+    ]
+  },
+  {
+    "id": "npr",
+    "name": "NPR",
+    "country": "US",
+    "language": "en",
+    "url": "https://feeds.npr.org/1001/rss.xml",
+    "home": "https://www.npr.org",
+    "kind": "Некоммерческая редакция",
+    "feeds": [
+      {
+        "url": "https://feeds.npr.org/1014/rss.xml",
+        "topic": "politics"
+      },
+      {
+        "url": "https://feeds.npr.org/1004/rss.xml",
+        "topic": "world"
+      }
+    ]
+  },
+  {
+    "id": "nyt",
+    "name": "The New York Times",
+    "country": "US",
+    "language": "en",
+    "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "home": "https://www.nytimes.com",
+    "kind": "Частная медиагруппа",
+    "feeds": [
+      {
+        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+        "topic": "politics"
+      },
+      {
+        "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+        "topic": "world"
+      }
+    ]
+  },
+  {
+    "id": "cgtn",
+    "name": "CGTN",
+    "country": "CN",
+    "language": "en",
+    "url": "https://www.cgtn.com/subscribe/rss/section/world.xml",
+    "home": "https://www.cgtn.com",
+    "kind": "Государственный международный вещатель",
+    "feeds": [
+      {
+        "url": "https://www.cgtn.com/subscribe/rss/section/politics.xml",
+        "topic": "politics"
+      },
+      {
+        "url": "https://www.cgtn.com/subscribe/rss/section/china.xml",
+        "topic": "world"
+      }
+    ]
+  },
+  {
+    "id": "bbc",
+    "name": "BBC News",
+    "country": "GB",
+    "language": "en",
+    "url": "https://feeds.bbci.co.uk/news/rss.xml",
+    "home": "https://www.bbc.com/news",
+    "kind": "Общественный вещатель",
+    "feeds": [
+      {
+        "url": "https://feeds.bbci.co.uk/news/politics/rss.xml",
+        "topic": "politics"
+      },
+      {
+        "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+        "topic": "world"
+      }
+    ]
+  },
+  {
+    "id": "dw",
+    "name": "DW",
+    "country": "DE",
+    "language": "en",
+    "url": "https://rss.dw.com/rdf/rss-en-top",
+    "home": "https://www.dw.com",
+    "kind": "Международный общественный вещатель",
+    "feeds": [
+      {
+        "url": "https://rss.dw.com/rdf/rss-en-world",
+        "topic": "world"
+      }
+    ]
+  },
+  {
+    "id": "france24",
+    "name": "France 24",
+    "country": "FR",
+    "language": "en",
+    "url": "https://www.france24.com/en/rss",
+    "home": "https://www.france24.com/en/",
+    "kind": "Общественный международный вещатель",
+    "feeds": [
+      {
+        "url": "https://www.france24.com/en/france/rss",
+        "topic": "world"
+      },
+      {
+        "url": "https://www.france24.com/en/europe/rss",
+        "topic": "world"
+      }
+    ]
+  },
+  {
+    "id": "japan",
+    "name": "The Japan Times",
+    "country": "JP",
+    "language": "en",
+    "url": "https://www.japantimes.co.jp/feed/",
+    "home": "https://www.japantimes.co.jp",
+    "kind": "Частная редакция"
+  },
+  {
+    "id": "hindu",
+    "name": "The Hindu",
+    "country": "IN",
+    "language": "en",
+    "url": "https://www.thehindu.com/news/national/feeder/default.rss",
+    "home": "https://www.thehindu.com",
+    "kind": "Частная медиагруппа",
+    "feeds": [
+      {
+        "url": "https://www.thehindu.com/news/international/feeder/default.rss",
+        "topic": "world"
+      }
+    ]
+  }
 ]

@@ -57,3 +57,12 @@ test('strict political feed excludes sport, lifestyle and incidental politician 
   assert.deepEqual(createQueue([a,b],['RU'],now,'politics').map(x=>x.id),['politics']);
   assert.deepEqual(createQueue([b],['RU'],now,'politics'),[]);
 });
+
+test('editorial politics feeds include indirect headlines; every selected country gets a turn',async()=>{
+  const {isPolitics}=await import('../web/core.mjs');
+  assert.equal(isPolitics({title:'A difficult road ahead',topic:'politics'}),true);
+  assert.equal(isPolitics({title:'Tennis finals',topic:'politics',categories:['Sports']}),false);
+  const many=Array.from({length:30},(_,i)=>({...article('ru'+i,'RU'),topic:'politics'}));
+  const cn={...article('cn','CN'),topic:'politics'},us={...article('us','US'),topic:'politics'};
+  assert.deepEqual(createQueue([...many,cn,us],['RU','CN','US'],now,'politics').slice(0,3).map(a=>a.country),['RU','CN','US']);
+});
