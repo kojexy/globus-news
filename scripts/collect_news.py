@@ -1,6 +1,6 @@
-"""Collect public RSS teasers, translate with Argos and publish a bounded JSON feed.
+"""Collect RSS and publicly accessible article text; translate with Argos.
 
-No full-article scraping, remote translation API, API keys, or invented summaries.
+No paywall bypass, remote translation API, API keys, or invented summaries.
 """
 from __future__ import annotations
 
@@ -141,7 +141,26 @@ def parse_feed(data, source, now=None, limit=6):
     return articles[:limit]
 
 
-def fetch_source(source, now):
+def extract_article(html, url, summary=''):
+    """Extract visible public news text; respect subscription metadata."""
+    if re.search(r'"isAccessibleForFree"\s*:\s*(false|"false")', html, re.I):
+        return '', 'restricted'
+    import trafilatura
+    body = trafilatura.extract(html, url=url, include_comments=False, include_tables=False,
+                               favor_precision=True, deduplicate=True) or ''
+    paragraphs = [re.sub(r'[ \t]+', ' ', line).strip() for line in body.splitlines()]
+    paragraphs = [line for line in paragraphs if line and not re.match(
+        r'^(Advertisement|Read more|Related (articles|topics)|Sign up|Subscribe|Copyright|Реклама|Читайте также|Подписывайтесь)\b', line, re.I)]
+    body = '\n\n'.join(paragraphs).strip()
+    if len(body) < max(220, len(summary) + 80):
+        return '', 'unavailable'
+    if len(body) > 40000:
+        body = body[:40000].rsplit('\n\n', 1)[0]
+        return body, 'excerpt'
+    return body, 'available'
+
+
+def fetch_source(source, now, previous_by_id=None):
     request = urllib.request.Request(source['url'], headers={
         'User-Agent': 'GlobusNews/1.0 (+https://github.com/kojexy/globus-news; personal RSS reader)',
         'Accept': 'application/rss+xml, application/xml, text/xml, */*',
@@ -153,25 +172,35 @@ def fetch_source(source, now):
     articles = parse_feed(payload, source, now)
     if not articles:
         raise ValueError('No articles from the last 72 hours')
-    # Some RSS feeds publish only titles. Read the publisher's public teaser
-    # metadata, never the full article or a paywall, and preserve its provenance.
+    previous_by_id = previous_by_id or {}
     base = urlparse(source['home']).hostname.removeprefix('www.')
     for article in articles:
         host = urlparse(article['url']).hostname or ''
-        if len(article['originalText']) >= 70 or not (host == base or host.endswith('.' + base)):
+        article['fullStatus'] = 'unavailable'
+        old = previous_by_id.get(article['id'], {})
+        if old.get('originalFullText') and old.get('fullStatus') in ('available', 'excerpt'):
+            for key in ('originalFullText', 'fullText', 'fullStatus', 'fullTranslation'):
+                if key in old:
+                    article[key] = old[key]
+            continue
+        if not (host == base or host.endswith('.' + base)):
             continue
         try:
             request = urllib.request.Request(article['url'], headers={'User-Agent': 'GlobusNews/1.0 (personal news reader)'})
-            with urllib.request.urlopen(request, timeout=8) as response:
-                payload = response.read(400_000).decode(response.headers.get_content_charset() or 'utf-8', errors='replace')
+            with urllib.request.urlopen(request, timeout=12) as response:
+                payload = response.read(2_000_000).decode(response.headers.get_content_charset() or 'utf-8', errors='replace')
             parser = MetadataParser()
             parser.feed(payload)
             description = excerpt(clean_text(parser.descriptions.get('og:description') or parser.descriptions.get('description', '')))
             if len(description) > len(article['originalText']) and description != article['originalTitle']:
                 article['originalText'] = description
                 article['excerptOrigin'] = 'metadata'
-        except Exception:
-            pass  # An unavailable original must never break the RSS edition.
+            body, status = extract_article(payload, article['url'], article['originalText'])
+            article['fullStatus'] = status
+            if body:
+                article['originalFullText'] = body
+        except Exception as error:
+            log.info('Full text unavailable for %s: %s', article['id'], error)
     return articles
 
 
@@ -197,17 +226,21 @@ class Translator:
             self.cache[key] = result
         return self.cache[key]
 
+    def article(self, text, language):
+        return '\n\n'.join(self.text(paragraph, language) for paragraph in text.split('\n\n') if paragraph.strip())
+
 
 def collect(output, cache_path, raw=False, limit=6):
     now = datetime.now(timezone.utc)
     sources = json.loads((ROOT / 'scripts/sources.json').read_text())
     previous = json.loads(output.read_text()) if output.exists() else {'articles': []}
+    previous_by_id = {a['id']: a for a in previous.get('articles', [])}
     cache = json.loads(cache_path.read_text()) if cache_path.exists() else {}
     # Initialize once. A model/dependency failure must not overwrite the last good edition.
     translator = None if raw else Translator(cache)
     records, statuses, successes = [], [], 0
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as pool:
-        jobs = {pool.submit(fetch_source, source, now): source for source in sources}
+        jobs = {pool.submit(fetch_source, source, now, previous_by_id): source for source in sources}
         for job in concurrent.futures.as_completed(jobs):
             source = jobs[job]
             try:
@@ -241,6 +274,14 @@ def collect(output, cache_path, raw=False, limit=6):
         except Exception as error:
             log.warning('Translation failed for %s: %s', article['id'], error)
             article.update(title=article['originalTitle'], text=article['originalText'], translation='unavailable')
+        if article.get('originalFullText'):
+            try:
+                article['fullText'] = translator.article(article['originalFullText'], article['language']) if translator else article['originalFullText']
+                article['fullTranslation'] = 'original' if article['language'] == 'ru' else ('argos' if translator else 'unavailable')
+            except Exception as error:
+                log.warning('Full article translation failed for %s: %s', article['id'], error)
+                article['fullText'] = article['originalFullText']
+                article['fullTranslation'] = 'unavailable'
         articles.append(article)
     articles.sort(key=lambda a: a.get('publishedAt') or '', reverse=True)
     data = {'schemaVersion': 1, 'generatedAt': now.isoformat(), 'translationEngine': 'Argos Translate en → ru',
@@ -250,8 +291,8 @@ def collect(output, cache_path, raw=False, limit=6):
     temporary.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')
     temporary.replace(output)
     cache_path.parent.mkdir(parents=True, exist_ok=True)
-    cache_path.write_text(json.dumps(dict(list(cache.items())[-2400:]), ensure_ascii=False) + '\n')
-    print(json.dumps({'articles': len(articles), 'healthySources': successes, 'totalSources': len(sources), 'raw': raw}))
+    cache_path.write_text(json.dumps(dict(list(cache.items())[-12000:]), ensure_ascii=False) + '\n')
+    print(json.dumps({'articles': len(articles), 'fullArticles': sum(bool(a.get('fullText')) for a in articles), 'healthySources': successes, 'totalSources': len(sources), 'raw': raw}))
 
 
 if __name__ == '__main__':

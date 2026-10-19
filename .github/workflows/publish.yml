@@ -16,13 +16,15 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     env:
       ARGOS_DEVICE_TYPE: cpu
       ARGOS_CHUNK_TYPE: MINISBD
+      ARGOS_BEAM_SIZE: '2'
+      ARGOS_INTRA_THREADS: '2'
       OMP_NUM_THREADS: '2'
       OPENBLAS_NUM_THREADS: '2'
     steps:

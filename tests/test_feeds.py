@@ -3,7 +3,9 @@ from pathlib import Path
 import unittest
 from datetime import datetime, timezone
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from collect_news import parse_feed, clean_text, canonical_url, excerpt, MetadataParser
+from collect_news import parse_feed, clean_text, canonical_url, excerpt, MetadataParser, extract_article
+from unittest.mock import patch
+from types import SimpleNamespace
 
 SOURCE = {'id':'test','name':'Test','country':'US','language':'en','kind':'Редакция'}
 NOW = datetime(2026,10,19,12,tzinfo=timezone.utc)
@@ -29,5 +31,14 @@ class FeedTests(unittest.TestCase):
         parser=MetadataParser()
         parser.feed('<meta property="og:description" content="Publisher &amp; description"><meta name="description" content="Fallback">')
         self.assertEqual(parser.descriptions['og:description'],'Publisher & description')
+    def test_full_text_does_not_bypass_subscription(self):
+        self.assertEqual(extract_article('<script>{"isAccessibleForFree":false}</script>','https://example.org'),('', 'restricted'))
+    def test_full_text_keeps_paragraphs_and_removes_boilerplate(self):
+        body='Первый абзац. '*25+'\nAdvertisement\n'+'Второй абзац. '*25
+        with patch.dict(sys.modules, {'trafilatura':SimpleNamespace(extract=lambda *a,**k:body)}):
+            text,status=extract_article('<article>text</article>','https://example.org')
+        self.assertEqual(status,'available')
+        self.assertIn('\n\n',text)
+        self.assertNotIn('Advertisement',text)
 
 if __name__=='__main__':unittest.main()
