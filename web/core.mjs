@@ -4,13 +4,17 @@ export const COUNTRIES = [
   {code:'DE', name:'Германия', flag:'🇩🇪'}, {code:'FR', name:'Франция', flag:'🇫🇷'},
   {code:'JP', name:'Япония', flag:'🇯🇵'}, {code:'IN', name:'Индия', flag:'🇮🇳'},
 ];
-export const DEFAULTS = {countries:COUNTRIES.map(c=>c.code),font:'large',theme:'paper'};
+export const DEFAULTS = {countries:COUNTRIES.map(c=>c.code),font:'normal',theme:'paper',textScale:100,lineHeight:1.5,contentWidth:'wide',autoTranslate:true};
 export function normalizeSettings(input = {}) {
   const countries = Array.isArray(input.countries) ? [...new Set(input.countries.filter(c => COUNTRIES.some(x => x.code===c)))] : DEFAULTS.countries;
   return {
     countries: countries.length ? countries : [...DEFAULTS.countries],
     font: ['normal','large','extra'].includes(input.font) ? input.font : DEFAULTS.font,
     theme: ['paper','dark'].includes(input.theme) ? input.theme : DEFAULTS.theme,
+    textScale: Number.isFinite(input.textScale)?Math.max(50,Math.min(180,Math.round(input.textScale/5)*5)):100,
+    lineHeight: [1.3,1.5,1.7].includes(input.lineHeight)?input.lineHeight:1.5,
+    contentWidth: ['wide','column'].includes(input.contentWidth)?input.contentWidth:'wide',
+    autoTranslate: input.autoTranslate!==false,
   };
 }
 export function safeUrl(value) {
@@ -22,7 +26,7 @@ export function validateFeed(feed) {
   const articles=feed.articles.filter(a=>{
     if (!a || typeof a.id!=='string' || seen.has(a.id) || typeof a.title!=='string' || !a.title.trim() || !COUNTRIES.some(c=>c.code===a.country) || !safeUrl(a.url)) return false;
     seen.add(a.id); return true;
-  }).map(a=>({...a,title:a.title.slice(0,1000),text:typeof a.text==='string'?a.text.slice(0,5000):'',source:typeof a.source==='string'?a.source:'Редакция'}));
+  }).map(a=>({...a,title:a.title.slice(0,1000),text:typeof a.text==='string'?a.text.slice(0,5000):'',fullText:typeof a.fullText==='string'?a.fullText.slice(0,80000):'',originalFullText:typeof a.originalFullText==='string'?a.originalFullText.slice(0,40000):'',source:typeof a.source==='string'?a.source:'Редакция'}));
   return {...feed,articles,sources:Array.isArray(feed.sources)?feed.sources:[]};
 }
 export function isRecent(article, now=Date.now()) {
@@ -32,7 +36,7 @@ export function isRecent(article, now=Date.now()) {
 }
 // Round-robin keeps one prolific country from taking over the edition.
 export function createQueue(articles,countries,now=Date.now()) {
-  const groups=countries.map(code=>articles.filter(a=>a.country===code && isRecent(a,now)).sort((a,b)=>(Date.parse(b.publishedAt)||0)-(Date.parse(a.publishedAt)||0)));
+  const groups=countries.map(code=>articles.filter(a=>a.country===code && isRecent(a,now)).sort((a,b)=>Number(Boolean(b.fullText||b.originalFullText))-Number(Boolean(a.fullText||a.originalFullText))||(Date.parse(b.publishedAt)||0)-(Date.parse(a.publishedAt)||0)));
   const out=[]; for(let i=0;groups.some(g=>i<g.length);i++) for(const group of groups) if(group[i]) out.push(group[i]);
   return out;
 }

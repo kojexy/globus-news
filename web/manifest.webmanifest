@@ -1,12 +1,25 @@
 {
-  "name": "Глобус — новости на большом экране",
-  "short_name": "Глобус",
+  "name": "Новости с Луны",
+  "short_name": "Новости с Луны",
   "lang": "ru",
   "start_url": "./",
   "scope": "./",
   "display": "fullscreen",
   "orientation": "landscape",
   "background_color": "#f2f0e9",
-  "theme_color": "#1f4e46",
-  "icons": [{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]
+  "theme_color": "#284f72",
+  "icons": [
+    {
+      "src": "./assets/moon-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/moon-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
 }

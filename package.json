@@ -1,8 +1,8 @@
 {
   "name": "globus-news",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
-  "description": "TV-first Russian-language world news reader",
+  "description": "Новости с Луны — чтение новостей и полных статей на русском для телевизора",
   "scripts": {
     "start": "python3 -m http.server 4173 --directory web",
     "test": "node --test tests/core.test.mjs",

@@ -4,8 +4,16 @@ import {normalizeSettings,createQueue,moveIndex,safeUrl,validateFeed} from '../w
 const now=Date.parse('2026-10-19T12:00:00Z');
 const article=(id,country,hours=1)=>({id,country,title:id,url:'https://example.org/'+id,publishedAt:new Date(now-hours*3600000).toISOString()});
 test('permanent country filter rejects unknown codes and keeps a nonempty selection',()=>{
-  assert.deepEqual(normalizeSettings({countries:['RU','US','RU','XX'],font:'bad',theme:'dark'}),{countries:['RU','US'],font:'large',theme:'dark'});
+  const normalized=normalizeSettings({countries:['RU','US','RU','XX'],font:'bad',theme:'dark'});
+  assert.deepEqual(normalized.countries,['RU','US']);
+  assert.equal(normalized.font,'normal');assert.equal(normalized.theme,'dark');assert.equal(normalized.textScale,100);assert.equal(normalized.autoTranslate,true);
   assert.equal(normalizeSettings({countries:[]}).countries.length,8);
+});
+test('TV reading settings clamp scale and preserve explicit translation preference',()=>{
+  assert.equal(normalizeSettings({textScale:10}).textScale,50);
+  assert.equal(normalizeSettings({textScale:999}).textScale,180);
+  assert.equal(normalizeSettings({autoTranslate:false}).autoTranslate,false);
+  assert.equal(normalizeSettings({lineHeight:1.3,contentWidth:'column'}).lineHeight,1.3);
 });
 test('queue filters countries, removes old/future stories, and balances editions',()=>{
   const articles=[article('ru2','RU',2),article('us','US'),article('ru','RU'),article('cn','CN'),article('old','RU',73),article('future','RU',-3)];

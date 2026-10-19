@@ -1,6 +1,8 @@
 [
   {"id":"rbc","name":"РБК","country":"RU","language":"ru","url":"https://rssexport.rbc.ru/rbcnews/news/30/full.rss","home":"https://www.rbc.ru","kind":"Частная медиагруппа"},
   {"id":"tass","name":"ТАСС","country":"RU","language":"ru","url":"https://tass.ru/rss/v2.xml","home":"https://tass.ru","kind":"Государственное информационное агентство"},
+  {"id":"interfax","name":"Интерфакс","country":"RU","language":"ru","url":"https://www.interfax.ru/rss.asp","home":"https://www.interfax.ru","kind":"Частное информационное агентство"},
+  {"id":"lenta","name":"Лента.ру","country":"RU","language":"ru","url":"https://lenta.ru/rss/news","home":"https://lenta.ru","kind":"Частная медиагруппа"},
   {"id":"npr","name":"NPR","country":"US","language":"en","url":"https://feeds.npr.org/1001/rss.xml","home":"https://www.npr.org","kind":"Некоммерческая редакция"},
   {"id":"nyt","name":"The New York Times","country":"US","language":"en","url":"https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml","home":"https://www.nytimes.com","kind":"Частная медиагруппа"},
   {"id":"cgtn","name":"CGTN","country":"CN","language":"en","url":"https://www.cgtn.com/subscribe/rss/section/world.xml","home":"https://www.cgtn.com","kind":"Государственный международный вещатель"},

@@ -80,6 +80,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           if ! gh release view android-latest >/dev/null 2>&1; then
-            gh release create android-latest --title "Глобус — Android TV" --notes "Установите globus-news.apk на Android TV / Google TV (Android 6 или новее, актуальный Android System WebView). Исходники и сборка находятся в этом репозитории. Платные API и Android Studio не нужны." --latest
+            gh release create android-latest --title "Новости с Луны — Android TV" --notes "Приложение для Android TV / Google TV. Новости, полные доступные статьи, автоперевод на русский и настройка размера текста. Android Studio не нужна." --latest
           fi
           gh release upload android-latest globus-news.apk --clobber
+          gh release edit android-latest --title "Новости с Луны — Android TV"

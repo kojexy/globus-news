@@ -87,7 +87,7 @@ public class MainActivity extends Activity {
             case KeyEvent.KEYCODE_DPAD_DOWN: key = "ArrowDown"; break;
             case KeyEvent.KEYCODE_DPAD_CENTER: case KeyEvent.KEYCODE_ENTER: key = "Enter"; break;
             case KeyEvent.KEYCODE_MENU:
-                if (event.getAction() == KeyEvent.ACTION_DOWN && event.getRepeatCount() == 0) reader.evaluateJavascript("document.getElementById('settingsButton').click()", null);
+                if (event.getAction() == KeyEvent.ACTION_DOWN && event.getRepeatCount() == 0) reader.evaluateJavascript("window.globusToggleMenu && window.globusToggleMenu()", null);
                 return true;
         }
         if (key != null) {
@@ -98,6 +98,10 @@ public class MainActivity extends Activity {
     }
     @Override public void onBackPressed() {
         reader.evaluateJavascript("window.globusBack ? window.globusBack() : false", result -> { if (!"true".equals(result)) finish(); });
+    }
+    @Override protected void onResume() {
+        super.onResume();
+        if (reader != null) reader.evaluateJavascript("window.globusResume && window.globusResume()", null);
     }
     @Override protected void onDestroy() { if (reader != null) { reader.stopLoading(); reader.destroy(); } super.onDestroy(); }
 }
