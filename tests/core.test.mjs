@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {normalizeSettings,createQueue,moveIndex,safeUrl,validateFeed} from '../web/core.mjs';
+import {normalizeSettings,createQueue,moveIndex,safeUrl,validateFeed,PAPER_STYLES} from '../web/core.mjs';
 const now=Date.parse('2026-10-19T12:00:00Z');
 const article=(id,country,hours=1)=>({id,country,title:id,url:'https://example.org/'+id,publishedAt:new Date(now-hours*3600000).toISOString()});
 test('permanent country filter rejects unknown codes and keeps a nonempty selection',()=>{
@@ -14,6 +14,13 @@ test('TV reading settings clamp scale and preserve explicit translation preferen
   assert.equal(normalizeSettings({textScale:999}).textScale,180);
   assert.equal(normalizeSettings({autoTranslate:false}).autoTranslate,false);
   assert.equal(normalizeSettings({lineHeight:1.3,contentWidth:'column'}).lineHeight,1.3);
+});
+test('newspaper styles migrate existing preferences without losing countries or translation',()=>{
+  assert.equal(PAPER_STYLES.length,12);assert.equal(new Set(PAPER_STYLES.map(s=>s.id)).size,12);
+  const old=normalizeSettings({countries:['RU','CN'],textScale:75,autoTranslate:false});
+  assert.deepEqual(old.countries,['RU','CN']);assert.equal(old.paperStyle,'rotate');assert.equal(old.textScale,75);assert.equal(old.autoTranslate,false);
+  assert.equal(normalizeSettings({paperStyle:'coffee',justify:false}).paperStyle,'coffee');
+  assert.equal(normalizeSettings({paperStyle:'invalid'}).paperStyle,'rotate');
 });
 test('queue filters countries, removes old/future stories, and balances editions',()=>{
   const articles=[article('ru2','RU',2),article('us','US'),article('ru','RU'),article('cn','CN'),article('old','RU',73),article('future','RU',-3)];

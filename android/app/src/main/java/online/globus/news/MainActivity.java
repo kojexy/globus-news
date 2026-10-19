@@ -91,7 +91,7 @@ public class MainActivity extends Activity {
                 return true;
         }
         if (key != null) {
-            if (event.getAction() == KeyEvent.ACTION_DOWN && (event.getRepeatCount() == 0 || !key.equals("Enter"))) reader.evaluateJavascript("window.globusRemoteKey && window.globusRemoteKey('" + key + "')", null);
+            if (event.getAction() == KeyEvent.ACTION_DOWN && (event.getRepeatCount() == 0 || key.equals("ArrowDown") || key.equals("ArrowUp"))) reader.evaluateJavascript("window.globusRemoteKey && window.globusRemoteKey('" + key + "')", null);
             return true;
         }
         return super.dispatchKeyEvent(event);

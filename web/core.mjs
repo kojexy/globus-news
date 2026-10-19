@@ -5,6 +5,14 @@ export const COUNTRIES = [
   {code:'JP', name:'Япония', flag:'🇯🇵'}, {code:'IN', name:'Индия', flag:'🇮🇳'},
 ];
 export const DEFAULTS = {countries:COUNTRIES.map(c=>c.code),font:'normal',theme:'paper',textScale:100,lineHeight:1.5,contentWidth:'wide',autoTranslate:true};
+export const PAPER_STYLES = [
+  {id:'morning',name:'Утренняя'}, {id:'broadsheet',name:'Большая газета'},
+  {id:'coffee',name:'За кофе'}, {id:'archive',name:'Архив'},
+  {id:'northern',name:'Северная'}, {id:'letterpress',name:'Типография'},
+  {id:'sunday',name:'Воскресная'}, {id:'telegram',name:'Телеграф'},
+  {id:'library',name:'Библиотечная'}, {id:'moon',name:'Лунный выпуск'},
+  {id:'post',name:'Почтовая'}, {id:'evening',name:'Вечерняя'},
+];
 export function normalizeSettings(input = {}) {
   const countries = Array.isArray(input.countries) ? [...new Set(input.countries.filter(c => COUNTRIES.some(x => x.code===c)))] : DEFAULTS.countries;
   return {
@@ -15,6 +23,8 @@ export function normalizeSettings(input = {}) {
     lineHeight: [1.3,1.5,1.7].includes(input.lineHeight)?input.lineHeight:1.5,
     contentWidth: ['wide','column'].includes(input.contentWidth)?input.contentWidth:'wide',
     autoTranslate: input.autoTranslate!==false,
+    paperStyle: ['rotate',...PAPER_STYLES.map(s=>s.id)].includes(input.paperStyle)?input.paperStyle:'rotate',
+    justify: input.justify!==false,
   };
 }
 export function safeUrl(value) {

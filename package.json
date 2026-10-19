@@ -1,8 +1,8 @@
 {
   "name": "globus-news",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
-  "description": "Новости с Луны — чтение новостей и полных статей на русском для телевизора",
+  "description": "Новости с Луны — полноэкранная газета в двух колонках для компьютера и Android TV",
   "scripts": {
     "start": "python3 -m http.server 4173 --directory web",
     "test": "node --test tests/core.test.mjs",
