@@ -8,7 +8,7 @@ self.addEventListener('fetch',event=>{
   // News is network-first with the last successful edition as an offline fallback.
   if(url.origin!==self.location.origin)return;
   if(url.pathname.endsWith('/data/news.json')){
-    event.respondWith(fetch(event.request).then(response=>{if(response.ok){const copy=response.clone();caches.open(CACHE).then(c=>c.put(event.request,copy));}return response;}).catch(()=>caches.match(event.request).then(r=>r||Response.error())));return;
+    event.respondWith(fetch(event.request).then(response=>{if(response.ok){const copy=response.clone();caches.open(CACHE).then(c=>c.put(event.request,copy));}return response;}).catch(()=>caches.match(event.request).then(r=>{if(!r)return Response.error();const headers=new Headers(r.headers);headers.set('X-Globus-Offline','1');return new Response(r.body,{status:200,headers});})));return;
   }
   event.respondWith(fetch(event.request).then(response=>{if(response.ok){const copy=response.clone();caches.open(CACHE).then(c=>c.put(event.request,copy));}return response;}).catch(()=>caches.match(event.request).then(r=>r||caches.match('./index.html'))));
 });

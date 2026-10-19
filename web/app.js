@@ -152,7 +152,7 @@ async function loadFeed(manual=false){
     const fresh=validateFeed(await response.json());
     if(!fresh.articles.length)throw new Error('Пустой выпуск');
     if(Date.parse(fresh.generatedAt)>Date.now()+2*3600_000)throw new Error('Неверная дата выпуска');
-    offline=false;lastFetch=Date.now();storage.set(CACHE_KEY,fresh);
+    offline=response.headers.get('X-Globus-Offline')==='1'||navigator.onLine===false;lastFetch=Date.now();storage.set(CACHE_KEY,fresh);
     if(feed && Date.parse(fresh.generatedAt)>Date.parse(feed.generatedAt) && current() && !manual){
       pendingFeed=fresh;refreshPending=true;updateStatus();scheduleLayout();
     }else{

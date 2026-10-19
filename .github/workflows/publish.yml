@@ -47,6 +47,7 @@ jobs:
           path: |
             ~/.local/share/argos-translate
             ~/.cache/argos-translate
+            ~/.local/cache/argos-translate
             ~/stanza_resources
           key: argos-1.11-en-ru-cpu-minisbd-v1
       - name: Install CPU translation engine
