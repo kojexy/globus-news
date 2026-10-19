@@ -183,8 +183,10 @@ function spatialFocus(key){
   const horizontal=key==='ArrowLeft'||key==='ArrowRight', positive=key==='ArrowRight'||key==='ArrowDown';
   const choices=elements.filter(e=>e!==active).map(e=>{
     const r=e.getBoundingClientRect(),dx=r.x+r.width/2-x,dy=r.y+r.height/2-y;
-    const along=horizontal?dx:dy, across=horizontal?dy:dx;
-    return {e,along,score:Math.abs(along)+Math.abs(across)*3};
+    const along=horizontal?dx:dy;
+    const across=horizontal?Math.max(0,r.top-origin.bottom,origin.top-r.bottom):Math.max(0,r.left-origin.right,origin.left-r.right);
+    const gap=horizontal?Math.max(0,positive?r.left-origin.right:origin.left-r.right):Math.max(0,positive?r.top-origin.bottom:origin.top-r.bottom);
+    return {e,along,score:gap+across*4+Math.abs(along)*.02};
   }).filter(c=>positive?c.along>4:c.along< -4).sort((a,b)=>a.score-b.score);
   choices[0]?.e.focus();
 }
@@ -249,5 +251,11 @@ function tick(){
 }
 applySettings();tick();
 try{const saved=storage.get(CACHE_KEY);if(saved){feed=validateFeed(saved);offline=true;rebuildQueue(true);}}catch{}
-loadFeed();setInterval(tick,60_000);setInterval(()=>{if(!document.hidden)loadFeed();},10*60_000);
+async function start(){
+  if(!feed && location.hostname==='app.globus.local'){
+    try{const response=await fetch('./data/news.json');if(response.ok){feed=validateFeed(await response.json());offline=true;rebuildQueue(true);}}catch{}
+  }
+  loadFeed();
+}
+start();setInterval(tick,60_000);setInterval(()=>{if(!document.hidden)loadFeed();},10*60_000);
 if('serviceWorker' in navigator && ['http:','https:'].includes(location.protocol) && location.hostname!=='app.globus.local')navigator.serviceWorker.register('./sw.js').catch(()=>{});

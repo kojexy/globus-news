@@ -3,12 +3,14 @@ plugins { id 'com.android.application' }
 android {
     namespace 'online.globus.news'
     compileSdk 35
+    testBuildType 'release'
     defaultConfig {
         applicationId 'online.globus.news'
         minSdk 23
         targetSdk 35
         versionCode 1
         versionName '1.0.0'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     signingConfigs {
         release {
@@ -28,4 +30,8 @@ android {
     }
     sourceSets { main { assets.srcDirs = ['src/main/assets'] } }
     compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}
+dependencies {
+    androidTestImplementation 'androidx.test:runner:1.6.2'
+    androidTestImplementation 'junit:junit:4.13.2'
 }

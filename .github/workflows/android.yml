@@ -45,7 +45,7 @@ jobs:
         env:
           GLOBUS_KEYSTORE: ${{ runner.temp }}/globus.jks
           GLOBUS_KEYSTORE_PASSWORD: ${{ secrets.GLOBUS_KEYSTORE_PASSWORD }}
-        run: gradle --no-daemon assembleRelease
+        run: gradle --no-daemon assembleRelease assembleReleaseAndroidTest
       - name: Verify APK signature
         run: |
           "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose android/app/build/outputs/apk/release/app-release.apk
@@ -61,9 +61,10 @@ jobs:
           api-level: 30
           target: android-tv
           arch: x86
+          profile: tv_1080p
           disable-animations: true
           emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -camera-back none
-          script: python3 scripts/smoke_android.py
+          script: python3 scripts/smoke_android_release.py
       - name: Upload Android screenshots and accessibility evidence
         if: always()
         uses: actions/upload-artifact@v4
